@@ -17,6 +17,7 @@ public class PlayerState : MonoBehaviour
     public bool isSliding;
     public bool isJumping;  
     public bool inAir;
+    public bool hasSpikedShoes;  //Testing purposes
 
     float runDuration;
 
