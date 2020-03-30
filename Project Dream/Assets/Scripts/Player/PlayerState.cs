@@ -31,20 +31,27 @@ public class PlayerState : MonoBehaviour
 
         RunState();
 
-        if(isRunning && Input.GetKey(KeyCode.S)) {
-            if(runDuration >= playerMovement.requiredRunDuration) {
-            isSliding = true;
-            isRunning = false;
-            }
-        } else if(playerMovement.timer_slideDuration >= playerMovement.slideDuration || isJumping) {
-            runDuration = 0f;
-            isSliding = false;
-        }
+        SlideState();
 
         JumpState();
 
         InAirState();
 
+    }
+
+    private void SlideState()
+    {
+        if (isRunning && Input.GetKey(KeyCode.S)) {
+            if (runDuration >= playerMovement.requiredRunDuration) {
+                isSliding = true;
+                isRunning = false;
+                animator.SetBool("isSliding", true); //Animation for Sliding
+            }
+        } else if (playerMovement.timer_slideDuration >= playerMovement.slideDuration || isJumping) {
+            runDuration = 0f;
+            isSliding = false;
+            animator.SetBool("isSliding", false);
+        }
     }
 
     private void IdleState()
