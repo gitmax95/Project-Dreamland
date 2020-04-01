@@ -11,12 +11,16 @@ public class PlayerState : MonoBehaviour
     public Animator animator;
 
     [Header("Player States")]
+    public bool isFacingRight;
     public bool isIdle;
     public bool onGround;
     public bool isRunning;
     public bool isSliding;
     public bool isJumping;  
     public bool inAir;
+    public bool isTouchingWall;
+    public bool onWall;
+    public bool isWallSliding;
     public bool hasSpikedShoes;  //Testing purposes
 
     float runDuration;
@@ -24,9 +28,12 @@ public class PlayerState : MonoBehaviour
     private void Start()
     {
         playerMovement = GameObject.Find("Player").GetComponent<BasicMovement_Player>();
+        isFacingRight = true;
     }
     void Update()
     {
+        CheckMovementDirection();
+
         IdleState();
 
         RunState();
@@ -36,6 +43,10 @@ public class PlayerState : MonoBehaviour
         JumpState();
 
         InAirState();
+
+        WallSlideState();
+
+        //WallHangState();
 
     }
 
@@ -67,7 +78,7 @@ public class PlayerState : MonoBehaviour
 
     private void InAirState()
     {
-        if (!onGround) {
+        if (!onGround && !isTouchingWall) {
             inAir = true;
         } else {
             inAir = false;
@@ -103,9 +114,40 @@ public class PlayerState : MonoBehaviour
         }
     }
 
+    private void WallSlideState()
+    {
+        if (isTouchingWall && !onGround && playerMovement.timer_jumpDuration > playerMovement.jumpDuration /*<- not sure what that does*/)
+        {
+            isWallSliding = true;
+        }
+        else
+        {
+            isWallSliding = false;
+        }
+    }
+
+    private void CheckMovementDirection()
+    {
+        if (isFacingRight && playerMovement.movementInputDirection < 0)
+        {
+            Flip();
+        }
+        else if (!isFacingRight && playerMovement.movementInputDirection > 0)
+        {
+            Flip();
+        }
+    }
+
+    private void Flip()
+    {
+        isFacingRight = !isFacingRight;
+        transform.Rotate(0.0f, 180.0f, 0.0f);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground") {
+        if(collision.gameObject.tag == "Ground")
+        {
             onGround = true;
         }
     }

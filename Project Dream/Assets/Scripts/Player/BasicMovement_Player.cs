@@ -7,6 +7,9 @@ public class BasicMovement_Player : MonoBehaviour
     PlayerState playerState;
 
     public Rigidbody2D rigidBodyPlayer;
+    public Transform wallCheck;
+
+    public LayerMask whatIsGround;
 
     [Header("Player Running")]
     [Tooltip("Player accelerates with Run Acceleration each frame.")]
@@ -16,7 +19,10 @@ public class BasicMovement_Player : MonoBehaviour
     [Tooltip("Player Run if not using Force")]
     public float runSpeed = 10f;
 
+    public float wallCheckDistance;
+
     int direction_Horizontal;
+    public float movementInputDirection;
 
     [Tooltip("Changes where the Joystick will notice the Player input.")]
     public float joystick_Threshold;
@@ -29,6 +35,7 @@ public class BasicMovement_Player : MonoBehaviour
     public float timeBetweenSlide = 0.5f;
     public float timer_timeBetweenSlide = 0.5f;
     public float speedDecayMultiplier = 0.5f;
+    public float wallSlideSpeed;
     bool newFeetLocation;
 
     [Header("Player Jumping")]
@@ -36,13 +43,13 @@ public class BasicMovement_Player : MonoBehaviour
     [Range(1, 200)]
     public float jumpVelocity;
     [Tooltip("Time which the Velocity is applied")]
-    public float jumpDuration = 1f;
+    public float jumpDuration = 0.1f;
     [Tooltip("Timer for jumpDuration")]
     public float timer_jumpDuration;
     [Tooltip("Additional Gravity applied during a High Jump")]
     public float fallMultiplier = 2.5f;
     [Tooltip("Additional Gravity applied during a Short Jump")]
-    public float lowJumpMultiplier = 2f;
+    public float lowJumpMultiplier = 2.0f;
 
     [Header("Player In Air")]   
     [Tooltip("Applied Air Strafe speed when Jumping from Idle")]
@@ -62,6 +69,8 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void Update()
     {
+        CheckInput();
+
         if (playerState.onGround) {
             rigidBodyPlayer.velocity = Vector2.zero;
         }
@@ -81,7 +90,7 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        
+        CheckSuroundings();
 
         if (playerState.isIdle) { //Player is Idle
             currentStrafeSpeed = strafeSpeedIdle;
@@ -123,6 +132,16 @@ public class BasicMovement_Player : MonoBehaviour
             AirStrafe();
         }
 
+        if (playerState.isWallSliding)
+        {
+            WallSlide();
+        }
+
+    }
+
+    private void CheckInput()
+    {
+        movementInputDirection = Input.GetAxisRaw("Horizontal");
     }
 
     private void Slide()
@@ -160,13 +179,17 @@ public class BasicMovement_Player : MonoBehaviour
         print("Jumping");
         timer_jumpDuration += Time.deltaTime;
 
-        if(timer_jumpDuration < jumpDuration && Input.GetKey(KeyCode.Space)) {
+        if(timer_jumpDuration < jumpDuration && Input.GetKey(KeyCode.Space))
+        {
         rigidBodyPlayer.velocity = new Vector2(rigidBodyPlayer.velocity.x, jumpVelocity * Time.deltaTime);
         }
 
-        if (rigidBodyPlayer.velocity.y < 0) { //Player is Falling
+        if (rigidBodyPlayer.velocity.y < 0)
+        { //Player is Falling
             rigidBodyPlayer.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
-        } else if (rigidBodyPlayer.velocity.y > 0 && timer_jumpDuration < jumpDuration / 2 && !Input.GetKey(KeyCode.Space)) {
+        }
+        else if (rigidBodyPlayer.velocity.y > 0 && timer_jumpDuration < jumpDuration / 2 && !Input.GetKey(KeyCode.Space))
+        {
             rigidBodyPlayer.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         }
     }
@@ -198,5 +221,39 @@ public class BasicMovement_Player : MonoBehaviour
         if(Input.GetAxis("Horizontal") < -joystick_Threshold || Input.GetAxis("Horizontal") > joystick_Threshold) {
             transform.Translate(transform.right * direction_Horizontal * runSpeed * Time.deltaTime);
         }
+    }
+
+    private void WallSlide()
+    {
+        if (rigidBodyPlayer.velocity.y < -wallSlideSpeed)
+        {
+            rigidBodyPlayer.velocity = new Vector2(rigidBodyPlayer.velocity.x, -wallSlideSpeed);
+        }
+    }
+
+    private void CheckSuroundings()
+    {
+
+        //if (movementInputDirection > 0)
+        //{
+        //    playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+        //}
+        //else if (movementInputDirection < 0)
+        //{
+        //    playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+        //}
+        playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+    }
+
+    private void OnDrawGizmos()
+    {
+        //if (playerState.isFacingRight) //This gives an error (no clue why, game runs fine). However, these are just to see the wall detection and ccan 
+        //{
+        //    Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x + wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+        //}
+        //else if (!playerState.isFacingRight)
+        //{
+        //    Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x-+ wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+        //}
     }
 }
