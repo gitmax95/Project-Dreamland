@@ -32,7 +32,7 @@ public class PlayerState : MonoBehaviour
 
     private void Start()
     {
-        playerMovement = GameObject.Find("Player").GetComponent<BasicMovement_Player>();
+        playerMovement = GameObject.Find("PlayerChar").GetComponent<BasicMovement_Player>();
         isFacingRight = true;
 
         touchingLeftWall = false;
