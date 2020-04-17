@@ -71,8 +71,8 @@ public class BasicMovement_Player : MonoBehaviour
 
     void Start()
     {
-        playerState = GameObject.Find("Player").GetComponent<PlayerState>();
-        rigidBodyPlayer = GameObject.Find("Player").GetComponent<Rigidbody2D>();
+        playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
+        rigidBodyPlayer = GameObject.Find("PlayerChar").GetComponent<Rigidbody2D>();
 
         wallHopDirection.Normalize();
         wallJumpDirection.Normalize();   
@@ -137,7 +137,7 @@ public class BasicMovement_Player : MonoBehaviour
             
         }
          
-        if(playerState.isJumping || playerState.isWallJumping && playerState.isGrounded)
+        if(playerState.isJumping || playerState.isWallJumping)
         {
             //Player is Jumping
             if (playerState.isTouchingGround)
@@ -363,7 +363,7 @@ public class BasicMovement_Player : MonoBehaviour
         //}
         //else if (!playerState.isFacingRight)
         //{
-        //    Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x-+ wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
+        //    Gizmos.DrawLine(wallCheck.position, new Vector3(wallCheck.position.x - +wallCheckDistance, wallCheck.position.y, wallCheck.position.z));
         //}
     }
 }
