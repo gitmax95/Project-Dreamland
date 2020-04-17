@@ -1,5 +1,51 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9104516656632067837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Jumping
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Jumping
+  guid: 055fe94123a3d845880645f6ab21bb04
+  Banks:
+  - {fileID: -3668841962458021010}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2473
+--- !u!114 &-7921375726427580803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/New Event
+  m_EditorClassIdentifier: 
+  Path: event:/Music/New Event
+  guid: 076b7fe06741de42a20dcd7d6900e441
+  Banks:
+  - {fileID: -3668841962458021010}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 32052
 --- !u!114 &-5415702982674362322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18,6 +64,47 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-3668841962458021010
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637227328656279877
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-3091802052949322841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Landing
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Landing
+  guid: e6d595e7d5e0db47a6e9c4c59ca16d6f
+  Banks:
+  - {fileID: -3668841962458021010}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1125
 --- !u!114 &-1700148749047392006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36,6 +123,26 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-483526786447783215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637227328656319946
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 828
+  Exists: 1
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -49,17 +156,17 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: 147329723755166859}
-  - {fileID: -1700148749047392006}
+  - {fileID: -483526786447783215}
+  - {fileID: -3668841962458021010}
   EditorEvents:
-  - {fileID: 4025164206849608100}
-  - {fileID: 2578836272491313311}
-  - {fileID: 6771693820293247155}
+  - {fileID: -9104516656632067837}
+  - {fileID: -7921375726427580803}
+  - {fileID: -3091802052949322841}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1700148749047392006}
+  - {fileID: -3668841962458021010}
   StringsBanks:
-  - {fileID: 147329723755166859}
+  - {fileID: -483526786447783215}
   stringsBankWriteTime: 637227328656319946
   cacheVersion: 3
 --- !u!114 &147329723755166859
