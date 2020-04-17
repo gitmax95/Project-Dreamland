@@ -15,8 +15,8 @@ MonoBehaviour:
   SwitchSettingsMigration: 1
   HasSourceProject: 1
   HasPlatforms: 1
-  sourceProjectPath: ../../DreamySoundsAndMusic/DreamySoundsAndMusic.fspro
-  sourceBankPath: ..\..\DreamySoundsAndMusic\Build
+  sourceProjectPath: ../DreamySoundsAndMusic/DreamySoundsAndMusic.fspro
+  sourceBankPath: ..\DreamySoundsAndMusic\Build
   SourceBankPathUnformatted: 
   AutomaticEventLoading: 1
   BankLoadType: 0
