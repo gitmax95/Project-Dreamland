@@ -31,7 +31,9 @@ public class SpriteBehaviour_Player : MonoBehaviour
         //else if(playerState.isFacingRight)
         //{
         //    playerSpriteRenderer.flipX = false;          
-        //}
+        //} 
+
+        // ^ THIS BECAME OBSOLETE BECAUSE WHEN PLAYER TURNS, I FLIP THE WHOLE TRANSFORM
 
         //DEALS WITH APPEARANCE POSITION CHANGES DEPENDENT ON ANIMATION
         if (playerState.isIdle && appearance.transform.localPosition.y != -0.01f)

@@ -13,15 +13,20 @@ public class PlayerState : MonoBehaviour
     [Header("Player States")]
     public bool isFacingRight;
     public bool isIdle;
-    public bool onGround;
+    public bool isTouchingGround;
     public bool isRunning;
     public bool isSliding;
-    public bool isJumping;  
-    public bool inAir;
-    public bool isTouchingWall;
-    public bool onWall;
+    public bool isJumping;
+    public bool isWallJumping;
+    public bool isGrounded;
+    //public bool inAir;
+    public bool isTouchingWall; //is Touching && IS FACING WALL!
+    //public bool onWall;
     public bool isWallSliding;
     public bool hasSpikedShoes;  //Testing purposes
+
+    public bool touchingLeftWall;
+    public bool touchingRightWall;
 
     float runDuration;
 
@@ -29,11 +34,12 @@ public class PlayerState : MonoBehaviour
     {
         playerMovement = GameObject.Find("Player").GetComponent<BasicMovement_Player>();
         isFacingRight = true;
+
+        touchingLeftWall = false;
+        touchingRightWall = false;
     }
     void Update()
     {
-        CheckMovementDirection();
-
         IdleState();
 
         RunState();
@@ -42,7 +48,9 @@ public class PlayerState : MonoBehaviour
 
         JumpState();
 
-        InAirState();
+        WallJumpState();
+
+        GroundedState();
 
         WallSlideState();
 
@@ -52,14 +60,18 @@ public class PlayerState : MonoBehaviour
 
     private void SlideState()
     {
-        if (isRunning && Input.GetKey(KeyCode.S)) {
-            if (runDuration >= playerMovement.requiredRunDuration) {
-                isSliding = true;
+        if (isRunning && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)))
+            {
+            if (runDuration >= playerMovement.requiredRunDuration)
+            {
                 isRunning = false;
+                isSliding = true;
                 animator.SetBool("isSliding", true); //Animation for Sliding
             }
-        } else if (playerMovement.timer_slideDuration >= playerMovement.slideDuration || isJumping) {
-            runDuration = 0f;
+        }
+        else if (playerMovement.timer_slideDuration >= playerMovement.slideDuration || isJumping)
+        {
+            runDuration = 0.0f;
             isSliding = false;
             animator.SetBool("isSliding", false);
         }
@@ -67,100 +79,146 @@ public class PlayerState : MonoBehaviour
 
     private void IdleState()
     {
-        if (onGround && Input.GetAxis("Horizontal") == 0) {
+        if (isTouchingGround && Input.GetAxis("Horizontal") == 0)
+        {
             isIdle = true;
             animator.SetBool("isIdle", true); //Animation for Idle
-        } else {
+        } 
+        else if (!isTouchingGround || isRunning || isSliding || isJumping || isWallSliding)
+        {
             isIdle = false;
             animator.SetBool("isIdle", false);
         }
     }
 
-    private void InAirState()
+    private void GroundedState()
     {
-        if (!onGround && !isTouchingWall) {
-            inAir = true;
-        } else {
-            inAir = false;
+        if (!isTouchingGround && !isTouchingWall)
+        {
+            isGrounded = false;
+            animator.SetBool("isGrounded", false);
+        }
+        else if (!isTouchingGround && isTouchingWall)
+        {
+            isGrounded = false;
+            animator.SetBool("isGrounded", false);
+        }
+        else if (isTouchingGround)
+        {
+            isGrounded = true;
+            animator.SetBool("isGrounded", true);
         }
     }
 
     private void JumpState()
     {
-        if (onGround && Input.GetKey(KeyCode.Space) && playerMovement.timer_jumpDuration < playerMovement.jumpDuration) {
+        if (isGrounded && Input.GetKey(KeyCode.Space) && playerMovement.timer_jumpDuration < playerMovement.jumpDuration)
+        {
             isJumping = true;
-        } else if (onGround)  {
+            animator.SetBool("isJumping", true);
+            //isGrounded = false;
+            //animator.SetBool("isGrounded", false);
+        }
+        else if (isTouchingGround || isWallSliding)
+        {
             isJumping = false;
+            animator.SetBool("isJumping", false);
+        }
+        //else if (isWallSliding)
+        //{
+        //    animator.SetBool("isJumping", false);
+        //    isJumping = false;
+        //}
+    }
+
+    private void WallJumpState()
+    {
+        if (!isGrounded && isWallSliding && Input.GetKey(KeyCode.Space))
+        {
+            isWallJumping = true;
+            animator.SetBool("isJumping", true);
+        }
+        else if (isTouchingGround || isWallSliding)
+        {
+            isWallJumping = false;
+            animator.SetBool("isJumping", false);
         }
     }
 
-    private void RunState()
+        private void RunState()
     {
-        if (onGround && !isSliding && !isJumping) {
-
-            if (Input.GetAxis("Horizontal") < -playerMovement.joystick_Threshold || Input.GetAxis("Horizontal") > playerMovement.joystick_Threshold) {
+        if (isTouchingGround && !isSliding && !isJumping && !isWallSliding && isGrounded)
+        {
+            if (Input.GetAxis("Horizontal") < -playerMovement.joystick_Threshold || Input.GetAxis("Horizontal") > playerMovement.joystick_Threshold)
+            {
                 isRunning = true;
                 animator.SetBool("isRunning", true); //Animation for Running
                 runDuration += Time.deltaTime;
-            } else {
+            } else
+            {
                 isRunning = false;
-                animator.SetBool("isRunning", false);
-                
+                animator.SetBool("isRunning", false);        
             }
-        } else if(isJumping) {
-            isRunning = false;
-        } else if (!onGround) {
+        }
+        else if(!isTouchingGround || isJumping || isSliding || isWallSliding || isGrounded || isIdle)
+        {
+            animator.SetBool("isRunning", false);
             isRunning = false;
         }
     }
 
     private void WallSlideState()
     {
-        if (isTouchingWall && !onGround && playerMovement.timer_jumpDuration > playerMovement.jumpDuration /*<- not sure what that does*/)
+        if (isTouchingWall && !isTouchingGround && playerMovement.rigidBodyPlayer.velocity.y < 0)
         {
-            isWallSliding = true;
+            if (touchingRightWall && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+            {
+                isWallSliding = true;
+                animator.SetBool("isWallSliding", true);
+                playerMovement.wallSlideSpeed = 0.1f;
+            }
+            else if (touchingLeftWall && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+            {
+                isWallSliding = true;
+                animator.SetBool("isWallSliding", true);
+                playerMovement.wallSlideSpeed = 0.1f;
+            }
+            else
+            {
+                isWallSliding = true;
+                animator.SetBool("isWallSliding", true);
+                playerMovement.wallSlideSpeed = 1.0f;
+            }
         }
         else
         {
             isWallSliding = false;
+            animator.SetBool("isWallSliding", false);
         }
-    }
-
-    private void CheckMovementDirection()
-    {
-        if (isFacingRight && playerMovement.movementInputDirection < 0)
-        {
-            Flip();
-        }
-        else if (!isFacingRight && playerMovement.movementInputDirection > 0)
-        {
-            Flip();
-        }
-    }
-
-    private void Flip()
-    {
-        isFacingRight = !isFacingRight;
-        transform.Rotate(0.0f, 180.0f, 0.0f);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ground")
         {
-            onGround = true;
+            isTouchingGround = true;
+            animator.SetBool("isGrounded", true);
         }
     }
     private void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground") {
-            onGround = true;
+        if(collision.gameObject.tag == "Ground")
+        {
+            isTouchingGround = true;
+            animator.SetBool("isGrounded", true);
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground") {
-            onGround = false;
+        if(collision.gameObject.tag == "Ground")
+        {
+            isTouchingGround = false;
+            animator.SetBool("isGrounded", false);
         }
     }
 }
