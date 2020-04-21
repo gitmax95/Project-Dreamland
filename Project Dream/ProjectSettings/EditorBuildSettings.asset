@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/LevelTestLudwig.unity
     guid: 22307e13272e6ed4ebac50ce222dc353
+  - enabled: 1
+    path: Assets/Scenes/Room_DarkRoom.unity
+    guid: dfcfd6d689efdf54baf474b732bc556f
   m_configObjects: {}

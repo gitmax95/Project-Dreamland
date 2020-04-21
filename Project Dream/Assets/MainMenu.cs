@@ -15,4 +15,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("LevelTestLudwig");
     }
+
+    public void DarkRoomScene()
+    {
+        SceneManager.LoadScene("Room_DarkRoom");
+    }
 }
