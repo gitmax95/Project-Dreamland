@@ -15,7 +15,7 @@ MonoBehaviour:
   Path: event:/Music/Jumping
   guid: 055fe94123a3d845880645f6ab21bb04
   Banks:
-  - {fileID: 2363301096002850850}
+  - {fileID: -5512337019056673540}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -38,7 +38,7 @@ MonoBehaviour:
   Path: event:/Music/New Event
   guid: 076b7fe06741de42a20dcd7d6900e441
   Banks:
-  - {fileID: 2363301096002850850}
+  - {fileID: -5512337019056673540}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -46,6 +46,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 32052
+--- !u!114 &-5512337019056673540
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230607257180718
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-5415702982674362322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,7 +115,7 @@ MonoBehaviour:
   Path: event:/Music/Landing
   guid: e6d595e7d5e0db47a6e9c4c59ca16d6f
   Banks:
-  - {fileID: 2363301096002850850}
+  - {fileID: -5512337019056673540}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -137,7 +155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637227480821049335
+  lastModified: 637230607257160769
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -157,17 +175,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -483526786447783215}
-  - {fileID: 2363301096002850850}
+  - {fileID: -5512337019056673540}
   EditorEvents:
   - {fileID: -9104516656632067837}
   - {fileID: -7921375726427580803}
   - {fileID: -3091802052949322841}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2363301096002850850}
+  - {fileID: -5512337019056673540}
   StringsBanks:
   - {fileID: -483526786447783215}
-  stringsBankWriteTime: 637227480821049335
+  stringsBankWriteTime: 637230607257160769
   cacheVersion: 3
 --- !u!114 &147329723755166859
 MonoBehaviour:
@@ -206,7 +224,7 @@ MonoBehaviour:
   lastModified: 637227480821133685
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &2578836272491313311
 MonoBehaviour:
   m_ObjectHideFlags: 0
