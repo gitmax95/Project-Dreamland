@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerState : MonoBehaviour
 {
     BasicMovement_Player playerMovement;
+    ControllerStates controllerStates;
 
     PolygonCollider2D playerCollider;
 
@@ -33,6 +34,8 @@ public class PlayerState : MonoBehaviour
     private void Start()
     {
         playerMovement = GameObject.Find("PlayerChar").GetComponent<BasicMovement_Player>();
+        controllerStates = GameObject.Find("InputManager").GetComponent<ControllerStates>();
+
         isFacingRight = true;
 
         touchingLeftWall = false;
@@ -62,7 +65,7 @@ public class PlayerState : MonoBehaviour
 
     private void SlideState()
     {
-        if (isRunning && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow)))
+        if (isRunning && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || controllerStates.rightFinger == ControllerStates.FingerState.downSwipe)) //Future iteration will only use fingerState and we'll have more InputMangerScripts
             {
             if (runDuration >= playerMovement.requiredRunDuration)
             {
@@ -81,7 +84,7 @@ public class PlayerState : MonoBehaviour
 
     private void IdleState()
     {
-        if (isTouchingGround && Input.GetAxis("Horizontal") == 0)
+        if (isTouchingGround && controllerStates.input_Horizontal == 0)
         {
             isIdle = true;
             animator.SetBool("isIdle", true); //Animation for Idle
@@ -153,7 +156,7 @@ public class PlayerState : MonoBehaviour
     {
         if (isTouchingGround && !isSliding && !isJumping && !isWallSliding && isGrounded)
         {
-            if (Input.GetAxis("Horizontal") < -playerMovement.joystick_Threshold || Input.GetAxis("Horizontal") > playerMovement.joystick_Threshold)
+            if (controllerStates.input_Horizontal < -playerMovement.joystick_Threshold || controllerStates.input_Horizontal > playerMovement.joystick_Threshold)
             {
                 isRunning = true;
                 animator.SetBool("isRunning", true); //Animation for Running

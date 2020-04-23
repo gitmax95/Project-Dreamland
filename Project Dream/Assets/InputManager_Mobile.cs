@@ -6,7 +6,9 @@ public class InputManager_Mobile : MonoBehaviour
 {
     ControllerStates controllerStates;
     SpriteRenderer testSprite;
+
     Vector2 startPosition;
+    bool fingerMoved;
 
     float minimumSwipe = 30f;
     void Start()
@@ -34,27 +36,33 @@ public class InputManager_Mobile : MonoBehaviour
                 }
 
                 if (touch.phase == TouchPhase.Moved) { //Touch moved
+                    fingerMoved = true;
                         if (touch.position.y < startPosition.y - minimumSwipe) { //Player Down Swiped Screen                        
                             controllerStates.rightFinger = ControllerStates.FingerState.downSwipe;
                         }
                 }
 
-                else if(touch.phase == TouchPhase.Ended) { //Player Tapped Screen
+                if(touch.phase == TouchPhase.Ended && fingerMoved == false) { //Player Tapped Screen
                
                      controllerStates.rightFinger = ControllerStates.FingerState.tap;
+
+                } else if(touch.phase == TouchPhase.Ended && fingerMoved) {
+
+                    fingerMoved = false;
+                    controllerStates.rightFinger = ControllerStates.FingerState.noTouch; //need to check for if a tap was made as well! This will always overwrite a fingerState.tap - only use notouch if a swipe was made and ended
 
                 }
 
             }
           
         }
-        if (controllerStates.rightFinger == ControllerStates.FingerState.tap) {
+       if (controllerStates.rightFinger == ControllerStates.FingerState.tap) {
             testSprite.color = Color.green;
         }
 
         if (controllerStates.rightFinger == ControllerStates.FingerState.downSwipe) {
             testSprite.color = Color.red;
-        }
+        } 
 
     }
 
