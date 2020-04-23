@@ -54,6 +54,8 @@ public class PlayerState : MonoBehaviour
 
         WallSlideState();
 
+        AirStrafeState();
+
         //WallHangState();
 
     }
@@ -137,11 +139,13 @@ public class PlayerState : MonoBehaviour
         {
             isWallJumping = true;
             animator.SetBool("isJumping", true);
+            //playerMovement.timerWallJump += Time.deltaTime;
         }
-        else if (isTouchingGround || isWallSliding)
+        else if (isTouchingGround || isTouchingWall || isWallSliding)
         {
             isWallJumping = false;
             animator.SetBool("isJumping", false);
+            //playerMovement.timerWallJump = 0.0f;
         }
     }
 
@@ -195,6 +199,11 @@ public class PlayerState : MonoBehaviour
             isWallSliding = false;
             animator.SetBool("isWallSliding", false);
         }
+    }
+
+    private void AirStrafeState()
+    {
+
     }
 
     private void OnCollisionEnter2D(Collision2D collision)

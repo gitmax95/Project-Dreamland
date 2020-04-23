@@ -20,9 +20,8 @@ public class BasicMovement_Player : MonoBehaviour
     public float runSpeed = 10f;
 
     public float wallCheckDistance;
-
-    int directionHorizontal;
     public float movementInputDirection;
+    int directionHorizontal;
 
     [Tooltip("Changes where the Joystick will notice the Player input.")]
     public float joystick_Threshold;
@@ -35,16 +34,15 @@ public class BasicMovement_Player : MonoBehaviour
     public float timeBetweenSlide = 0.5f;
     public float timer_timeBetweenSlide = 0.5f;
     public float speedDecayMultiplier = 0.5f;
+    public float timerWallJump = 0.0f;
     public float wallSlideSpeed;
     public float movementForceInAir;
     public float wallHopForce;
     public float wallJumpForce;
 
-
-    public Vector2 wallHopDirection;
-    public Vector2 wallJumpDirection;
-
     bool newFeetLocation;
+    bool canMove;
+    bool canStrafe = true;
 
     [Header("Player Jumping")]
     [Tooltip("Speed of the upwards motion of the Jump")]
@@ -73,15 +71,14 @@ public class BasicMovement_Player : MonoBehaviour
     {
         playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
         rigidBodyPlayer = GameObject.Find("PlayerChar").GetComponent<Rigidbody2D>();
-
-        wallHopDirection.Normalize();
-        wallJumpDirection.Normalize();   
     }
 
     private void Update()
     {
         CheckInput();
         CheckMovementDirection();
+        CheckStrafe();
+        CheckWallJumpState();
 
         if (playerState.isTouchingGround)
         {
@@ -124,12 +121,12 @@ public class BasicMovement_Player : MonoBehaviour
             Slide();
             
         } else {
-            timer_slideDuration = 0f;
+            timer_slideDuration = 0.0f;
             
         }
 
         if(!playerState.isSliding && newFeetLocation) { //Set new position when Player stands up after a slide
-            timer_timeBetweenSlide = 0f;
+            timer_timeBetweenSlide = 0.0f;
             newFeetLocation = false;
             Vector3 newPosition = new Vector3(transform.position.x + (0.38f * directionHorizontal), transform.position.y, transform.position.z);
             //transform.position = new Vector3(transform.position.x + (0.38f * directionHorizontal), transform.position.y, transform.position.z);
@@ -198,19 +195,22 @@ public class BasicMovement_Player : MonoBehaviour
     
     private void AirStrafe()
     {
-        if (Input.GetAxis("Horizontal") > joystick_Threshold && !playerState.isWallSliding)
+        if (canStrafe)
         {
-            rigidBodyPlayer.velocity = new Vector2(currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
-        }
+            if (Input.GetAxis("Horizontal") > joystick_Threshold && !playerState.isWallSliding)
+            {
+                rigidBodyPlayer.velocity = new Vector2(currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
+            }
 
-        else if (Input.GetAxis("Horizontal") < -joystick_Threshold && !playerState.isWallSliding)
-        {
-            rigidBodyPlayer.velocity = new Vector2(-currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
-        }
+            else if (Input.GetAxis("Horizontal") < -joystick_Threshold && !playerState.isWallSliding)
+            {
+                rigidBodyPlayer.velocity = new Vector2(-currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
+            }
 
-        else if (!playerState.isWallSliding)  //All aditions are temp while I am working on Wall Jump, the reason for this so the player deosnt "run" off the wall when sliding
-        {
-            rigidBodyPlayer.velocity = new Vector2(0, rigidBodyPlayer.velocity.y); //Remove this to keep momentum even without Strafe Input.
+            else if (!playerState.isWallSliding)  //All aditions are temp while I am working on Wall Jump, the reason for this so the player deosnt "run" off the wall when sliding
+            {
+                rigidBodyPlayer.velocity = new Vector2(0, rigidBodyPlayer.velocity.y); //Remove this to keep momentum even without Strafe Input.
+            }
         }
     }
 
@@ -242,14 +242,15 @@ public class BasicMovement_Player : MonoBehaviour
         {
             if (playerState.touchingRightWall)
             {
-                rigidBodyPlayer.velocity = new Vector2(-jumpVelocity*2 * Time.deltaTime, jumpVelocity*0.75f * Time.deltaTime);
-                Flip();
+                rigidBodyPlayer.velocity = new Vector2(-jumpVelocity * 0.5f * Time.deltaTime, jumpVelocity*0.75f * Time.deltaTime);
+                //Flip();
             }
-            else if (!playerState.isFacingRight)
+            else if (playerState.touchingLeftWall)
             {
-                rigidBodyPlayer.velocity = new Vector2(jumpVelocity * 2 * Time.deltaTime, jumpVelocity*0.75f * Time.deltaTime);
-                Flip();
+                rigidBodyPlayer.velocity = new Vector2(jumpVelocity * 0.5f * Time.deltaTime, jumpVelocity*0.75f * Time.deltaTime);
+                //Flip();
             }
+            Flip();
         }
     }
     
@@ -309,14 +310,41 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void Flip()
     {
-        if (!playerState.isWallSliding)
-        {
+        //if (!playerState.isWallSliding)
+        //{
             directionHorizontal *= -1;
             playerState.isFacingRight = !playerState.isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
-        }
+        //}
     }
 
+    private void CheckStrafe()
+    {
+        if (timerWallJump > 0 && timerWallJump < 0.5f)
+        {
+            canStrafe = false;
+        }
+        else if (timerWallJump == 0)
+        {
+            canStrafe = true;
+        }
+        else
+        {
+            canStrafe = true;
+        }    
+    }
+
+    private void CheckWallJumpState()
+    {
+        if (playerState.isWallJumping)
+        {
+            timerWallJump += Time.deltaTime;
+        }
+        else if (!playerState.isWallJumping)
+        {
+            timerWallJump = 0.0f;
+        }
+    }
     //private void AddForce()
     //{
     //    Vector2 forceToAdd = new Vector2(movementForceInAir * movementInputDirection, 0);
