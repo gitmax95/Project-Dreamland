@@ -416,6 +416,7 @@ GameObject:
   - component: {fileID: 310112973808920566}
   - component: {fileID: 310112973808920567}
   - component: {fileID: 310112973808920564}
+  - component: {fileID: 7007010564139244506}
   - component: {fileID: 310112973808920565}
   m_Layer: 8
   m_Name: PlayerChar
@@ -494,12 +495,11 @@ MonoBehaviour:
   timeBetweenSlide: 0.5
   timer_timeBetweenSlide: 0.5
   speedDecayMultiplier: 0.4
+  timerWallJump: 0
   wallSlideSpeed: 0
   movementForceInAir: 0
   wallHopForce: 0
   wallJumpForce: 0
-  wallHopDirection: {x: 0, y: 0}
-  wallJumpDirection: {x: 0, y: 0}
   jumpVelocity: 200
   jumpDuration: 0.1
   timer_jumpDuration: 0
@@ -558,6 +558,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4dd214063cade16439a1d607a59ed0c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &7007010564139244506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310112973808920562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21fb1bfdc6617344b9530a86f5f5ea3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerHealth: 100
+  invincibilityPeriod: 5
 --- !u!61 &310112973808920565
 BoxCollider2D:
   m_ObjectHideFlags: 0
