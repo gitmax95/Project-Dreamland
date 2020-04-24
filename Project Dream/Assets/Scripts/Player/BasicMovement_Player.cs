@@ -227,11 +227,11 @@ public class BasicMovement_Player : MonoBehaviour
             rigidBodyPlayer.velocity = new Vector2(rigidBodyPlayer.velocity.x, jumpVelocity * Time.deltaTime);
         }
 
-        /*if (rigidBodyPlayer.velocity.y < 0) //Player is Falling
+        /* if (rigidBodyPlayer.velocity.y < 0) //Player is Falling - THIS SECTION DOES NOTHING ANYMORE. REWORK?
         { 
             rigidBodyPlayer.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (rigidBodyPlayer.velocity.y > 0 && timer_jumpDuration < jumpDuration / 2 && !Input.GetKey(KeyCode.Space))
+        else if (rigidBodyPlayer.velocity.y > 0 && timer_jumpDuration < jumpDuration / 2 && !Input.GetKeyUp(KeyCode.Space))
         {
             rigidBodyPlayer.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
         } */

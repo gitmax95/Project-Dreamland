@@ -95,6 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d46b0d5d919fe374b953cd96734cdde4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fingerMoved: 0
 --- !u!114 &5296310857175006038
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,3 +110,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   leftFinger: 0
   rightFinger: 0
+  touchJoystick: {fileID: 0}
+  input_Horizontal: 0

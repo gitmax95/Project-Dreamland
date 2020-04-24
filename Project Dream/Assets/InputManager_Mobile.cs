@@ -5,6 +5,7 @@ using UnityEngine;
 public class InputManager_Mobile : MonoBehaviour
 {
     ControllerStates controllerStates;
+    PlayerState playerState;
     SpriteRenderer testSprite;
 
     Vector2 startPosition;
@@ -14,6 +15,7 @@ public class InputManager_Mobile : MonoBehaviour
     void Start()
     {
         controllerStates = GameObject.Find("InputManager").GetComponent<ControllerStates>();
+        playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
 
         testSprite = GetComponent<SpriteRenderer>();
 
@@ -53,13 +55,18 @@ public class InputManager_Mobile : MonoBehaviour
                
                      controllerStates.rightFinger = ControllerStates.FingerState.tap;
 
-                }
-              
+                }            
 
-            }
+            }         
           
         }
-       if (controllerStates.rightFinger == ControllerStates.FingerState.tap) {
+
+        if (playerState.jumpActivated && controllerStates.rightFinger == ControllerStates.FingerState.tap) { //Player is done jumping but FingerState is still "tap"
+            controllerStates.rightFinger = ControllerStates.FingerState.noTouch; //Reset FingerState after a jump
+        }
+
+        //DEBUG INPUT with TestSprite
+        if (controllerStates.rightFinger == ControllerStates.FingerState.tap) {
             testSprite.color = Color.green;
         }
 
