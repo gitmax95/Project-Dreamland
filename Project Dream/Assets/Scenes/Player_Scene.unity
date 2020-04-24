@@ -6744,6 +6744,11 @@ PrefabInstance:
       propertyPath: joystick_Threshold
       value: 0.25
       objectReference: {fileID: 0}
+    - target: {fileID: 310112973808920561, guid: 9c29f483047d4894480990fc6aed040c,
+        type: 3}
+      propertyPath: jumpDuration
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 310112973808920562, guid: 9c29f483047d4894480990fc6aed040c,
         type: 3}
       propertyPath: m_Name

@@ -18,6 +18,7 @@ public class PlayerState : MonoBehaviour
     public bool isRunning;
     public bool isSliding;
     public bool isJumping;
+    public bool jumpActivated;
     public bool isWallJumping;
     public bool isGrounded;
     //public bool inAir;
@@ -117,17 +118,25 @@ public class PlayerState : MonoBehaviour
 
     private void JumpState()
     {
-        if (isGrounded && Input.GetKey(KeyCode.Space) && playerMovement.timer_jumpDuration < playerMovement.jumpDuration)
+        if(isJumping && !isTouchingGround) {
+            jumpActivated = true;
+        }
+
+        if (isGrounded && Input.GetKeyUp(KeyCode.Space)) //&& playerMovement.timer_jumpDuration < playerMovement.jumpDuration
         {
             isJumping = true;
             animator.SetBool("isJumping", true);
             //isGrounded = false;
             //animator.SetBool("isGrounded", false);
         }
-        else if (isTouchingGround || isWallSliding)
+        else if (jumpActivated && isTouchingGround || isWallSliding)
         {
+           // if (isJumping){ //playerMovement.timer_jumpDuration > 0.02f//This needs to be made in a different way otherwise the Landing becomes inconsistent.
+
             isJumping = false;
             animator.SetBool("isJumping", false);
+            jumpActivated = false;
+           
         }
         //else if (isWallSliding)
         //{
@@ -144,7 +153,7 @@ public class PlayerState : MonoBehaviour
             animator.SetBool("isJumping", true);
             //playerMovement.timerWallJump += Time.deltaTime;
         }
-        else if (isTouchingGround || isTouchingWall || isWallSliding)
+        else if (!isJumping && isTouchingGround || isTouchingWall || isWallSliding)
         {
             isWallJumping = false;
             animator.SetBool("isJumping", false);

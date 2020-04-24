@@ -8,7 +8,7 @@ public class InputManager_Mobile : MonoBehaviour
     SpriteRenderer testSprite;
 
     Vector2 startPosition;
-    bool fingerMoved;
+    public bool fingerMoved;
 
     float minimumSwipe = 30f;
     void Start()
@@ -36,22 +36,25 @@ public class InputManager_Mobile : MonoBehaviour
                 }
 
                 if (touch.phase == TouchPhase.Moved) { //Touch moved
-                    fingerMoved = true;
-                        if (touch.position.y < startPosition.y - minimumSwipe) { //Player Down Swiped Screen                        
-                            controllerStates.rightFinger = ControllerStates.FingerState.downSwipe;
+                    
+                        if (touch.position.y < startPosition.y - minimumSwipe) { //Player Down Swiped Screen    
+                        fingerMoved = true;
+                        controllerStates.rightFinger = ControllerStates.FingerState.downSwipe;
                         }
                 }
-
-                if(touch.phase == TouchPhase.Ended && fingerMoved == false) { //Player Tapped Screen
-               
-                     controllerStates.rightFinger = ControllerStates.FingerState.tap;
-
-                } else if(touch.phase == TouchPhase.Ended && fingerMoved) {
+                if (touch.phase == TouchPhase.Ended && fingerMoved) {
 
                     fingerMoved = false;
                     controllerStates.rightFinger = ControllerStates.FingerState.noTouch; //need to check for if a tap was made as well! This will always overwrite a fingerState.tap - only use notouch if a swipe was made and ended
 
                 }
+
+                else if (touch.phase == TouchPhase.Ended && fingerMoved == false) { //Player Tapped Screen
+               
+                     controllerStates.rightFinger = ControllerStates.FingerState.tap;
+
+                }
+              
 
             }
           
