@@ -170,7 +170,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>-42</value>
+			<value>0</value>
 		</property>
 		<property name="curveShape">
 			<value>-0.0298312698</value>
@@ -181,7 +181,7 @@
 			<value>0.59999999999999998</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-9.20000076</value>
 		</property>
 	</object>
 </objects>
