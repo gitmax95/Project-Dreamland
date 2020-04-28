@@ -4,48 +4,69 @@ using UnityEngine;
 
 public class ElevatorMover : MonoBehaviour
 {
-    bool elevatorMoving = false;
-    bool elevatorTriggered = false;
+    GameObject playerChar;
+    public bool playerOnboard;
 
     public float elevatorSpeed;
-    Transform originTransform;
+    Vector3 startPosition;
     public Transform targetTransform;
 
-    int direction;
+    int direction = -1; //Next intended direction for Elevator
+    int destination; //Player wants next direction to be destination.
    
     void Start()
     {
-        originTransform = this.transform;
+        startPosition = this.transform.position;
+        playerChar = GameObject.Find("PlayerChar");
     }
 
 
     void Update()
-    {
-        if(transform.position.y == originTransform.position.y) {
-            direction = -1;
-        } else if (transform.position.y == targetTransform.position.y) {
-            direction = 1;
-        }
+    { 
 
         if (Input.GetKey(KeyCode.E)) { //Player triggered elevator movement.
-            elevatorTriggered = true;
+            destination = direction;
         }
 
-        if(transform.position != originTransform.position || transform.position != targetTransform.position) { //Elevator currently moving.
-            elevatorMoving = true;
-        } else {
-            elevatorMoving = false;
+        if (transform.position.y <= targetTransform.position.y) { //Elevator reached Target position or slightly below. - Change next Direction
+            direction = 1; 
+            
+            if(direction != destination) { 
+                transform.position = new Vector3(transform.position.x, targetTransform.position.y, transform.position.z);
+            }
+            
+        } else if(transform.position.y >= startPosition.y) { //Elevator is at Origin Position or slightly above. - Change next Direction.
+            direction = -1;
+
+            if (direction != destination) {
+                transform.position = new Vector3(transform.position.x, startPosition.y, transform.position.z);
+            }
         }
 
-        if(elevatorMoving && transform.position.y <= targetTransform.position.y) { //Elevator reached destination.
-            elevatorTriggered = false;
-        }
 
-        if (elevatorTriggered) { //Makes Elevator Move
+        if (direction == destination) { //Makes Elevator Move
             transform.Translate(0f, elevatorSpeed * direction * Time.deltaTime, 0f);
         }
 
+        if (playerOnboard) {
+            playerChar.transform.parent = this.transform;
+        } else {
+            playerChar.transform.parent = null;
+        }
 
-      
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if(collision.gameObject.tag == "Player") {
+            playerOnboard = true;
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Player") {
+            playerOnboard = false;
+        }
     }
 }
