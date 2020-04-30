@@ -8,7 +8,7 @@
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{248aae76-d91a-4eb1-88b6-43096d548a36}</destination>
+			<destination>{b945d55f-3351-48e7-81a9-6a48085710cb}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{5fdb5144-0c08-4d66-bc35-77ced167c13d}</destination>
@@ -30,6 +30,9 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{195c2cec-5f58-4c95-9956-89b2bfa12c3b}</destination>
+		</relationship>
+		<relationship name="parameters">
+			<destination>{01ea71c6-1968-476a-8a8d-62616fcbc315}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{a3bd2c5e-b52f-4464-be9a-992d65dad336}</destination>
@@ -56,7 +59,11 @@
 			<destination>{c9db8b77-862e-47bc-bda0-7fae28468609}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{5174ff41-f4b2-4af9-a240-24d2fa2e75d7}" />
+	<object class="EventAutomatableProperties" id="{5174ff41-f4b2-4af9-a240-24d2fa2e75d7}">
+		<property name="maxVoices">
+			<value>50</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{8504d50a-6128-4730-8362-1fc894bca3f3}" />
 	<object class="GroupTrack" id="{b52a6c57-704b-49bd-ab9b-9fa303f7adb1}">
 		<relationship name="automationTracks">
@@ -72,6 +79,11 @@
 	<object class="Timeline" id="{195c2cec-5f58-4c95-9956-89b2bfa12c3b}">
 		<relationship name="modules">
 			<destination>{3d91e39f-e213-47b9-9025-1c8da6a72c16}</destination>
+		</relationship>
+	</object>
+	<object class="ParameterProxy" id="{01ea71c6-1968-476a-8a8d-62616fcbc315}">
+		<relationship name="preset">
+			<destination>{87ee80e6-28be-4fa7-8b62-363fe7df97e7}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{4d1d9607-1a44-4800-b947-e1ab4eceeece}">
@@ -160,7 +172,7 @@
 			<value>0.09375</value>
 		</property>
 		<property name="value">
-			<value>0</value>
+			<value>10</value>
 		</property>
 		<property name="curveShape">
 			<value>0.28752476</value>
@@ -171,7 +183,7 @@
 			<value>0.5</value>
 		</property>
 		<property name="value">
-			<value>-80</value>
+			<value>-40</value>
 		</property>
 	</object>
 </objects>
