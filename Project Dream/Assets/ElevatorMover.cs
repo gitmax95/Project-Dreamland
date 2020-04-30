@@ -24,21 +24,21 @@ public class ElevatorMover : MonoBehaviour
     void Update()
     { 
 
-        if (Input.GetKey(KeyCode.E)) { //Player triggered elevator movement.
-            destination = direction;
+        if (Input.GetKey(KeyCode.E)) { //Developer triggered elevator movement.
+            CallElevator();
         }
 
         if (transform.position.y <= targetTransform.position.y) { //Elevator reached Target position or slightly below. - Change next Direction
             direction = 1; 
             
-            if(direction != destination) { 
+            if(direction != destination) { //Elevator reached Target Position - Adjust position to be correct.
                 transform.position = new Vector3(transform.position.x, targetTransform.position.y, transform.position.z);
             }
             
         } else if(transform.position.y >= startPosition.y) { //Elevator is at Origin Position or slightly above. - Change next Direction.
             direction = -1;
 
-            if (direction != destination) {
+            if (direction != destination) { //Elevator is at Origin Position - Adjust position to be correct.
                 transform.position = new Vector3(transform.position.x, startPosition.y, transform.position.z);
             }
         }
@@ -54,6 +54,11 @@ public class ElevatorMover : MonoBehaviour
             playerChar.transform.parent = null;
         }
 
+    }
+
+    public void CallElevator()
+    {
+        destination = direction;
     }
 
     private void OnTriggerStay2D(Collider2D collision)

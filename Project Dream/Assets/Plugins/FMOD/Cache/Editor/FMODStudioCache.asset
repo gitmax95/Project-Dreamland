@@ -33,7 +33,7 @@ MonoBehaviour:
   Path: event:/Music/Jumping
   guid: 055fe94123a3d845880645f6ab21bb04
   Banks:
-  - {fileID: -1228036122147594851}
+  - {fileID: 3505831004157890421}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -168,7 +168,7 @@ MonoBehaviour:
   Path: event:/Music/New Event
   guid: 076b7fe06741de42a20dcd7d6900e441
   Banks:
-  - {fileID: -1228036122147594851}
+  - {fileID: 3505831004157890421}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -512,7 +512,7 @@ MonoBehaviour:
   Path: event:/Music/Landing
   guid: e6d595e7d5e0db47a6e9c4c59ca16d6f
   Banks:
-  - {fileID: -1228036122147594851}
+  - {fileID: 3505831004157890421}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -710,7 +710,7 @@ MonoBehaviour:
   - {fileID: 2184576390493774308}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -1228036122147594851}
+  - {fileID: 3505831004157890421}
   StringsBanks:
   - {fileID: -483526786447783215}
   stringsBankWriteTime: 637238388012767578
