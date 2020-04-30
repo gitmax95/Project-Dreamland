@@ -7,7 +7,7 @@ public class Walk : MonoBehaviour
     PlayerState player;
 
     [FMODUnity.EventRef]
-    public string selectedSound;
+    public string walking = "event:/SFX/Walking";
     FMOD.Studio.EventInstance soundEvent;
 
 
@@ -38,7 +38,7 @@ public class Walk : MonoBehaviour
 
     void WalkSound()
     {
-        soundEvent = FMODUnity.RuntimeManager.CreateInstance(selectedSound);
+        soundEvent = FMODUnity.RuntimeManager.CreateInstance(walking);
         soundEvent.start();
         soundEvent.release();
     }

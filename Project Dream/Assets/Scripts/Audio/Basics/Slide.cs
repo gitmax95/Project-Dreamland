@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Sliding : MonoBehaviour
+public class Slide : MonoBehaviour
 {
-
     PlayerState player;
 
     [FMODUnity.EventRef]
-    public string selectedSound;
+    public string sliding = "event:/SFX/Sliding";
     FMOD.Studio.EventInstance soundEvent;
 
     bool playsound;
@@ -25,18 +24,18 @@ public class Sliding : MonoBehaviour
     {
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
-        if(player.isSliding || player.isWallSliding)
+        if (player.isSliding || player.isWallSliding)
         {
             SlideSound();
-          
+
         }
-                
+
 
     }
 
     void SlideSound()
     {
-        soundEvent = FMODUnity.RuntimeManager.CreateInstance(selectedSound);
+        soundEvent = FMODUnity.RuntimeManager.CreateInstance(sliding);
         soundEvent.start();
         soundEvent.release();
     }

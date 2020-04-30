@@ -5,11 +5,11 @@ using UnityEngine;
 public class Jump : MonoBehaviour
 {
     PlayerState player;
- 
+
     [FMODUnity.EventRef]
-    public string selectedSound;
+    public string jumping = "event:/SFX/Jumping";
     //FMOD.Studio.EventInstance soundEvent;
-    
+
     bool playsound;
 
     
@@ -47,7 +47,7 @@ public class Jump : MonoBehaviour
     void JumpSound()
     {
 
-        FMODUnity.RuntimeManager.PlayOneShot(selectedSound, GetComponent<Transform>().position); //PlayOneShotAttached
+        FMODUnity.RuntimeManager.PlayOneShot(jumping, GetComponent<Transform>().position); //PlayOneShotAttached
 
         //soundEvent = FMODUnity.RuntimeManager.CreateInstance(selectedSound);
         //    soundEvent.start();

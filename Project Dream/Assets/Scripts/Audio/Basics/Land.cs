@@ -7,7 +7,7 @@ public class Land : MonoBehaviour
     PlayerState playerState;
 
     [FMODUnity.EventRef]
-    public string selectedSound;
+    public string landing = "event:/SFX/Landing";
     //FMOD.Studio.EventInstance soundEvent;
 
     bool inAir;
@@ -38,7 +38,7 @@ public class Land : MonoBehaviour
             {
                 
                     inAir = false;
-                FMODUnity.RuntimeManager.PlayOneShot(selectedSound, GetComponent<Transform>().position);
+                FMODUnity.RuntimeManager.PlayOneShot(landing, GetComponent<Transform>().position);
                 //soundEvent = FMODUnity.RuntimeManager.CreateInstance(selectedSound);
                 //    soundEvent.start();
                 
