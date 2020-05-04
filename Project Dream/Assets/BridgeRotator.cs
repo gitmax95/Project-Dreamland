@@ -106,15 +106,24 @@ public class BridgeRotator : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.tag == "Player" && Input.GetKey(KeyCode.F)) {  //Player tries to activate Lever        
+        if (Input.GetKey(KeyCode.F)) {
+            UseLever(collision);
+        }
+    }
 
-            if(bridgeLowered || bridgeRaised) { //If bridge ready. Lever Activated             
+    public void UseLever(Collider2D collision)
+    {
+        //if (collision.tag == "Player") {  //Player tries to activate Lever        
+
+            if (bridgeLowered || bridgeRaised) { //If bridge ready. Lever Activated             
                 rotateBridge = true;
                 //invisibleBridgeWall.enabled = true;
                 bridgeFloor.enabled = false;
                 //bridgeZoomZone.enabled = false;
 
             }
-        }
+
+
+        //}
     }
 }
