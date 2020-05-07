@@ -20,4 +20,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Room_DarkRoom");
     }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }

@@ -621,6 +621,7 @@ MonoBehaviour:
   isRunning: 0
   isSliding: 0
   isJumping: 0
+  jumpActivated: 0
   isWallJumping: 0
   isGrounded: 0
   isTouchingWall: 0

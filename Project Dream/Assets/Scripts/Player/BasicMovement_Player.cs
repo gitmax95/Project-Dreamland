@@ -5,6 +5,7 @@ using UnityEngine;
 public class BasicMovement_Player : MonoBehaviour
 {
     PlayerState playerState;
+    ControllerStates controllerStates;
 
     public Rigidbody2D rigidBodyPlayer;
     public Transform wallCheck;
@@ -70,6 +71,8 @@ public class BasicMovement_Player : MonoBehaviour
     void Start()
     {
         playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
+        controllerStates = GameObject.Find("InputManager").GetComponent<ControllerStates>();
+
         rigidBodyPlayer = GameObject.Find("PlayerChar").GetComponent<Rigidbody2D>();
     }
 
@@ -85,11 +88,11 @@ public class BasicMovement_Player : MonoBehaviour
             rigidBodyPlayer.velocity = Vector2.zero;
         }
 
-        if (Input.GetAxis("Horizontal") < 0)
+        if (controllerStates.input_Horizontal < 0)
         {
             directionHorizontal = -1;
         }
-        else if (Input.GetAxis("Horizontal") > 0)
+        else if (controllerStates.input_Horizontal > 0)
         {
             directionHorizontal = 1;
         }
@@ -175,7 +178,7 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void CheckInput()
     {
-        movementInputDirection = Input.GetAxisRaw("Horizontal");
+        movementInputDirection = controllerStates.input_Horizontal; //Replace as well with controllerStates.inputHorizontal? Input.GetAxisRaw("Horizontal")
     }
 
     private void Slide()
@@ -197,12 +200,12 @@ public class BasicMovement_Player : MonoBehaviour
     {
         if (canStrafe)
         {
-            if (Input.GetAxis("Horizontal") > joystick_Threshold && !playerState.isWallSliding)
+            if (controllerStates.input_Horizontal > joystick_Threshold && !playerState.isWallSliding)
             {
                 rigidBodyPlayer.velocity = new Vector2(currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
             }
 
-            else if (Input.GetAxis("Horizontal") < -joystick_Threshold && !playerState.isWallSliding)
+            else if (controllerStates.input_Horizontal < -joystick_Threshold && !playerState.isWallSliding)
             {
                 rigidBodyPlayer.velocity = new Vector2(-currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
             }
@@ -219,19 +222,19 @@ public class BasicMovement_Player : MonoBehaviour
         print("Jumping");
         timer_jumpDuration += Time.deltaTime;
 
-        if(timer_jumpDuration < jumpDuration && Input.GetKey(KeyCode.Space))
+        if(timer_jumpDuration < jumpDuration && playerState.isJumping)
         {
             rigidBodyPlayer.velocity = new Vector2(rigidBodyPlayer.velocity.x, jumpVelocity * Time.deltaTime);
         }
 
-        if (rigidBodyPlayer.velocity.y < 0) //Player is Falling
+        /* if (rigidBodyPlayer.velocity.y < 0) //Player is Falling - THIS SECTION DOES NOTHING ANYMORE. REWORK?
         { 
             rigidBodyPlayer.velocity += Vector2.up * Physics2D.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
         }
-        else if (rigidBodyPlayer.velocity.y > 0 && timer_jumpDuration < jumpDuration / 2 && !Input.GetKey(KeyCode.Space))
+        else if (rigidBodyPlayer.velocity.y > 0 && timer_jumpDuration < jumpDuration / 2 && !Input.GetKeyUp(KeyCode.Space))
         {
             rigidBodyPlayer.velocity += Vector2.up * Physics2D.gravity.y * (lowJumpMultiplier - 1) * Time.deltaTime;
-        }
+        } */
     }
 
     private void WallJump()
@@ -278,7 +281,7 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void RunByTranslate()
     {
-        if(Input.GetAxis("Horizontal") < -joystick_Threshold || Input.GetAxis("Horizontal") > joystick_Threshold && playerState.isGrounded)  //Temporary, will get a better fix asap 
+        if(controllerStates.input_Horizontal < -joystick_Threshold || controllerStates.input_Horizontal > joystick_Threshold && playerState.isGrounded)  //Temporary, will get a better fix asap 
         {
             transform.Translate(transform.right * directionHorizontal * runSpeed * Time.deltaTime);
         }
