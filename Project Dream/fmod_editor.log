@@ -7,7 +7,7 @@
 [LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000022F34D9B1E8 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000002092DA845D8 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -16,6 +16,71 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000002092E2C11C8
+[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 000002092E2C11C8
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000002092E2C11C8
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 000002092E2C11C8 connected, entering connected state
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-docuFZ/hotswap_119.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-docuFZ/hotswap_119.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[WRN] ObjectLookup::get                        : Lookup failed for ParameterLayoutModel: {57a13852-8e14-008d-2298-ed810c852ca8}
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 775904
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 26016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000F4150FF55C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB8E47C320
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB8E47C2F0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB8E47C3F0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB8E47C4B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000206E4EC77A8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Fast', format=2, channels=2, frequency=48000, lengthbytes=4736, lengthpcm=19355, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.707000.
+[LOG] SystemI::createSoundInternal             : Create name='', mode=0x02000202
+[LOG] SystemI::createSoundInternal             : exinfo->cbsize             = 224
+[LOG] SystemI::createSoundInternal             : exinfo->length             = 775904
+[LOG] SystemI::createSoundInternal             : exinfo->fileoffset         = 26016
+[LOG] SystemI::createSoundInternal             : exinfo->numsubsounds       = 1
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlist      = 000000F4150FF55C
+[LOG] SystemI::createSoundInternal             : exinfo->inclusionlistnum   = 1
+[LOG] SystemI::createSoundInternal             : exinfo->suggestedsoundtype = 5
+[LOG] SystemI::createSoundInternal             : exinfo->useropen           = 00007FFB8E47C320
+[LOG] SystemI::createSoundInternal             : exinfo->userclose          = 00007FFB8E47C2F0
+[LOG] SystemI::createSoundInternal             : exinfo->userread           = 00007FFB8E47C3F0
+[LOG] SystemI::createSoundInternal             : exinfo->userseek           = 00007FFB8E47C4B0
+[LOG] SystemI::createSoundInternal             : exinfo->fileuserdata       = 00000208B2BEA0B8
+[LOG] SystemI::createSoundInternal             : exinfo->initialseekpostype = 1
+[LOG] SystemI::DSPCodecPoolRegister            : register codec pool for pool type 5
+[LOG] SystemI::createSoundInternal             : Sample 0/1: name='Fast1', format=2, channels=2, frequency=48000, lengthbytes=5408, lengthpcm=22123, pcmblocksize=0, loopstart=0, loopend=0, mode=0x00000000, channelmask=0x00000000, channelorder=0, peakvolume=0.479625.
+[LOG] SoundI::release                          :  (0000020930D591D8)
+[LOG] SoundI::release                          :     Fast1 (000002089BC3A1E8)
+[LOG] SoundI::release                          :  (0000020930D59798)
+[LOG] SoundI::release                          :     Fast (000002089BC3AA08)
+[LOG] SoundI::release                          :  (0000020930D5B8A8)
+[LOG] SoundI::release                          :     MAGIC AIR Large Whoosh, Swirl, Wind Gust, Foliage 01 (00000208B0B87BF8)
+[LOG] Thread::callback                         : FMOD Studio update thread finished.
+[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] FMOD_OS_Net_Read                         : Interrupted.[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
+[LOG] LiveUpdate::release                      : 
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::callback                         : FMOD stream thread finished.
+[LOG] Thread::callback                         : FMOD mixer thread finished.
+[LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
+[LOG] SystemI::close                           : Closed.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 

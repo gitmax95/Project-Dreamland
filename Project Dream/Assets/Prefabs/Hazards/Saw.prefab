@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 8378724863816981357}
   m_Layer: 0
   m_Name: SawObject
-  m_TagString: Ground
+  m_TagString: Hazard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,7 +157,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4421925394774232321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalPosition: {x: -2.239, y: 1, z: 0}
   m_LocalScale: {x: 1.25, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 4421925395265267837}
@@ -187,7 +187,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4421925394977314307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -3, y: 1, z: 0}
+  m_LocalPosition: {x: 2.515, y: 1, z: 0}
   m_LocalScale: {x: 1.25, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 4421925395265267837}
@@ -203,7 +203,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4421925395265267837}
   - component: {fileID: 6852207544140956323}
-  - component: {fileID: 8237545161872685982}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -244,15 +243,3 @@ MonoBehaviour:
   sawObj: {fileID: 4421925393266084831}
   Left: {fileID: 4421925394774232322}
   Right: {fileID: 4421925394977314556}
---- !u!114 &8237545161872685982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4421925395265268099}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c18c8197246234f91c2ea95184edcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

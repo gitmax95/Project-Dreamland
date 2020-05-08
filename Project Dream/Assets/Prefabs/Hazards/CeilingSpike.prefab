@@ -1,5 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1170770180059495740
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7557384963114075509}
+  - component: {fileID: 1098645169758044516}
+  m_Layer: 0
+  m_Name: Ground
+  m_TagString: Ground
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7557384963114075509
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170770180059495740}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1194718431477527640}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1098645169758044516
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1170770180059495740}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.12560076, y: -0.20861638}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2360419, y: 0.004016161}
+  m_EdgeRadius: 0
 --- !u!1 &1194718430048006216
 GameObject:
   m_ObjectHideFlags: 0
@@ -149,7 +206,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -157,7 +214,7 @@ SpriteRenderer:
   m_Size: {x: 0.2, y: 0.2}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1194718431477527643
@@ -191,6 +248,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1194718430048006217}
+  - {fileID: 7557384963114075509}
   m_Father: {fileID: 1194718431699890622}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
@@ -220,16 +278,12 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.15834212, y: -0.13397515}
-      - {x: 0.16893756, y: -0.09173834}
-      - {x: 0.1473695, y: 0.2578522}
-      - {x: 0.1255585, y: 0.833156}
-      - {x: 0.099502325, y: 0.23154366}
-      - {x: 0.07479489, y: -0.08943331}
+      - {x: 0.17670488, y: -0.087299824}
+      - {x: 0.12639642, y: 0.86499524}
+      - {x: 0.07621825, y: -0.09144306}
       - {x: 0.09360635, y: -0.13929808}
-      - {x: 0.089270115, y: -0.17909479}
-      - {x: 0.0034276247, y: -0.21394765}
-      - {x: 0.25064754, y: -0.21320975}
-      - {x: 0.1584686, y: -0.18823779}
+      - {x: 0.09640777, y: -0.18266368}
+      - {x: 0.15668428, y: -0.18377662}
 --- !u!114 &1194718431477527641
 MonoBehaviour:
   m_ObjectHideFlags: 0
