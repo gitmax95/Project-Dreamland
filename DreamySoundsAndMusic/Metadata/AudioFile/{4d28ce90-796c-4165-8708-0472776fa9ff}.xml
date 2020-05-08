@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{4d28ce90-796c-4165-8708-0472776fa9ff}">
+		<property name="assetPath">
+			<value>Room tone_Empty School_Dining hall, faint traffic, steady humming ventilation.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>96</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>148.28200000000001</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e829a7df-3f2d-493a-9002-e2b70a3fb248}</destination>
+		</relationship>
+	</object>
+</objects>

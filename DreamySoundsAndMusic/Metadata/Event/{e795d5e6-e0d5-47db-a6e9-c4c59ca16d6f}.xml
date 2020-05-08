@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{e795d5e6-e0d5-47db-a6e9-c4c59ca16d6f}">
 		<property name="name">
-			<value>Landing</value>
+			<value>LandingWood</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{b945d55f-3351-48e7-81a9-6a48085710cb}</destination>
+			<destination>{d8624dd4-3052-46fe-9cb2-12fbc14fade2}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{bfda92db-8069-43c8-b2be-f37008625dd9}</destination>
@@ -30,9 +30,6 @@
 		</relationship>
 		<relationship name="timeline">
 			<destination>{66756d9e-cc76-4fdb-98a6-3343b9f97d00}</destination>
-		</relationship>
-		<relationship name="parameters">
-			<destination>{5d3be157-f216-4beb-b1de-a628c7c9aec9}</destination>
 		</relationship>
 		<relationship name="banks">
 			<destination>{a3bd2c5e-b52f-4464-be9a-992d65dad336}</destination>
@@ -66,7 +63,7 @@
 			<destination>{68aa10ea-0e2f-4617-a269-8e2e2aeb5c75}</destination>
 		</relationship>
 		<relationship name="modules">
-			<destination>{1076920a-db46-4b0d-9750-904a48033023}</destination>
+			<destination>{7fb3e7df-c01f-4e56-8ee1-98d260031db2}</destination>
 		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{b611b464-edfb-4eb8-bb2f-e18c77dfa050}</destination>
@@ -74,12 +71,7 @@
 	</object>
 	<object class="Timeline" id="{66756d9e-cc76-4fdb-98a6-3343b9f97d00}">
 		<relationship name="modules">
-			<destination>{1076920a-db46-4b0d-9750-904a48033023}</destination>
-		</relationship>
-	</object>
-	<object class="ParameterProxy" id="{5d3be157-f216-4beb-b1de-a628c7c9aec9}">
-		<relationship name="preset">
-			<destination>{87ee80e6-28be-4fa7-8b62-363fe7df97e7}</destination>
+			<destination>{7fb3e7df-c01f-4e56-8ee1-98d260031db2}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{758838e9-f7cb-43e3-91fe-76941366b629}">
@@ -104,18 +96,9 @@
 			<destination>{a92a312b-e1aa-46d6-8249-e84be305dccc}</destination>
 		</relationship>
 	</object>
-	<object class="SingleSound" id="{1076920a-db46-4b0d-9750-904a48033023}">
-		<property name="length">
-			<value>1.125</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
-		<property name="playCount">
-			<value>1</value>
-		</property>
+	<object class="SingleSound" id="{7fb3e7df-c01f-4e56-8ee1-98d260031db2}">
 		<relationship name="audioFile">
-			<destination>{9efe7867-00e6-41d4-9592-1814f8c6bc13}</destination>
+			<destination>{49ba1d65-40a1-46e6-8590-d4ebd8f34fb2}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{b611b464-edfb-4eb8-bb2f-e18c77dfa050}">
@@ -164,7 +147,8 @@
 		</relationship>
 		<relationship name="automationPoints">
 			<destination>{d0d8a9ce-9abb-456d-88d7-e75e3e67d13f}</destination>
-			<destination>{9e719d0c-ab3e-4a8d-9995-02dc7dc3c3cb}</destination>
+			<destination>{7d8fabc9-a2d5-449b-b01b-52a95d3d82cf}</destination>
+			<destination>{6c25cc09-9da3-41ac-a773-e701576de09c}</destination>
 		</relationship>
 	</object>
 	<object class="SFXReverbEffect" id="{1838f709-9cc4-4ed7-8da0-f6032a26a247}">
@@ -181,15 +165,26 @@
 			<value>0</value>
 		</property>
 		<property name="curveShape">
-			<value>-0.0298312698</value>
+			<value>0.0273797847</value>
 		</property>
 	</object>
-	<object class="AutomationPoint" id="{9e719d0c-ab3e-4a8d-9995-02dc7dc3c3cb}">
+	<object class="AutomationPoint" id="{7d8fabc9-a2d5-449b-b01b-52a95d3d82cf}">
 		<property name="position">
-			<value>0.59999999999999998</value>
+			<value>0.10000000000000001</value>
 		</property>
 		<property name="value">
-			<value>-9.20000076</value>
+			<value>-17.4500008</value>
+		</property>
+	</object>
+	<object class="AutomationPoint" id="{6c25cc09-9da3-41ac-a773-e701576de09c}">
+		<property name="position">
+			<value>0.02</value>
+		</property>
+		<property name="value">
+			<value>-2</value>
+		</property>
+		<property name="curveShape">
+			<value>1</value>
 		</property>
 	</object>
 </objects>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{47371752-ad00-4441-8409-3604e0ddcbce}">
+		<property name="name">
+			<value>PlayerJumping</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4a0618a5-9504-4528-acf3-db89f0bb287b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{27d2779b-9854-4c33-b188-2525386fe83b}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{27d2779b-9854-4c33-b188-2525386fe83b}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>JWood</value>
+			<value>JStone</value>
+			<value>JCarpet</value>
+			<value>JMetal</value>
+			<value>onGround</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

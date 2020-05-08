@@ -2,7 +2,7 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="ParameterPreset" id="{78817152-a8b5-40ea-ae1c-64bf88ce1a72}">
 		<property name="name">
-			<value>Parameters Player Mech</value>
+			<value>PlayerMSFX</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4a0618a5-9504-4528-acf3-db89f0bb287b}</destination>
@@ -16,18 +16,17 @@
 			<value>2</value>
 		</property>
 		<property name="maximum">
-			<value>3</value>
+			<value>5</value>
 		</property>
 		<property name="enumerationLabels">
-			<value>Stone</value>
 			<value>Wood</value>
+			<value>Stone</value>
 			<value>Carpet</value>
-		</property>
-		<property name="isGlobal">
-			<value>true</value>
+			<value>Metal</value>
+			<value>Standing Still</value>
 		</property>
 		<property name="initialValue">
-			<value>0</value>
+			<value>4</value>
 		</property>
 		<property name="isExposedRecursively">
 			<value>false</value>
