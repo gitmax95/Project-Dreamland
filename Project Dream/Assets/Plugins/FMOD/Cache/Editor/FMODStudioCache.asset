@@ -545,7 +545,7 @@ MonoBehaviour:
   FileSizes:
   - Name: Desktop
     Value: 1078
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4147561417832876532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -670,7 +670,7 @@ MonoBehaviour:
   lastModified: 637238466409514632
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3091802052949322841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,7 +732,7 @@ MonoBehaviour:
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 7663607815560447458}
+  - {fileID: 0}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -818,6 +818,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2473
+--- !u!114 &-1873062684262693851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637244654487388151
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-1793802428485334813
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -927,11 +945,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637227480821049335
+  lastModified: 637244654487457868
   LoadResult: 0
   FileSizes:
-  - Name: 
-    Value: 1078
+  - Name: Desktop
+    Value: 1504
   Exists: 1
 --- !u!114 &-429387157233682744
 MonoBehaviour:
@@ -988,10 +1006,11 @@ MonoBehaviour:
   EditorBanks:
   - {fileID: -4348496936844860150}
   - {fileID: -3099609461631418631}
+  - {fileID: -1873062684262693851}
   EditorEvents:
   - {fileID: -1886703629801071034}
   - {fileID: 6823534998247420163}
-  - {fileID: 7608303062861503782}
+  - {fileID: 0}
   - {fileID: 6128716512165511223}
   - {fileID: -1886713972557991246}
   - {fileID: -1237204090060929253}
@@ -1001,7 +1020,7 @@ MonoBehaviour:
   - {fileID: -3099609461631418631}
   StringsBanks:
   - {fileID: -483526786447783215}
-  stringsBankWriteTime: 637227480821049335
+  stringsBankWriteTime: 637244654487457868
   cacheVersion: 3
 --- !u!114 &17714794562873945
 MonoBehaviour:
@@ -1387,7 +1406,7 @@ MonoBehaviour:
   Min: 0
   Max: 3
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &2707247736350269701
 MonoBehaviour:
   m_ObjectHideFlags: 0
