@@ -11,9 +11,11 @@ GameObject:
   - component: {fileID: 4421925393266084820}
   - component: {fileID: 5380839419919750173}
   - component: {fileID: 8378724863816981357}
+  - component: {fileID: 5112923163612602384}
   - component: {fileID: 2989014964394688835}
   - component: {fileID: 1750349480407223911}
   - component: {fileID: 3969610889206307731}
+  - component: {fileID: 1295714699448400230}
   m_Layer: 0
   m_Name: SawObject
   m_TagString: Hazard
@@ -29,8 +31,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4421925393266084831}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.112, y: 0.368, z: 0}
-  m_LocalScale: {x: 57.68242, y: 37.84729, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4421925395265267837}
   m_RootOrder: 0
@@ -60,6 +62,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazardDamage: 1
+--- !u!114 &5112923163612602384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4421925393266084831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d9c18c8197246234f91c2ea95184edcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!33 &2989014964394688835
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -67,7 +81,7 @@ MeshFilter:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4421925393266084831}
-  m_Mesh: {fileID: -5495902117074765545, guid: d31679bd8eb8d174182b55c0c774b868, type: 3}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!23 &1750349480407223911
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -86,7 +100,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5582290746251517078, guid: c19fc30ce5a5b2c4d9a44cef36d30d18, type: 3}
+  - {fileID: 2100000, guid: 5d9936937dbeec64cb475c1107fb0850, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -118,9 +132,9 @@ BoxCollider2D:
   m_Density: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_UsedByEffector: 0
+  m_UsedByEffector: 1
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: -0.0000011324883, y: 0.0000005662441}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -131,8 +145,27 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.02, y: 0.02}
+  m_Size: {x: 1.0112752, y: 1.0033097}
   m_EdgeRadius: 0
+--- !u!251 &1295714699448400230
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4421925393266084831}
+  m_Enabled: 1
+  m_UseColliderMask: 1
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 256
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!1 &4421925394774232321
 GameObject:
   m_ObjectHideFlags: 0
@@ -157,7 +190,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4421925394774232321}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.239, y: 1, z: 0}
+  m_LocalPosition: {x: -2.239, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 4421925395265267837}
@@ -187,7 +220,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4421925394977314307}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.515, y: 1, z: 0}
+  m_LocalPosition: {x: 2.515, y: 0, z: 0}
   m_LocalScale: {x: 1.25, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 4421925395265267837}
@@ -203,7 +236,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4421925395265267837}
   - component: {fileID: 6852207544140956323}
-  - component: {fileID: 206262099003699856}
   m_Layer: 0
   m_Name: Saw
   m_TagString: Untagged
@@ -244,19 +276,3 @@ MonoBehaviour:
   sawObj: {fileID: 4421925393266084831}
   Left: {fileID: 4421925394774232322}
   Right: {fileID: 4421925394977314556}
---- !u!54 &206262099003699856
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4421925395265268099}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
