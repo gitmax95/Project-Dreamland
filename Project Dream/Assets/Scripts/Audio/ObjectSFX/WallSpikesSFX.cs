@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WallSpikesSFX : MonoBehaviour
 {
-    SpikeController spikeWall;
+    SpikeMovement spikeWall;
 
     Transform spike;
 
@@ -14,19 +14,19 @@ public class WallSpikesSFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spike = this.gameObject.transform.GetChild(1);
+        spike = this.gameObject.transform;
 
-        spikeWall = this.gameObject.GetComponent<SpikeController>();
+        spikeWall = this.gameObject.GetComponent<SpikeMovement>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (spikeWall.State() == 0)
+        if (spikeWall.direction == 0)
         {
             FMODUnity.RuntimeManager.PlayOneShot(SpikeWallIn, spike.position);
         }
-        else if(spikeWall.State() == 1)
+        else if(spikeWall.direction == 1)
         {
             FMODUnity.RuntimeManager.PlayOneShot(SpikeWallOut, spike.position);
         }

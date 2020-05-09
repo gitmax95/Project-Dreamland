@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CeilingSpikesSFX : MonoBehaviour
 {
-    SpikeControllerCeiling spikeCeiling;
+    SpikeMovementDown spikeCeiling;
 
     Transform spike;
 
@@ -13,15 +13,15 @@ public class CeilingSpikesSFX : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        spike = this.gameObject.transform.GetChild(1);
+        spike = this.gameObject.transform;
 
-        spikeCeiling = this.gameObject.GetComponent<SpikeControllerCeiling>();
+        spikeCeiling = this.gameObject.GetComponent<SpikeMovementDown>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(spikeCeiling.State() == true)
+        if(spikeCeiling.fall == true)
         {
             FMODUnity.RuntimeManager.PlayOneShot(SpikeCeiling, spike.position);
         }

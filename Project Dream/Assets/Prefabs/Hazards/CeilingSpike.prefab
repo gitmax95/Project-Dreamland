@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7557384963114075509}
   - component: {fileID: 1098645169758044516}
   m_Layer: 0
-  m_Name: Ground
+  m_Name: PlayerLane
   m_TagString: Ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 1194718431477527647}
   - component: {fileID: 1194718431477527641}
   - component: {fileID: 5949407710131672645}
+  - component: {fileID: 5333221647674804787}
   m_Layer: 0
   m_Name: SpikeObject
   m_TagString: Hazard
@@ -310,6 +311,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fall: 0
+--- !u!114 &5333221647674804787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194718431477527643}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88762dad5880a364fba70beafa616ed8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1194718431699890618
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,7 +334,6 @@ GameObject:
   - component: {fileID: 1194718431699890622}
   - component: {fileID: 1194718431699890617}
   - component: {fileID: 6515707477314922680}
-  - component: {fileID: 1746950841380914191}
   m_Layer: 0
   m_Name: CeilingSpike
   m_TagString: Untagged
@@ -386,15 +398,3 @@ MonoBehaviour:
   SpeedDown: 4
   spikeObj: {fileID: 1194718431477527643}
   Ground: {fileID: 1194718431260700787}
---- !u!114 &1746950841380914191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194718431699890618}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88762dad5880a364fba70beafa616ed8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
