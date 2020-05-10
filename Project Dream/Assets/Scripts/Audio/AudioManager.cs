@@ -49,9 +49,9 @@ public class AudioManager : MonoBehaviour
     {
        
 
-        PlayJumpSFX();
+        //PlayJumpSFX();
         PlayWalkingSFX();
-        PlayLandingSFX();
+        //PlayLandingSFX();
         //PlaySlidingSFX();
 
         soundEvent.setParameterByName("PlayerMSFX", parameterValue);
@@ -172,7 +172,7 @@ public class AudioManager : MonoBehaviour
         else if(!playerState.isRunning)
         {
 
-            parameterValue = 4; //Idle sound
+            parameterValue = 5; //Idle sound
 
         }
         
@@ -223,6 +223,11 @@ public class AudioManager : MonoBehaviour
                 {
                     parameterValue = 3;
                     memoryValue = 3;
+                }
+                else if (surface.getType() == "Sand")
+                {
+                    parameterValue = 4;
+                    memoryValue = 4;
                 }
 
 

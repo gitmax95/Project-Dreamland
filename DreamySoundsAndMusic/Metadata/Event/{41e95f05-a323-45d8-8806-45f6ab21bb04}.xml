@@ -5,7 +5,7 @@
 			<value>JumpingWood</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ae07df06-8b4b-4c1c-8fd4-04502db68db7}</destination>
@@ -66,18 +66,11 @@
 		<relationship name="automationTracks">
 			<destination>{ded8be33-9d5f-494b-ba81-92152ddd89ba}</destination>
 		</relationship>
-		<relationship name="modules">
-			<destination>{18c78fa9-d2fe-419c-aa75-c585fd427bdb}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{ace7b3a3-451c-4861-b72a-de5d71a30368}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{195c2cec-5f58-4c95-9956-89b2bfa12c3b}">
-		<relationship name="modules">
-			<destination>{18c78fa9-d2fe-419c-aa75-c585fd427bdb}</destination>
-		</relationship>
-	</object>
+	<object class="Timeline" id="{195c2cec-5f58-4c95-9956-89b2bfa12c3b}" />
 	<object class="EventMixerMaster" id="{4d1d9607-1a44-4800-b947-e1ab4eceeece}">
 		<relationship name="effectChain">
 			<destination>{6c8a43e4-1aa4-46ad-aa1a-9408777eca96}</destination>
@@ -98,11 +91,6 @@
 	<object class="AutomationTrack" id="{ded8be33-9d5f-494b-ba81-92152ddd89ba}">
 		<relationship name="automator">
 			<destination>{896fd267-9fa5-4354-ab07-b9948e1d11ee}</destination>
-		</relationship>
-	</object>
-	<object class="SingleSound" id="{18c78fa9-d2fe-419c-aa75-c585fd427bdb}">
-		<relationship name="audioFile">
-			<destination>{49ba1d65-40a1-46e6-8590-d4ebd8f34fb2}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{ace7b3a3-451c-4861-b72a-de5d71a30368}">

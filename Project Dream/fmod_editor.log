@@ -2,13 +2,12 @@
 [LOG] Manager::init                            : maxchannels = 256 studioflags = 00000006 flags 00000000 extradriverdata 0000000000000000.
 [LOG] SystemI::init                            : Initialize version=20008 (108014), maxchannels=256, flags=0x00020000
 [LOG] SystemI::setOutputInternal               : Setting output to 'FMOD WASAPI Output'
-[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=44100, nAvgBytesPerSec=352800, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
+[LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEX): wFormatTag=0xFFFE, nChannels=2, nSamplesPerSec=48000, nAvgBytesPerSec=384000, nBlockAlign=8, wBitsPerSample=32, cbSize=22.
 [LOG] OutputWASAPI::init                       : Mix Format (WAVEFORMATEXTENSIBLE): wValidBitsPerSample=32, dwChannelMask=0x00000003, SubFormat=00000003-0000-0010-8000-00AA00389B71.
-[LOG] OutputWASAPI::init                       : Output buffer size: 3760 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
-[WRN] SystemI::init                            : Output requires a sample rate of 44100Hz, resampling will occur.
+[LOG] OutputWASAPI::init                       : Output buffer size: 4096 samples, latency: 0.00ms, period: 10.00ms, DSP buffer: 1024 * 4
 [LOG] Thread::initThread                       : Init FMOD stream thread. Priority: 2, Stack Size: 98304, Semaphore: No, Sleep Time: 10, Looping: Yes.
 [LOG] Thread::initThread                       : Init FMOD mixer thread. Priority: 3, Stack Size: 81920, Semaphore: No, Sleep Time: 0, Looping: Yes.
-[LOG] AsyncManager::init                       : manager 0000027BE4021398 isAsync 0 updatePeriod 0.02
+[LOG] AsyncManager::init                       : manager 000001A05C31F678 isAsync 0 updatePeriod 0.02
 [LOG] AsyncManager::init                       : done
 [LOG] PlaybackSystem::init                     : 
 [LOG] Thread::initThread                       : Init FMOD Studio sample load thread. Priority: 0, Stack Size: 98304, Semaphore: No, Sleep Time: 1, Looping: No.
@@ -17,24 +16,405 @@
 [LOG] Manager::init                            : done.
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
 [LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_9.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_9.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_10.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_10.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_11.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_11.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_12.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_12.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_13.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_13.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_14.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_14.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_15.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_15.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_16.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_16.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_17.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_17.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_18.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_18.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_19.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_19.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_20.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_20.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_21.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_21.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_22.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_22.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_23.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_23.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_24.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_24.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_25.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_25.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_26.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_26.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_27.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_27.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_28.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_28.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_29.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_29.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_30.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_30.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_31.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_31.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_32.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_32.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_33.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_33.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_34.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_34.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_35.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_35.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_36.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_36.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_37.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_37.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_38.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_38.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_39.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_39.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_40.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_40.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_41.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_41.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_42.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_42.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_43.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_43.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_44.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_44.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_45.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_45.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] LiveUpdate::clientDisconnected           : client = 000001A03B6F4368
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000001A03B6F00A8
+[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 000001A03B6F00A8
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000001A03B6F00A8
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 000001A03B6F00A8 connected, entering connected state
+[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] LiveUpdate::clientDisconnected           : client = 000001A03B6F00A8
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000001A03B6F00A8
+[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 000001A03B6F00A8
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000001A03B6F00A8
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 000001A03B6F00A8 connected, entering connected state
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_46.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_46.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[WRN] ObjectLookup::get                        : Lookup failed for ParameterLayoutModel: {57a13852-8e14-008d-2298-ed810c852ca8}
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_47.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_47.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_48.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_48.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] LiveUpdate::clientDisconnected           : client = 000001A03B6F00A8
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000001A03B6F5418
+[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 000001A03B6F5418
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000001A03B6F5418
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 000001A03B6F5418 connected, entering connected state
+[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] LiveUpdate::clientDisconnected           : client = 000001A03B6F5418
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000001A03B6F00A8
+[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 000001A03B6F00A8
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000001A03B6F00A8
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 000001A03B6F00A8 connected, entering connected state
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_49.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_49.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[WRN] ObjectLookup::get                        : Lookup failed for ParameterLayoutModel: {57a13852-8e14-008d-2298-ed810c852ca8}
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_50.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_50.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_51.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_51.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_52.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_52.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_53.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_53.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_54.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_54.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_55.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_55.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_56.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_56.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_57.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_57.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_58.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_58.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_59.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_59.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_60.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_60.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_61.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_61.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_62.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_62.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_63.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_63.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_64.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_64.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_65.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_65.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_66.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_66.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_67.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_67.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_68.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_68.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_69.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_69.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_70.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_70.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_71.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_71.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_72.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_72.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_73.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_73.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_74.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_74.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_75.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_75.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_76.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_76.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_77.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_77.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_78.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_78.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_79.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_79.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_80.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_80.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_81.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_81.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_82.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_82.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_83.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_83.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_84.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_84.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_85.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_85.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_86.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_86.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_87.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_87.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_88.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_88.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_89.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_89.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_90.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_90.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_91.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_91.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_92.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_92.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_93.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_93.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_94.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_94.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_95.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_95.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_96.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_96.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_97.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_97.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_98.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_98.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] LiveUpdate::clientDisconnected           : client = 000001A03B6F00A8
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000001A03B6F59A8
+[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] LiveUpdate::clientDisconnected           : client = 000001A03B6F59A8
+[LOG] Thread::initThread                       : Init FMOD profiler thread (recv). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] Thread::initThread                       : Init FMOD profiler thread (send). Priority: 0, Stack Size: 131072, Semaphore: No, Sleep Time: 0, Looping: No.
+[LOG] LiveUpdate::clientConnected              : client = 000001A03B6F3848
+[LOG] LiveUpdate::readPacket                   : Recieved init packet from client 000001A03B6F3848
+[LOG] LiveUpdate::readPacket                   : Accepting init message for client 000001A03B6F3848
+[LOG] LiveUpdate::transitionToConnected        : 
+[LOG] Manager::sendConnectTimeHash             : 
+[LOG] LiveUpdate::sendBankHash                 : 
+[LOG] LiveUpdate::acceptInitPacket             : Client 000001A03B6F3848 connected, entering connected state
+[LOG] Manager::receiveLiveUpdateBank           : Received live update bank path: fmod:///remote/C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_99.bank
+[LOG] ProfileRemoteFile::fileOpen              : Attemping to open remote file 'C:/Users/milan/AppData/Local/FMOD Studio/UnsavedProjects/Hotswap-WgywZC/hotswap_99.bank'
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[WRN] ObjectLookup::get                        : Lookup failed for ParameterLayoutModel: {57a13852-8e14-008d-2298-ed810c852ca8}
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] Manager::readBank                        : fileversion = 125, compatVersion = 119 (oldest = 44, newest = 125)
+[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
+[LOG] ProfileClient::markForDead               : Closing client connection
+[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
+[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
+[LOG] LiveUpdate::clientDisconnected           : client = 000001A03B6F3848
+[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
+[LOG] SoundI::release                          : Room tone_Empty School_Dining hall, faint traffic, steady humming ventilation - Trimmed.wav (000001A034636C68)
+[LOG] SoundI::release                          : Sand5.mp3 (000001A0346358E8)
+[LOG] SoundI::release                          : Sand1.mp3 (000001A034635268)
+[LOG] SoundI::release                          : Sand2.mp3 (000001A034634A48)
+[LOG] SoundI::release                          : Sand3.mp3 (000001A034637B08)
+[LOG] SoundI::release                          : Sand4.mp3 (000001A034635A88)
+[LOG] SoundI::release                          : Concrete2.mp3 (000001A034635C28)
+[LOG] SoundI::release                          : Concrete3.mp3 (000001A0346350C8)
+[LOG] SoundI::release                          : Concrete4.mp3 (000001A034636448)
+[LOG] SoundI::release                          : Concrete5.mp3 (000001A034636928)
+[LOG] SoundI::release                          : Metal2.mp3 (000001A03AB7AD78)
+[LOG] SoundI::release                          : Wood5.mp3 (000001A03AB7A6F8)
+[LOG] SoundI::release                          : Carpet2.mp3 (000001A03AB7AA38)
+[LOG] SoundI::release                          : Carpet3.mp3 (000001A03AB7B3F8)
+[LOG] SoundI::release                          : Metal4.mp3 (000001A03AB7B8D8)
+[LOG] SoundI::release                          : Wood4.mp3 (000001A03AB7A558)
+[LOG] SoundI::release                          : Metal1.mp3 (000001A03AB7A3B8)
+[LOG] SoundI::release                          : Metal5.mp3 (000001A03AB7B738)
+[LOG] SoundI::release                          : Wood1.mp3 (000001A03AB7A078)
+[LOG] SoundI::release                          : Metal3.mp3 (000001A03AB7B0B8)
+[LOG] SoundI::release                          : Wood2.mp3 (000001A03AB7A218)
+[LOG] SoundI::release                          : Wood3.mp3 (000001A03AB7B598)
+[LOG] SoundI::release                          : Carpet5.mp3 (000001A03AB7A898)
+[LOG] SoundI::release                          : Carpet1.mp3 (000001A03AB7B258)
+[LOG] SoundI::release                          : Carpet4.mp3 (000001A03AB7BA78)
 [LOG] Thread::callback                         : FMOD Studio update thread finished.
 [LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] ProfileClient::markForDead               : Closing client connection
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] Thread::callback                         : FMOD profiler thread (send) finished.
-[LOG] FMOD_OS_Net_Read                         : Interrupted.[LOG] ProfileClient::recvThreadLoopFunction    : Socket disconnected
-[LOG] Thread::callback                         : FMOD profiler thread (recv) finished.
 [LOG] Thread::callback                         : FMOD Studio sample load thread finished.
 [LOG] LiveUpdate::release                      : 
 [LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
 [LOG] Thread::callback                         : FMOD stream thread finished.
 [LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] Profile::disconnectAll                   : Profiler disconnecting all clients
-[LOG] SystemI::close                           : Closed.
-[LOG] Thread::callback                         : FMOD Studio bank load thread finished.
-[LOG] Thread::callback                         : FMOD Studio sample load thread finished.
-[LOG] LiveUpdate::release                      : 
-[LOG] LiveUpdate::reset                        : Reset connection (reason Disconnected)
-[LOG] Thread::callback                         : FMOD stream thread finished.
-[LOG] Thread::callback                         : FMOD mixer thread finished.
 [LOG] SystemI::close                           : Closed.

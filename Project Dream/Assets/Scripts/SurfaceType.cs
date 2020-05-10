@@ -5,7 +5,7 @@ using UnityEngine;
 public class SurfaceType : MonoBehaviour
 {
 
-    enum SurfaceTypes { Stone, Carpet, Wood};
+    enum SurfaceTypes { Wood, Stone, Carpet, Metal, Sand};
     
     [SerializeField]
     SurfaceTypes thisSurface;
@@ -26,7 +26,11 @@ public class SurfaceType : MonoBehaviour
 
    public string getType()
     {
-        if(thisSurface == SurfaceTypes.Stone)
+        if(thisSurface == SurfaceTypes.Wood)
+        {
+            return "Wood";
+        }
+        else if (thisSurface == SurfaceTypes.Stone)
         {
             return "Stone";
         }
@@ -34,9 +38,13 @@ public class SurfaceType : MonoBehaviour
         {
             return "Carpet";
         }
-        else if (thisSurface == SurfaceTypes.Wood)
+        else if (thisSurface == SurfaceTypes.Metal)
         {
-            return "Wood";
+            return "Metal";
+        }
+        else if (thisSurface == SurfaceTypes.Sand)
+        {
+            return "Sand";
         }
 
         return "idk";
