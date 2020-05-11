@@ -5,7 +5,7 @@
 			<value>cuttingFootstepsHere</value>
 		</property>
 		<property name="outputFormat">
-			<value>1</value>
+			<value>0</value>
 		</property>
 		<relationship name="folder">
 			<destination>{ecc89183-9339-4cb2-83db-79dbe96f96fd}</destination>
@@ -68,9 +68,6 @@
 	</object>
 	<object class="MarkerTrack" id="{284968b3-15ac-4bfc-a7bb-94a9d95c8c2c}" />
 	<object class="GroupTrack" id="{16cef980-3197-4387-bb12-b14b1d347438}">
-		<relationship name="modules">
-			<destination>{fee829c6-e0b9-41e6-bbca-5817e58e1d96}</destination>
-		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{9c0076f4-d62e-47c1-a4e9-bfde2735000d}</destination>
 		</relationship>
@@ -88,11 +85,7 @@
 			<destination>{f5774238-a513-419b-a426-ed0164288727}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{8f1fadd7-6714-46de-be0e-07960ea5f602}">
-		<relationship name="modules">
-			<destination>{fee829c6-e0b9-41e6-bbca-5817e58e1d96}</destination>
-		</relationship>
-	</object>
+	<object class="Timeline" id="{8f1fadd7-6714-46de-be0e-07960ea5f602}" />
 	<object class="EventMixerMaster" id="{64654f98-a6cd-4cd3-94f3-499621e4e524}">
 		<relationship name="effectChain">
 			<destination>{8c0dc423-4434-40d4-ae40-3f2d885a835a}</destination>
@@ -110,20 +103,6 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b152d588-2567-415f-a164-57f469b18ccb}" />
-	<object class="SingleSound" id="{fee829c6-e0b9-41e6-bbca-5817e58e1d96}">
-		<property name="length">
-			<value>0.16995073891625617</value>
-		</property>
-		<property name="timelockedOffset">
-			<value>0.73135218082922782</value>
-		</property>
-		<property name="looping">
-			<value>true</value>
-		</property>
-		<relationship name="audioFile">
-			<destination>{e2cb17f1-1ba2-4eaf-88d1-029a487b0bcd}</destination>
-		</relationship>
-	</object>
 	<object class="EventMixerGroup" id="{9c0076f4-d62e-47c1-a4e9-bfde2735000d}">
 		<property name="volume">
 			<value>-80</value>

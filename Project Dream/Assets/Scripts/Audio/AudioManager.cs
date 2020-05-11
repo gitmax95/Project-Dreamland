@@ -7,11 +7,10 @@ public class AudioManager : MonoBehaviour
     PlayerState playerState;
 
     [SerializeField]
-    [FMODUnity.EventRef] string[] JumpingEvent = { "event:/Jumping/JumpingWood","event:/Jumping/JumpingStone","event:/Jumping/JumpingCarpet","event:/Jumping/JumpingMetal" };
-
+    [FMODUnity.EventRef] string[] JumpingEvent = new string[4];
 
     [SerializeField]
-    [FMODUnity.EventRef] string[] LandingEvent = { "event:/Landing/LandingWood", "event:/Landing/LandingStone", "event:/Landing/LandingCarpet", "event:/Landing/LandingMetal" };
+    [FMODUnity.EventRef] string[] LandingEvent = new string[4];
 
     //Walking Event
     [FMODUnity.EventRef]
@@ -36,6 +35,18 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
 
+        JumpingEvent[0] = "event:/Jumping/JumpingWood";
+        JumpingEvent[1] = "event:/Jumping/JumpingStone";
+        JumpingEvent[2] = "event:/Jumping/JumpingCarpet";
+        JumpingEvent[3] = "event:/Jumping/JumpingMetal";
+        JumpingEvent[4] = "event:/Jumping/JumpingSand";
+
+        LandingEvent[0] = "event:/Landing/LandingWood";
+        LandingEvent[1] = "event:/Landing/LandingStone";
+        LandingEvent[2] = "event:/Landing/LandingCarpet";
+        LandingEvent[3] = "event:/Landing/LandingMetal";
+        LandingEvent[4] = "event:/Landing/LandingSand";
+
         playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
 
 
@@ -47,11 +58,11 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-       
 
-        //PlayJumpSFX();
+
+        PlayJumpSFX();
         PlayWalkingSFX();
-        //PlayLandingSFX();
+        PlayLandingSFX();
         //PlaySlidingSFX();
 
         soundEvent.setParameterByName("PlayerMSFX", parameterValue);
@@ -108,6 +119,10 @@ public class AudioManager : MonoBehaviour
                     FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent[3], GetComponent<Transform>().position);
                     onGround = false;
                     break;
+                case 4:
+                    FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent[4], GetComponent<Transform>().position);
+                    onGround = false;
+                    break;
 
             }           
         }
@@ -153,7 +168,10 @@ public class AudioManager : MonoBehaviour
                         FMODUnity.RuntimeManager.PlayOneShot(LandingEvent[3], GetComponent<Transform>().position);
                         inAir = false;
                         break;
-
+                    case 4:
+                        FMODUnity.RuntimeManager.PlayOneShot(LandingEvent[4], GetComponent<Transform>().position);
+                        inAir = false;
+                        break;
                 }
 
             }
