@@ -7,10 +7,10 @@ public class AudioManager : MonoBehaviour
     PlayerState playerState;
 
     [SerializeField]
-    [FMODUnity.EventRef] string[] JumpingEvent = new string[4];
+    [FMODUnity.EventRef] string[] JumpingEvent = { "event:/Jumping/JumpingWood", "event:/Jumping/JumpingStone", "event:/Jumping/JumpingCarpet", "event:/Jumping/JumpingMetal", "event:/Jumping/JumpingSand"};
 
     [SerializeField]
-    [FMODUnity.EventRef] string[] LandingEvent = new string[4];
+    [FMODUnity.EventRef] string[] LandingEvent = { "event:/Landing/LandingWood", "event:/Landing/LandingStone", "event:/Landing/LandingCarpet", "event:/Landing/LandingMetal", "event:/Landing/LandingSand"};
 
     //Walking Event
     [FMODUnity.EventRef]
@@ -35,17 +35,17 @@ public class AudioManager : MonoBehaviour
     void Start()
     {
 
-        JumpingEvent[0] = "event:/Jumping/JumpingWood";
-        JumpingEvent[1] = "event:/Jumping/JumpingStone";
-        JumpingEvent[2] = "event:/Jumping/JumpingCarpet";
-        JumpingEvent[3] = "event:/Jumping/JumpingMetal";
-        JumpingEvent[4] = "event:/Jumping/JumpingSand";
+        //JumpingEvent[0] = "event:/Jumping/JumpingWood";
+        //JumpingEvent[1] = "event:/Jumping/JumpingStone";
+        //JumpingEvent[2] = "event:/Jumping/JumpingCarpet";
+        //JumpingEvent[3] = "event:/Jumping/JumpingMetal";
+        //JumpingEvent[4] = "event:/Jumping/JumpingSand";
 
-        LandingEvent[0] = "event:/Landing/LandingWood";
-        LandingEvent[1] = "event:/Landing/LandingStone";
-        LandingEvent[2] = "event:/Landing/LandingCarpet";
-        LandingEvent[3] = "event:/Landing/LandingMetal";
-        LandingEvent[4] = "event:/Landing/LandingSand";
+        //LandingEvent[0] = "event:/Landing/LandingWood";
+        //LandingEvent[1] = "event:/Landing/LandingStone";
+        //LandingEvent[2] = "event:/Landing/LandingCarpet";
+        //LandingEvent[3] = "event:/Landing/LandingMetal";
+        //LandingEvent[4] = "event:/Landing/LandingSand";
 
         playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
 
