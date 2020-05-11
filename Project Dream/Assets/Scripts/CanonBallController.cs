@@ -18,6 +18,11 @@ public class CanonBallController : MonoBehaviour
         rb.velocity = transform.right * speed;
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Destroy(this.gameObject);
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(this.gameObject);

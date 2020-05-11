@@ -77,4 +77,4 @@ MonoBehaviour:
   shootingPoint: {fileID: 171100234584777973}
   canonBall: {fileID: 1843768676554590516, guid: e323c0a343a676c4ea61addb1c04e362,
     type: 3}
-  Timer: 1
+  Timer: 3
