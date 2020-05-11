@@ -47,7 +47,6 @@ public class LucidState : MonoBehaviour
         else if (lucidTimer > lucidTime)
         {
             isLucid = false;
-
         }
     }
 
