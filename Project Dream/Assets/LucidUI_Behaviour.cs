@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class LucidUI_Behaviour : MonoBehaviour
 {
+    LucidState lucidState;
+
     public Image lucidMoon;
 
     Image lucidOrb1;
@@ -34,16 +36,24 @@ public class LucidUI_Behaviour : MonoBehaviour
         lucidOrb3 = GameObject.Find("LucidOrb3").GetComponent<Image>();
 
         startColor = playerAura.color;
+
+        lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
     }
 
     
     void Update()
     {
-        DebugLucidOrb();
+        currentCharges = lucidState.lucidCharges; //Connect Lucid Orbs with current Lucid Charges
+
+        if(moonFilled && lucidState.isLucid) {
+            lucidMoon.fillAmount = (lucidState.lucidTime / 10 - lucidState.lucidTimer / 10);
+        }
+
+        //DebugLucidOrb(); //Used for Keyboard Debug of Lucid Orbs
 
         LucidOrbState();
 
-        if(lucidMoon.fillAmount > 0) {
+        if(lucidState.isLucid) {
             playerAura.color = targetColor;
         } else {
             playerAura.color = startColor;
@@ -53,13 +63,13 @@ public class LucidUI_Behaviour : MonoBehaviour
 
     public void RefillMoon()
     {
-        if (lucidMoon.fillAmount < 1) {
+        if (lucidMoon.fillAmount < 1 && lucidState.isLucid) {
             lucidMoon.fillAmount += fillIncrement * Time.deltaTime;
         }
 
         if(lucidMoon.fillAmount >= 1) {
             moonFilled = true;
-        } else {
+        } else if (lucidMoon.fillAmount <= 0f || lucidState.isLucid == false){
             moonFilled = false;
         }
     }

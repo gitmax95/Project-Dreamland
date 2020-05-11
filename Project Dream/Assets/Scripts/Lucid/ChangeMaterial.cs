@@ -11,7 +11,7 @@ public class ChangeMaterial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ComponentUI = GameObject.Find("UI_Icon");
+        ComponentUI = GameObject.Find("LucidIcon");
 
         PlatformNormal = Resources.Load<Material>("Materials/Platform_PlaceHolder");
         PlatformLucid = Resources.Load<Material>("Materials/Torch_PlaceHolder");

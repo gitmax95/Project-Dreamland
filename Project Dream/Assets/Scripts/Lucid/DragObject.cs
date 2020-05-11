@@ -20,7 +20,7 @@ public class DragObject : MonoBehaviour
 
     void Start()
     {
-        ComponentUI = GameObject.Find("UI_Icon");
+        ComponentUI = GameObject.Find("LucidIcon");
 
         platform = gameObject.transform.parent.gameObject;
         transPosition = platform.transform.position;
