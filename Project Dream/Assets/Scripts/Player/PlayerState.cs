@@ -257,6 +257,7 @@ public class PlayerState : MonoBehaviour
         {
             isTouchingGround = true;
             animator.SetBool("isGrounded", true);
+            
         }
     }
     private void OnCollisionStay2D(Collision2D collision)

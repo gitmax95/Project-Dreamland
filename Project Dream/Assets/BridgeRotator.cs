@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BridgeRotator : MonoBehaviour {
 
-    bool rotateBridge;
+    public bool rotateBridge;
     float timeCount;
     float timeCount_Handle;
     public float rotationSpeed_Bridge;

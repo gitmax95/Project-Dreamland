@@ -1,5 +1,23 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9149369849246252528
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231540816566223
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-9104516656632067837
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15,7 +33,7 @@ MonoBehaviour:
   Path: event:/Music/Jumping
   guid: 055fe94123a3d845880645f6ab21bb04
   Banks:
-  - {fileID: 3505831004157890421}
+  - {fileID: 0}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -23,6 +41,192 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2473
+--- !u!114 &-9032547629686565470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637233581175830988
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-9025952415852823800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient2
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Ambient2
+  guid: 25d1224ee129b747b1cfa76c559e59d4
+  Banks: []
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters:
+  - {fileID: 0}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-8803241929905780226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247152952618425
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8609052477945441021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-8562985225677684107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231482419287302
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8509733689751044976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247902541088715
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8252618492357865765
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230707358714620
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-8222029078247706599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637238466409574474
+  LoadResult: 0
+  FileSizes:
+  - Name: 
+    Value: 1078
+  Exists: 1
+--- !u!114 &-7992678048216863607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637246495036570040
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7988994123629464991
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232324071203366
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-7921375726427580803
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38,7 +242,7 @@ MonoBehaviour:
   Path: event:/Music/New Event
   guid: 076b7fe06741de42a20dcd7d6900e441
   Banks:
-  - {fileID: 3505831004157890421}
+  - {fileID: 0}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -46,6 +250,208 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 32052
+--- !u!114 &-7786129488432572855
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231629748379920
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7753247634547704911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247136623792917
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7686640512934745642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247135553895172
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7471307507106459714
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231481759008526
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-7017282466698138168
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232364027978100
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6970818163475121812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-6583969264136065461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247126491048767
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-6233352982949435672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Sliding
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Sliding
+  guid: 0e15cc49efdecd4f85e4e0a393e23003
+  Banks:
+  - {fileID: 1495039045702470779}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 600
+--- !u!114 &-6212268037491026430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231479564509262
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-5886239063366730216
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247903060412529
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-5765577022122643430
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637245657001483230
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-5512337019056673540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -60,7 +466,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637230607257180718
+  lastModified: 637237678556294632
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -82,6 +488,333 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-5089456722960046006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-5048616881149238502
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637233293717444071
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4982435543105371220
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637238464417879140
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4865879896129492780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248246883985051
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4785202064118452767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-4769759201606672212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Jumping
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Jumping
+  guid: 055fe94123a3d845880645f6ab21bb04
+  Banks:
+  - {fileID: 1495039045702470779}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2473
+--- !u!114 &-4734020569749088410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637238388012727689
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4647953537486252447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637246455202849282
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4607359952730337935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-4531045219694442536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637238462557883920
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4420587639602100904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637233581089361994
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4398485366934930501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637238384573200300
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4348496936844860150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.strings.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
+  SubDir: 
+  lastModified: 637238466409574474
+  LoadResult: 0
+  FileSizes:
+  - Name: Desktop
+    Value: 1078
+  Exists: 0
+--- !u!114 &-4256114634584007399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248138825398748
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4147561417832876532
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232343232704559
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-4015190303985494604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient2/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
+--- !u!114 &-3944224351577229160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637233296040818945
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3706911440898538899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232364161125332
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-3668841962458021010
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,6 +830,24 @@ MonoBehaviour:
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637227328656279877
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-3436758457731374673
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637246482259696999
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -118,6 +869,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-3099609461631418631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637238466409514632
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-3091802052949322841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +902,7 @@ MonoBehaviour:
   Path: event:/Music/Landing
   guid: e6d595e7d5e0db47a6e9c4c59ca16d6f
   Banks:
-  - {fileID: 3505831004157890421}
+  - {fileID: 0}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -141,6 +910,256 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1125
+--- !u!114 &-3065948510940780403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248053109671670
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2864838643335196230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247133980259765
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2767097349392571437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232361941220325
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2446385044159629339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Ambient1
+  guid: 22cd5ca71cb40a42b1d2329201e0491b
+  Banks:
+  - {fileID: 1495039045702470779}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 0}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &-2303705841832334620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637233581755350524
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &-2293411262940556322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247126566918208
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2266405269554536734
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231477117109100
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2164743825231338461
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248070118875133
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-2083483289085999895
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247155401733056
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1886713972557991246
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Walking
+  guid: bda9fb5474863c459a4fa049c0afa9a9
+  Banks:
+  - {fileID: -3099609461631418631}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
+--- !u!114 &-1886703629801071034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Jumping
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Jumping
+  guid: 055fe94123a3d845880645f6ab21bb04
+  Banks:
+  - {fileID: -3099609461631418631}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2473
+--- !u!114 &-1873062684262693851
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637244654487388151
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1793802428485334813
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231482730723150
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1700148749047392006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +1178,29 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-1237204090060929253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Landing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Landing
+  guid: e6d595e7d5e0db47a6e9c4c59ca16d6f
+  Banks:
+  - {fileID: -3099609461631418631}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1125
 --- !u!114 &-1228036122147594851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -176,7 +1218,7 @@ MonoBehaviour:
   lastModified: 637230607257180718
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-1007381115121152923
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -209,12 +1251,88 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637227480821049335
+  lastModified: 637248248580549459
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 828
+    Value: 1716
   Exists: 1
+--- !u!114 &-429387157233682744
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music
+  guid: 076b7fe06741de42a20dcd7d6900e441
+  Banks:
+  - {fileID: 1495039045702470779}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 32052
+--- !u!114 &-309995687048774080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247901329991955
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-216227160674819888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient2/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &-193262967985370997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637246483167281619
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -228,19 +1346,106 @@ MonoBehaviour:
   m_Name: FMODStudioCache
   m_EditorClassIdentifier: 
   EditorBanks:
-  - {fileID: -483526786447783215}
-  - {fileID: 3505831004157890421}
+  - {fileID: -4348496936844860150}
+  - {fileID: -3099609461631418631}
+  - {fileID: -1873062684262693851}
+  - {fileID: -5765577022122643430}
+  - {fileID: 3970895249879734524}
+  - {fileID: 8796865054252743221}
+  - {fileID: 7465836244389873391}
+  - {fileID: -4647953537486252447}
+  - {fileID: -3436758457731374673}
+  - {fileID: -193262967985370997}
+  - {fileID: -7992678048216863607}
+  - {fileID: 5784182623402811708}
+  - {fileID: 3360534160621962915}
+  - {fileID: -6583969264136065461}
+  - {fileID: -2293411262940556322}
+  - {fileID: 5401836896777520304}
+  - {fileID: -2864838643335196230}
+  - {fileID: 2783644458364656390}
+  - {fileID: -7686640512934745642}
+  - {fileID: -7753247634547704911}
+  - {fileID: 2681503697584033799}
+  - {fileID: 3298087723433284195}
+  - {fileID: 5451568376172345399}
+  - {fileID: -8803241929905780226}
+  - {fileID: 7416520903623577357}
+  - {fileID: -2083483289085999895}
+  - {fileID: 1214940853869719845}
+  - {fileID: 5659812227281247546}
+  - {fileID: 8202278890373787335}
+  - {fileID: 6993896752722855848}
+  - {fileID: -309995687048774080}
+  - {fileID: 8149037166659137249}
+  - {fileID: -8509733689751044976}
+  - {fileID: -5886239063366730216}
+  - {fileID: 8274614696235443896}
+  - {fileID: 7557988633813206698}
+  - {fileID: 5022516354293446846}
+  - {fileID: 4464273175911285903}
+  - {fileID: 786002722580433006}
+  - {fileID: 3488238913804969661}
+  - {fileID: 8718178672130929674}
+  - {fileID: -3065948510940780403}
+  - {fileID: -2164743825231338461}
+  - {fileID: 3323888696610283539}
+  - {fileID: 6031272223430085002}
+  - {fileID: -4256114634584007399}
+  - {fileID: 1623588724004997339}
+  - {fileID: 6476595609760265883}
+  - {fileID: -4865879896129492780}
+  - {fileID: 2920644449195972509}
+  - {fileID: 6762031126374970412}
   EditorEvents:
-  - {fileID: -9104516656632067837}
-  - {fileID: -7921375726427580803}
-  - {fileID: -3091802052949322841}
-  EditorParameters: []
+  - {fileID: -1886703629801071034}
+  - {fileID: 6823534998247420163}
+  - {fileID: 0}
+  - {fileID: 6128716512165511223}
+  - {fileID: -1886713972557991246}
+  - {fileID: -1237204090060929253}
+  EditorParameters:
+  - {fileID: 2627013676128097946}
   MasterBanks:
-  - {fileID: 3505831004157890421}
+  - {fileID: -3099609461631418631}
   StringsBanks:
   - {fileID: -483526786447783215}
-  stringsBankWriteTime: 637227480821049335
+  stringsBankWriteTime: 637248248580549459
   cacheVersion: 3
+--- !u!114 &17714794562873945
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &141456030439820986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &147329723755166859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -261,6 +1466,315 @@ MonoBehaviour:
   - Name: Desktop
     Value: 828
   Exists: 1
+--- !u!114 &161016915654356306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &287090024716677898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231483799851069
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &786002722580433006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248012420330541
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &934247426704770864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &1186824046506460505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637230705037328109
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1214940853869719845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247155600173733
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1258985097994549573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232366951560529
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1495039045702470779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637238466409514632
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &1623588724004997339
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248193326407663
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1699213921114442005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231477755120485
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1699651310932053056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232351233247394
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1827183189720612856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232371994828447
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &1978886105570030815
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambient1/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
+--- !u!114 &2071334900499611664
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232371725216278
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2107966818095059861
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232379443510220
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2184576390493774308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Ambient1
+  guid: 22cd5ca71cb40a42b1d2329201e0491b
+  Banks:
+  - {fileID: 0}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: 0}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &2322860745744819330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232364319229712
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &2363301096002850850
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,6 +1790,24 @@ MonoBehaviour:
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637227480821133685
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2430088593305113170
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232378018025509
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -302,7 +1834,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 32052
---- !u!114 &3505831004157890421
+--- !u!114 &2627013676128097946
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Parameters Player Mech
+  m_EditorClassIdentifier: 
+  Name: Parameters Player Mech
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 0
+--- !u!114 &2681503697584033799
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,10 +1865,379 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
   SubDir: 
-  lastModified: 637231524933304623
+  lastModified: 637247141616652372
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2707247736350269701
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Jumping
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Jumping
+  guid: 055fe94123a3d845880645f6ab21bb04
+  Banks:
+  - {fileID: 0}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 2473
+--- !u!114 &2719060661443905338
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: Parameters Player Mech
+  m_EditorClassIdentifier: 
+  Name: Parameters Player Mech
+  Min: 0
+  Max: 3
+  Default: 0
+  Exists: 1
+--- !u!114 &2766274400689316799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231631149547095
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2783644458364656390
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247134086772765
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2849438356532879200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232370125454148
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2920644449195972509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248247338952291
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &2960647313284465255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Landing
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Landing
+  guid: e6d595e7d5e0db47a6e9c4c59ca16d6f
+  Banks:
+  - {fileID: 1495039045702470779}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 1125
+--- !u!114 &3118303250399052766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232322704327628
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3298087723433284195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247142465255735
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3323888696610283539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248070824719244
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3326170686315451252
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231647146606468
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3360534160621962915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637246503083065701
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3389219475568813352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232341050177556
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3488238913804969661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248013781729230
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3758172578277171722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231659212304483
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3765407558820593896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637238464417879140
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &3792684760770538609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232349654840578
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3842395165984350957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637232369855427948
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &3852658920576262834
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637233259441327944
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
+--- !u!114 &3970895249879734524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637245657779801594
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &4025164206849608100
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -343,6 +2261,310 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 2473
+--- !u!114 &4350347744992781953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637231475894533744
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &4464273175911285903
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248008597105104
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &4634976131630215482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637233274241478997
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5022516354293446846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247914294132490
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5303638905680810400
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Walking
+  guid: bda9fb5474863c459a4fa049c0afa9a9
+  Banks:
+  - {fileID: 1495039045702470779}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
+--- !u!114 &5371817363626016904
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637237678556294632
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5401836896777520304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247131942011753
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5451568376172345399
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247142599330525
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5659812227281247546
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247190945955775
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &5678108927191489070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/SFX/Walking
+  m_EditorClassIdentifier: 
+  Path: event:/SFX/Walking
+  guid: bda9fb5474863c459a4fa049c0afa9a9
+  Banks:
+  - {fileID: 0}
+  IsStream: 0
+  Is3D: 0
+  IsOneShot: 1
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 400
+--- !u!114 &5784182623402811708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637246499837795554
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6031272223430085002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248135340424111
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6091491606757161188
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637238464034674845
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6128716512165511223
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Ambient/Ambient1
+  m_EditorClassIdentifier: 
+  Path: event:/Ambient/Ambient1
+  guid: 22cd5ca71cb40a42b1d2329201e0491b
+  Banks:
+  - {fileID: -3099609461631418631}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 1
+  Parameters:
+  - {fileID: -6970818163475121812}
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 0
+--- !u!114 &6476595609760265883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248194194760635
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &6762031126374970412
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248248580479634
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &6771693820293247155
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -366,6 +2588,47 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 1125
+--- !u!114 &6823534998247420163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceb653cd98e289a4e8697a1af55201f2, type: 3}
+  m_Name: event:/Music/Music
+  m_EditorClassIdentifier: 
+  Path: event:/Music/Music
+  guid: 076b7fe06741de42a20dcd7d6900e441
+  Banks:
+  - {fileID: -3099609461631418631}
+  IsStream: 1
+  Is3D: 0
+  IsOneShot: 0
+  Parameters: []
+  MinDistance: 0
+  MaxDistance: 0
+  Length: 32052
+--- !u!114 &6993896752722855848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247310886080922
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &7157793599262376004
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -402,3 +2665,147 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &7416520903623577357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247154998577255
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7465836244389873391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637246454298800992
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &7557988633813206698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247903610675670
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8149037166659137249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247902381999919
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8202278890373787335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247309033197245
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8274614696235443896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637247903140103617
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8718178672130929674
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248015284999524
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &8796865054252743221
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637245658223161172
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0

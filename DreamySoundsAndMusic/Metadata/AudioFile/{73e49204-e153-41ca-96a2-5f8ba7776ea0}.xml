@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{73e49204-e153-41ca-96a2-5f8ba7776ea0}">
+		<property name="assetPath">
+			<value>Metal2.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>44.0999985</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>0.4179591836734694</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e829a7df-3f2d-493a-9002-e2b70a3fb248}</destination>
+		</relationship>
+	</object>
+</objects>

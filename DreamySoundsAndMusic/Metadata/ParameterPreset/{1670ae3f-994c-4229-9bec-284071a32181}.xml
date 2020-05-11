@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{1670ae3f-994c-4229-9bec-284071a32181}">
+		<property name="name">
+			<value>Carpet</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4a0618a5-9504-4528-acf3-db89f0bb287b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{6c8219d6-3ef9-4f9e-8316-e4d184fbc609}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{6c8219d6-3ef9-4f9e-8316-e4d184fbc609}">
+		<property name="initialValue">
+			<value>0</value>
+		</property>
+		<property name="isExposedRecursively">
+			<value>false</value>
+		</property>
+	</object>
+</objects>
