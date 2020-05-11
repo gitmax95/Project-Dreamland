@@ -626,6 +626,8 @@ MonoBehaviour:
   isGrounded: 0
   isTouchingWall: 0
   isWallSliding: 0
+  isDying: 0
+  isDead: 0
   hasSpikedShoes: 0
   touchingLeftWall: 0
   touchingRightWall: 0
@@ -653,7 +655,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21fb1bfdc6617344b9530a86f5f5ea3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: 10
+  animationFinish: 0
+  playerHealth: 3
 --- !u!61 &310112973808920565
 BoxCollider2D:
   m_ObjectHideFlags: 0

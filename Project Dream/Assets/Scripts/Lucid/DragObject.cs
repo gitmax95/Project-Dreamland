@@ -15,7 +15,8 @@ public class DragObject : MonoBehaviour
 
     GameObject platform;
 
-    public float movementRange;
+    public float movementRangeX;
+    public float movementRangeY;
 
     void Start()
     {
@@ -39,54 +40,54 @@ public class DragObject : MonoBehaviour
         if (ComponentUI.GetComponent<LucidState>().isLucid)
         {
             if (gameObject.name.EndsWith("X")
-            && (platform.transform.position.x <= transPosition.x + movementRange && platform.transform.position.x >= transPosition.x - movementRange))
+            && (platform.transform.position.x <= transPosition.x + movementRangeX && platform.transform.position.x >= transPosition.x - movementRangeX))
             {
                 platform.transform.position = new Vector3(GetMouseWorldPos().x + mouseOffset.x, platform.transform.position.y, GetMouseWorldPos().z + mouseOffset.z);
 
-                if (platform.transform.position.x > transPosition.x + movementRange)
+                if (platform.transform.position.x > transPosition.x + movementRangeX)
                 {
-                    platform.transform.position = new Vector3(transPosition.x + movementRange, platform.transform.position.y, platform.transform.position.z);
+                    platform.transform.position = new Vector3(transPosition.x + movementRangeX, platform.transform.position.y, platform.transform.position.z);
                 }
-                if (platform.transform.position.x < transPosition.x - movementRange)
+                if (platform.transform.position.x < transPosition.x - movementRangeX)
                 {
-                    platform.transform.position = new Vector3(transPosition.x - movementRange, platform.transform.position.y, platform.transform.position.z);
+                    platform.transform.position = new Vector3(transPosition.x - movementRangeX, platform.transform.position.y, platform.transform.position.z);
                 }
             }
             else if (gameObject.name.EndsWith("Y")
-                 && (platform.transform.position.y <= transPosition.y + movementRange && platform.transform.position.y >= transPosition.y - movementRange))
+                 && (platform.transform.position.y <= transPosition.y + movementRangeY && platform.transform.position.y >= transPosition.y - movementRangeY))
             {
                 platform.transform.position = new Vector3(platform.transform.position.x, GetMouseWorldPos().y + mouseOffset.y, GetMouseWorldPos().z + mouseOffset.z);
 
-                if (platform.transform.position.y > transPosition.y + movementRange)
+                if (platform.transform.position.y > transPosition.y + movementRangeY)
                 {
-                    platform.transform.position = new Vector3(platform.transform.position.x, transPosition.y + movementRange, platform.transform.position.z);
+                    platform.transform.position = new Vector3(platform.transform.position.x, transPosition.y + movementRangeY, platform.transform.position.z);
                 }
-                if (platform.transform.position.y < transPosition.y - movementRange)
+                if (platform.transform.position.y < transPosition.y - movementRangeY)
                 {
-                    platform.transform.position = new Vector3(platform.transform.position.x, transPosition.y - movementRange, platform.transform.position.z);
+                    platform.transform.position = new Vector3(platform.transform.position.x, transPosition.y - movementRangeY, platform.transform.position.z);
                 }
             }
             else if (gameObject.name.EndsWith("Any")
-                 && (platform.transform.position.x <= transPosition.x + movementRange && platform.transform.position.x >= transPosition.x - movementRange)
-                 && (platform.transform.position.y <= transPosition.y + movementRange && platform.transform.position.y >= transPosition.y - movementRange))
+                 && (platform.transform.position.x <= transPosition.x + movementRangeX && platform.transform.position.x >= transPosition.x - movementRangeX)
+                 && (platform.transform.position.y <= transPosition.y + movementRangeY && platform.transform.position.y >= transPosition.y - movementRangeY))
             {
                 platform.transform.position = GetMouseWorldPos() + mouseOffset;
 
-                if (platform.transform.position.x > transPosition.x + movementRange)
+                if (platform.transform.position.x > transPosition.x + movementRangeX)
                 {
-                    platform.transform.position = new Vector3(transPosition.x + movementRange, platform.transform.position.y, platform.transform.position.z);
+                    platform.transform.position = new Vector3(transPosition.x + movementRangeX, platform.transform.position.y, platform.transform.position.z);
                 }
-                if (platform.transform.position.x < transPosition.x - movementRange)
+                if (platform.transform.position.x < transPosition.x - movementRangeX)
                 {
-                    platform.transform.position = new Vector3(transPosition.x - movementRange, platform.transform.position.y, platform.transform.position.z);
+                    platform.transform.position = new Vector3(transPosition.x - movementRangeX, platform.transform.position.y, platform.transform.position.z);
                 }
-                if (platform.transform.position.y > transPosition.y + movementRange)
+                if (platform.transform.position.y > transPosition.y + movementRangeY)
                 {
-                    platform.transform.position = new Vector3(platform.transform.position.x, transPosition.y + movementRange, platform.transform.position.z);
+                    platform.transform.position = new Vector3(platform.transform.position.x, transPosition.y + movementRangeY, platform.transform.position.z);
                 }
-                if (platform.transform.position.y < transPosition.y - movementRange)
+                if (platform.transform.position.y < transPosition.y - movementRangeY)
                 {
-                    platform.transform.position = new Vector3(platform.transform.position.x, transPosition.y - movementRange, platform.transform.position.z);
+                    platform.transform.position = new Vector3(platform.transform.position.x, transPosition.y - movementRangeY, platform.transform.position.z);
                 }
             }
         }

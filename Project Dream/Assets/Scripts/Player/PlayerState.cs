@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
+    PlayerHealthSystem playerHealthScript;
     BasicMovement_Player playerMovement;
     ControllerStates controllerStates;
 
     PolygonCollider2D playerCollider;
+
+     
 
     public Animator animator;
 
@@ -25,22 +28,29 @@ public class PlayerState : MonoBehaviour
     public bool isTouchingWall; //is Touching && IS FACING WALL!
     //public bool onWall;
     public bool isWallSliding;
+    public bool isDying;
+    public bool isDead;
     public bool hasSpikedShoes;  //Testing purposes
 
     public bool touchingLeftWall;
     public bool touchingRightWall;
 
     float runDuration;
+    
 
     private void Start()
     {
         playerMovement = GameObject.Find("PlayerChar").GetComponent<BasicMovement_Player>();
         controllerStates = GameObject.Find("InputManager").GetComponent<ControllerStates>();
+        playerHealthScript = GameObject.Find("PlayerChar").GetComponent<PlayerHealthSystem>();
 
         isFacingRight = true;
 
         touchingLeftWall = false;
         touchingRightWall = false;
+
+        isDying = false;
+        isDead = false;
     }
     void Update()
     {
@@ -60,6 +70,9 @@ public class PlayerState : MonoBehaviour
 
         AirStrafeState();
 
+        DyingState();
+
+        //DeadState();
         //WallHangState();
 
     }
@@ -212,6 +225,26 @@ public class PlayerState : MonoBehaviour
             animator.SetBool("isWallSliding", false);
         }
     }
+
+    private void DyingState()
+    {
+        if (playerHealthScript.playerHealth <= 0)
+        {
+            isDying = true;
+            animator.SetBool("isDying", true);
+        }
+    }
+
+    //private void DeadState()
+    //{
+    //    if (playerHealthScript.animationFinish)
+    //    {
+    //        isDying = false;
+    //        animator.SetBool("isDying", false);
+    //        isDead = true;
+    //        animator.SetBool("isDead", true);
+    //    }
+    //}
 
     private void AirStrafeState()
     {
