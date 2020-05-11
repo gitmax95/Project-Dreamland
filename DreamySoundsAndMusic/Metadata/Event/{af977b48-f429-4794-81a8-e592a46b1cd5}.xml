@@ -97,7 +97,7 @@
 	<object class="MixerBusPanner" id="{fec3f5c4-96e3-4dd5-871c-c0ba079f1035}" />
 	<object class="SingleSound" id="{4c531a9e-98fb-499a-bc42-d99083aff07c}">
 		<property name="length">
-			<value>0.46089583333333334</value>
+			<value>1.46</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{2a5dd0e1-6f66-4833-b4cb-15a04bea94ed}</destination>
@@ -140,7 +140,11 @@
 	</object>
 	<object class="MixerBusPanner" id="{54ae3391-bf80-48fb-b90c-913a09f59406}" />
 	<object class="MixerBusFader" id="{0a26a4f4-52cb-4c9a-ac1e-db41269c4258}" />
-	<object class="SpatialiserEffect" id="{db6bad6f-4fe7-4b2f-9e1b-af50b9bda31a}" />
+	<object class="SpatialiserEffect" id="{db6bad6f-4fe7-4b2f-9e1b-af50b9bda31a}">
+		<property name="maximumDistance">
+			<value>13</value>
+		</property>
+	</object>
 	<object class="PitchShifterEffect" id="{0f0e9159-8755-4cd5-9a51-81bddfa250ab}">
 		<property name="pitch">
 			<value>1.00000012</value>
