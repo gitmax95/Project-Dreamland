@@ -278,7 +278,7 @@ MonoBehaviour:
   Path: event:/Jumping/JumpingWood
   guid: 055fe94123a3d845880645f6ab21bb04
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -360,7 +360,7 @@ MonoBehaviour:
   Path: event:/SFX/Saw
   guid: 6d68013c5bba03438ce36e0f8afe4b98
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -401,7 +401,7 @@ MonoBehaviour:
   Path: event:/Jumping/JumpingStone
   guid: d31727bee06f2445a52664e971b480b8
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -442,7 +442,7 @@ MonoBehaviour:
   Path: event:/Jumping/JumpingMetal
   guid: 2ddefee712877d42adc04597acc8e51a
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -450,6 +450,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 650
+--- !u!114 &-7144176144932237498
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/walk/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 6
+  Default: 4
+  Exists: 1
 --- !u!114 &-7017282466698138168
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -518,7 +535,7 @@ MonoBehaviour:
   Path: event:/SFX/Sliding
   guid: 0e15cc49efdecd4f85e4e0a393e23003
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -526,6 +543,24 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 600
+--- !u!114 &-6334678235494270514
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637248326120929135
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &-6233352982949435672
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -671,7 +706,7 @@ MonoBehaviour:
   Path: event:/SFX/SpikeWallIn
   guid: d0315abb6b7dcd4b871db546a22805a3
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -893,7 +928,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637248317915199137
+  lastModified: 637248264740764476
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -1095,7 +1130,7 @@ MonoBehaviour:
   Path: event:/SFX/SpikeCeiling
   guid: 487b97af29f4944781a8e592a46b1cd5
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -1118,7 +1153,7 @@ MonoBehaviour:
   Path: event:/SFX/Lantern
   guid: c7d750133b992541bfd7945745340f77
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1200,7 +1235,7 @@ MonoBehaviour:
   Path: event:/Jumping/JumpingCarpet
   guid: 1aa44452ceba4b4288d8ebcae2fe9892
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1532,7 +1567,7 @@ MonoBehaviour:
   Path: event:/Music/Music
   guid: 076b7fe06741de42a20dcd7d6900e441
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
@@ -1573,7 +1608,7 @@ MonoBehaviour:
   Path: event:/Jumping/JumpingSand
   guid: 08d2f98a4e4c9c4db1ae148ee28433ab
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1691,7 +1726,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -4408218279438224100}
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   EditorEvents:
   - {fileID: -7930555741603752671}
   - {fileID: -1192317422422737762}
@@ -1715,10 +1750,10 @@ MonoBehaviour:
   - {fileID: 5497949782863775684}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   StringsBanks:
   - {fileID: -4408218279438224100}
-  stringsBankWriteTime: 637248317915199137
+  stringsBankWriteTime: 637248264740764476
   cacheVersion: 3
 --- !u!114 &17714794562873945
 MonoBehaviour:
@@ -1806,7 +1841,7 @@ MonoBehaviour:
   Path: event:/Landing/LandingWood
   guid: e6d595e7d5e0db47a6e9c4c59ca16d6f
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1847,7 +1882,7 @@ MonoBehaviour:
   Path: event:/SFX/Lever
   guid: 7e454234d9d13e49a91d8398296e9f0b
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1977,7 +2012,7 @@ MonoBehaviour:
   Path: event:/Landing/LandingMetal
   guid: ee82d14811256f428fbcf7e152a92e7d
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2262,7 +2297,7 @@ MonoBehaviour:
   Path: event:/Landing/LandingSand
   guid: 5c878a6a947c244983671eed4131cee2
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2582,7 +2617,7 @@ MonoBehaviour:
   Min: 0
   Max: 6
   Default: 4
-  Exists: 1
+  Exists: 0
 --- !u!114 &3758172578277171722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2729,7 +2764,7 @@ MonoBehaviour:
   Path: event:/Landing/LandingStone
   guid: 368a365cf4d8aa4ea3d08ef51cbe8e76
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2901,12 +2936,12 @@ MonoBehaviour:
   Path: event:/SFX/walk
   guid: fb9dd4e1b70e244a8a75b6501441ab8a
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 3603744791475862097}
+  - {fileID: -7144176144932237498}
   MinDistance: 0
   MaxDistance: 0
   Length: 375
@@ -2927,7 +2962,7 @@ MonoBehaviour:
   lastModified: 637248317915159248
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &5659812227281247546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3080,7 +3115,7 @@ MonoBehaviour:
   Path: event:/SFX/SpikeWallOut
   guid: f68a00228ed55049b309a801adf7f611
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3346,7 +3381,7 @@ MonoBehaviour:
   Path: event:/SFX/Bridge
   guid: e51b2aa1057400468a03308ead1809b1
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3405,7 +3440,7 @@ MonoBehaviour:
   Path: event:/Landing/LandingCarpet
   guid: de9059ac3a5500458f528b870268e21d
   Banks:
-  - {fileID: 5568031141213658496}
+  - {fileID: -6334678235494270514}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
