@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="ParameterPreset" id="{579ca118-80ef-4f7b-9726-67bacb3d6bc8}">
+		<property name="name">
+			<value>PlayerLanding</value>
+		</property>
+		<relationship name="folder">
+			<destination>{4a0618a5-9504-4528-acf3-db89f0bb287b}</destination>
+		</relationship>
+		<relationship name="parameter">
+			<destination>{c10ecb5e-e064-4075-9cb2-9478733f7adb}</destination>
+		</relationship>
+	</object>
+	<object class="GameParameter" id="{c10ecb5e-e064-4075-9cb2-9478733f7adb}">
+		<property name="parameterType">
+			<value>2</value>
+		</property>
+		<property name="maximum">
+			<value>5</value>
+		</property>
+		<property name="enumerationLabels">
+			<value>Wood</value>
+			<value>Stone</value>
+			<value>Carpet</value>
+			<value>Metal</value>
+			<value>inAir</value>
+		</property>
+		<property name="initialValue">
+			<value>1</value>
+		</property>
+	</object>
+</objects>

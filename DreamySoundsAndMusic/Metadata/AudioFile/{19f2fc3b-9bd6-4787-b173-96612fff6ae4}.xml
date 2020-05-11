@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{19f2fc3b-9bd6-4787-b173-96612fff6ae4}">
+		<property name="assetPath">
+			<value>lever.mp3</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>1.4399999999999999</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e829a7df-3f2d-493a-9002-e2b70a3fb248}</destination>
+		</relationship>
+	</object>
+</objects>
