@@ -63,7 +63,7 @@ public class LucidUI_Behaviour : MonoBehaviour
 
     public void RefillMoon()
     {
-        if (lucidMoon.fillAmount < 1 && lucidState.isLucid) {
+        if (lucidMoon.fillAmount < 1 && lucidState.isLucid && !moonFilled) {
             lucidMoon.fillAmount += fillIncrement * Time.deltaTime;
         }
 
