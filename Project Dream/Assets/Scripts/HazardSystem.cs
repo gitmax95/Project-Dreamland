@@ -5,15 +5,4 @@ using UnityEngine;
 public class HazardSystem : MonoBehaviour
 {
     public int hazardDamage;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

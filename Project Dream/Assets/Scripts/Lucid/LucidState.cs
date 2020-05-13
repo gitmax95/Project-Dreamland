@@ -14,14 +14,14 @@ public class LucidState : MonoBehaviour
     public float lucidTime;
     public int lucidCharges;
 
-    float lucidTimer = 0.0f;
+    public float lucidTimer = 0.0f;
 
     
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.Find("PlayerChar");
-        ComponentUI = GameObject.Find("UI_Icon");
+        ComponentUI = GameObject.Find("LucidIcon");
 
         isLucid = false;
 
@@ -47,7 +47,6 @@ public class LucidState : MonoBehaviour
         else if (lucidTimer > lucidTime)
         {
             isLucid = false;
-
         }
     }
 

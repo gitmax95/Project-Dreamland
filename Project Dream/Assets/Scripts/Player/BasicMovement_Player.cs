@@ -106,74 +106,85 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void FixedUpdate()
     {
-        CheckSuroundings();
-
-        if (playerState.isIdle) { //Player is Idle
-            currentStrafeSpeed = strafeSpeedIdle;
-            rigidBodyPlayer.velocity = new Vector2(0, 0); //TODO: IMPROVE THIS WITH A INPUT CHECK FOR JOYSTICK TOUCH. THIS WILL INSTANTLY NOTICE A LACK OF INPUT.
-        }
-
-        if (playerState.isRunning) { //Player is Running
-            //RunWithForce();
-            RunByTranslate();
-            currentStrafeSpeed = strafeSpeedRun;
-        }
-
-
-        if (playerState.isSliding) {  //Player is Sliding          
-            Slide();
-            
-        } else {
-            timer_slideDuration = 0.0f;
-            
-        }
-
-        if(!playerState.isSliding && newFeetLocation) { //Set new position when Player stands up after a slide
-            timer_timeBetweenSlide = 0.0f;
-            newFeetLocation = false;
-            Vector3 newPosition = new Vector3(transform.position.x + (0.38f * directionHorizontal), transform.position.y, transform.position.z);
-            //transform.position = new Vector3(transform.position.x + (0.38f * directionHorizontal), transform.position.y, transform.position.z);
-            transform.position = Vector3.Lerp(transform.position, newPosition, 10 * Time.deltaTime);
-            
-        }
-         
-        if(playerState.isJumping || playerState.isWallJumping)
+        if (!playerState.isDying && !playerState.isDead)
         {
-            //Player is Jumping
-            if (playerState.isTouchingGround)
-            {
-                Jump();
+            CheckSuroundings();
+
+            if (playerState.isIdle)
+            { //Player is Idle
+                currentStrafeSpeed = strafeSpeedIdle;
+                rigidBodyPlayer.velocity = new Vector2(0, 0); //TODO: IMPROVE THIS WITH A INPUT CHECK FOR JOYSTICK TOUCH. THIS WILL INSTANTLY NOTICE A LACK OF INPUT.
             }
-            //Player is WallJumping
-            else if (playerState.isWallSliding)
-            {
-                WallJump();
+
+            if (playerState.isRunning)
+            { //Player is Running
+              //RunWithForce();
+                RunByTranslate();
+                currentStrafeSpeed = strafeSpeedRun;
             }
 
 
-            //if (!playerState.isTouchingGround && playerState.isWallSliding && Input.GetKey(KeyCode.Space))
+            if (playerState.isSliding)
+            {  //Player is Sliding          
+                Slide();
+
+            }
+            else
+            {
+                timer_slideDuration = 0.0f;
+
+            }
+
+            if (!playerState.isSliding && newFeetLocation)
+            { //Set new position when Player stands up after a slide
+                timer_timeBetweenSlide = 0.0f;
+                newFeetLocation = false;
+                Vector3 newPosition = new Vector3(transform.position.x + (0.38f * directionHorizontal), transform.position.y, transform.position.z);
+                //transform.position = new Vector3(transform.position.x + (0.38f * directionHorizontal), transform.position.y, transform.position.z);
+                transform.position = Vector3.Lerp(transform.position, newPosition, 10 * Time.deltaTime);
+
+            }
+
+            if (playerState.isJumping || playerState.isWallJumping)
+            {
+                //Player is Jumping
+                if (playerState.isTouchingGround)
+                {
+                    Jump();
+                }
+                //Player is WallJumping
+                else if (playerState.isWallSliding)
+                {
+                    WallJump();
+                }
+
+
+                //if (!playerState.isTouchingGround && playerState.isWallSliding && Input.GetKey(KeyCode.Space))
+                //{
+                //    AddForce();
+                //}
+
+            }
+            else if (playerState.isTouchingGround)
+            { //Reset Jump Timer after the completion of a jump.
+                timer_jumpDuration = 0.0f;
+            }
+
+            if (!playerState.isGrounded)
+            {
+                AirStrafe();
+            }
+
+            if (playerState.isWallSliding)
+            {
+                WallSlide();
+            }
+
+            //if (!playerState.isTouchingGround && playerState.isWallSliding && movementInputDirection != 0)
             //{
             //    AddForce();
             //}
-
-        } else if (playerState.isTouchingGround) { //Reset Jump Timer after the completion of a jump.
-            timer_jumpDuration = 0.0f;
         }
-
-        if (!playerState.isGrounded) {
-            AirStrafe();
-        }
-
-        if (playerState.isWallSliding)
-        {
-            WallSlide();
-        }
-
-        //if (!playerState.isTouchingGround && playerState.isWallSliding && movementInputDirection != 0)
-        //{
-        //    AddForce();
-        //}
-
     }
 
     private void CheckInput()

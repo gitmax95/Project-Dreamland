@@ -48,7 +48,7 @@ MonoBehaviour:
   - Platform: 1
     Value: 1
   - Platform: 2
-    Value: 1
+    Value: 0
   - Platform: 20
     Value: 0
   LoggingSettings:
@@ -78,50 +78,6 @@ MonoBehaviour:
   Plugins: []
   MasterBanks:
   - Master
-  Banks:
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master
-  - Master.strings
+  Banks: []
   BanksToLoad: []
   LiveUpdatePort: 9264

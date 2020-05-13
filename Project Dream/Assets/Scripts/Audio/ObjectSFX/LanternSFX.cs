@@ -5,7 +5,7 @@ using UnityEngine;
 public class LanternSFX : MonoBehaviour
 {
     [FMODUnity.EventRef]
-    public string Lantern = "event:/SFX/Lantern";
+    string Lantern = "event:/SFX/Lantern";
     // Start is called before the first frame update
     void Start()
     {

@@ -71,7 +71,7 @@
 			<destination>{b109fb1f-c7c0-4ec0-915c-4b848d71167a}</destination>
 		</relationship>
 		<relationship name="markers">
-			<destination>{706e43cc-29fb-45d8-9457-7bbd31288609}</destination>
+			<destination>{84c84c51-f452-45ae-9b5f-2a4584dbce68}</destination>
 		</relationship>
 	</object>
 	<object class="EventMixerMaster" id="{6c90e05c-e1ba-4c4d-83a1-e012de09f042}">
@@ -116,7 +116,7 @@
 			<destination>{6c90e05c-e1ba-4c4d-83a1-e012de09f042}</destination>
 		</relationship>
 	</object>
-	<object class="LoopRegion" id="{706e43cc-29fb-45d8-9457-7bbd31288609}">
+	<object class="LoopRegion" id="{84c84c51-f452-45ae-9b5f-2a4584dbce68}">
 		<property name="position">
 			<value>0</value>
 		</property>
