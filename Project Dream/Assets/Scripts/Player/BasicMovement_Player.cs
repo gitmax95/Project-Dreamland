@@ -88,11 +88,11 @@ public class BasicMovement_Player : MonoBehaviour
             rigidBodyPlayer.velocity = Vector2.zero;
         }
 
-        if (controllerStates.input_Horizontal < 0)
+        if (controllerStates.input_Horizontal < 0 && !playerState.isSliding)
         {
             directionHorizontal = -1;
         }
-        else if (controllerStates.input_Horizontal > 0)
+        else if (controllerStates.input_Horizontal > 0 && !playerState.isSliding)
         {
             directionHorizontal = 1;
         }
@@ -324,12 +324,12 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void Flip()
     {
-        //if (!playerState.isWallSliding)
-        //{
+        if (!playerState.isWallSliding && !playerState.isDying && !playerState.isSliding)
+        {
             directionHorizontal *= -1;
             playerState.isFacingRight = !playerState.isFacingRight;
             transform.Rotate(0.0f, 180.0f, 0.0f);
-        //}
+        }
     }
 
     private void CheckStrafe()
