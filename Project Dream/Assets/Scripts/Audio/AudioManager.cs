@@ -5,28 +5,43 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     PlayerState playerState;
+    PlayerHealthSystem playerHealth;
+    LucidState lucidState;
+
 
     [SerializeField]
-    [FMODUnity.EventRef] string[] JumpingEvent = { "event:/Jumping/JumpingWood", "event:/Jumping/JumpingStone", "event:/Jumping/JumpingCarpet", "event:/Jumping/JumpingMetal", "event:/Jumping/JumpingSand"};
+    [FMODUnity.EventRef] string JumpingEvent = "event:/PlayerMechanics/Jumping";
 
     [SerializeField]
-    [FMODUnity.EventRef] string[] LandingEvent = { "event:/Landing/LandingWood", "event:/Landing/LandingStone", "event:/Landing/LandingCarpet", "event:/Landing/LandingMetal", "event:/Landing/LandingSand"};
-
-    //Walking Event
+    [FMODUnity.EventRef] string[] LandingEvent = { "event:/PlayerMechanics/Landing/LandingWood",
+                                                   "event:/PlayerMechanics/Landing/LandingStone",
+                                                   "event:/PlayerMechanics/Landing/LandingCarpet",
+                                                   "event:/PlayerMechanics/Landing/LandingMetal",
+                                                   "event:/PlayerMechanics/Landing/LandingSand",
+                                                   "event:/PlayerMechanics/Landing/LandingWater"};
     [FMODUnity.EventRef]
-    public string Walking = "event:/SFX/walk";
+    public string Walking = "event:/PlayerMechanics/Walking";
+
+    [FMODUnity.EventRef]
+    public string Damage = "event:/PlayerMechanics/Damage";
+
+    [FMODUnity.EventRef]
+    public string Lucid = "event:/PlayerMechanics/Lucid";
 
     FMOD.Studio.EventInstance soundEvent;
+    FMOD.Studio.EventInstance damageSoundEvent;
 
     //[FMODUnity.EventRef]
     //public string Sliding = "event:/SFX/Sliding";
-    
+
     //Variables to keep track of what sounds are allowed to be played atm
 
     bool inAir;
     bool onGround;
 
-    //Parameter values: Wood - 0, Stone - 1, Carpet - 2, Metal - 3, inAir/Idle - 4.
+    int healthMemory = 10;
+
+    //Parameter values: Wood - 0, Stone - 1, Carpet - 2, Metal - 3, Sand - 4, Water - 5, inAir/Idle - 6.
     int parameterValue;
     int memoryValue; 
 
@@ -34,20 +49,10 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-        //JumpingEvent[0] = "event:/Jumping/JumpingWood";
-        //JumpingEvent[1] = "event:/Jumping/JumpingStone";
-        //JumpingEvent[2] = "event:/Jumping/JumpingCarpet";
-        //JumpingEvent[3] = "event:/Jumping/JumpingMetal";
-        //JumpingEvent[4] = "event:/Jumping/JumpingSand";
-
-        //LandingEvent[0] = "event:/Landing/LandingWood";
-        //LandingEvent[1] = "event:/Landing/LandingStone";
-        //LandingEvent[2] = "event:/Landing/LandingCarpet";
-        //LandingEvent[3] = "event:/Landing/LandingMetal";
-        //LandingEvent[4] = "event:/Landing/LandingSand";
-
-        playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
+        
+        playerState = this.gameObject.GetComponent<PlayerState>();
+        playerHealth = this.gameObject.GetComponent<PlayerHealthSystem>();
+        lucidState = this.gameObject.GetComponent<LucidState>();
 
 
         soundEvent = FMODUnity.RuntimeManager.CreateInstance(Walking);
@@ -59,11 +64,14 @@ public class AudioManager : MonoBehaviour
     void Update()
     {
 
+        //Health
+        DamageSFX();
 
-        PlayJumpSFX();
-        PlayWalkingSFX();
-        PlayLandingSFX();
-        //PlaySlidingSFX();
+        //Mechanics
+        JumpSFX();
+        WalkingSFX();
+        LandingSFX();
+        //SlidingSFX();
 
         soundEvent.setParameterByName("PlayerMSFX", parameterValue);
 
@@ -80,7 +88,41 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    void PlayJumpSFX()
+    void LucidSFX()
+    {
+        if (lucidState.isLucid)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
+        }
+    }
+
+    void DamageSFX()
+    {
+        if (playerHealth.playerHealth != 10)
+        {
+            if (memoryValue > playerHealth.playerHealth)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(Damage, GetComponent<Transform>().position);
+                //damageSoundEvent.setParameterByName("DamageIntensity", playerHealth.playerHealth);
+            }
+            else if(memoryValue == playerHealth.playerHealth)
+            {
+                //damageSoundEvent.setParameterByName("DamageIntensity", 10);
+            }
+            else if(memoryValue < playerHealth.playerHealth)
+            {
+                memoryValue = playerHealth.playerHealth;
+            }
+
+            memoryValue = playerHealth.playerHealth;
+        }
+        else
+        {
+            //damageSoundEvent.setParameterByName("DamageIntensity", 10); /silence
+        }
+    }
+
+    void JumpSFX()
     {
 
         if (!playerState.isJumping && playerState.isTouchingGround)
@@ -97,34 +139,8 @@ public class AudioManager : MonoBehaviour
 
         if (playerState.isJumping && onGround)
         {
-
-            switch (memoryValue)
-            {
-                case 0:
-                    FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent[0], GetComponent<Transform>().position);
-                    onGround = false;
-                    break;
-
-                case 1:
-                    FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent[1], GetComponent<Transform>().position);
-                    onGround = false;
-                    break;
-
-                case 2:
-                    FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent[2], GetComponent<Transform>().position);
-                    onGround = false;
-                    break;
-
-                case 3:
-                    FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent[3], GetComponent<Transform>().position);
-                    onGround = false;
-                    break;
-                case 4:
-                    FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent[4], GetComponent<Transform>().position);
-                    onGround = false;
-                    break;
-
-            }           
+            FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent, GetComponent<Transform>().position);
+            onGround = false;
         }
 
 
@@ -132,7 +148,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    void PlayLandingSFX()
+    void LandingSFX()
     {
 
         if (!playerState.isTouchingGround)
@@ -172,6 +188,10 @@ public class AudioManager : MonoBehaviour
                         FMODUnity.RuntimeManager.PlayOneShot(LandingEvent[4], GetComponent<Transform>().position);
                         inAir = false;
                         break;
+                    case 5:
+                        FMODUnity.RuntimeManager.PlayOneShot(LandingEvent[5], GetComponent<Transform>().position);
+                        inAir = false;
+                        break;
                 }
 
             }
@@ -180,7 +200,7 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    void PlayWalkingSFX()
+    void WalkingSFX()
     {
         if (playerState.isRunning)
         {
@@ -190,13 +210,13 @@ public class AudioManager : MonoBehaviour
         else if(!playerState.isRunning)
         {
 
-            parameterValue = 5; //Idle sound
+            parameterValue = 6; //Idle sound
 
         }
         
     }
 
-    //void PlaySlidingSFX()
+    //void SlidingSFX()
     //{
     //    FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
@@ -246,6 +266,11 @@ public class AudioManager : MonoBehaviour
                 {
                     parameterValue = 4;
                     memoryValue = 4;
+                }
+                else if (surface.getType() == "Water")
+                {
+                    parameterValue = 5;
+                    memoryValue = 5;
                 }
 
 
