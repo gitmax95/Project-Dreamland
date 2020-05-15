@@ -142,7 +142,7 @@ public class PlayerState : MonoBehaviour
             jumpActivated = true;
         }
 
-        if (isGrounded && Input.GetKeyUp(KeyCode.Space) || controllerStates.rightFinger == ControllerStates.FingerState.tap) //&& playerMovement.timer_jumpDuration < playerMovement.jumpDuration
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space) || controllerStates.rightFinger == ControllerStates.FingerState.tap) //&& playerMovement.timer_jumpDuration < playerMovement.jumpDuration
         {
             isJumping = true;
             animator.SetBool("isJumping", true);
