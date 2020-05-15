@@ -8,7 +8,9 @@ public class PlayerState : MonoBehaviour
     BasicMovement_Player playerMovement;
     ControllerStates controllerStates;
 
-    PolygonCollider2D playerCollider;
+    CapsuleCollider2D playerCollider;
+
+    //PolygonCollider2D playerCollider;
 
      
 
@@ -43,6 +45,7 @@ public class PlayerState : MonoBehaviour
         playerMovement = GameObject.Find("PlayerChar").GetComponent<BasicMovement_Player>();
         controllerStates = GameObject.Find("InputManager").GetComponent<ControllerStates>();
         playerHealthScript = GameObject.Find("PlayerChar").GetComponent<PlayerHealthSystem>();
+        playerCollider = GameObject.Find("Appearance").GetComponent<CapsuleCollider2D>();
 
         isFacingRight = true;
 
@@ -84,15 +87,19 @@ public class PlayerState : MonoBehaviour
             if (runDuration >= playerMovement.requiredRunDuration)
             {
                 isRunning = false;
+                playerCollider.enabled = false;
+
                 isSliding = true;
                 animator.SetBool("isSliding", true); //Animation for Sliding
             }
         }
-        else if (playerMovement.timer_slideDuration >= playerMovement.slideDuration || isJumping)
+        else if (playerMovement.timer_slideDuration >= playerMovement.slideDuration || isJumping || isIdle /*|| !isRunning*/)
         {
             runDuration = 0.0f;
             isSliding = false;
             animator.SetBool("isSliding", false);
+
+            playerCollider.enabled = true;
         }
     }
 
@@ -135,7 +142,7 @@ public class PlayerState : MonoBehaviour
             jumpActivated = true;
         }
 
-        if (isGrounded && Input.GetKeyUp(KeyCode.Space) || controllerStates.rightFinger == ControllerStates.FingerState.tap) //&& playerMovement.timer_jumpDuration < playerMovement.jumpDuration
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space) || controllerStates.rightFinger == ControllerStates.FingerState.tap) //&& playerMovement.timer_jumpDuration < playerMovement.jumpDuration
         {
             isJumping = true;
             animator.SetBool("isJumping", true);
