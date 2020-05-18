@@ -11,6 +11,13 @@ public class AmbientManager : MonoBehaviour
     FMOD.Studio.EventInstance soundEvent;
 
     int parameterValue;
+    int memoryValue;
+    float lerpValue;
+    bool dontChangeParameter = true;
+
+    [Header("Values between 10 and 1")]
+    [SerializeField]
+    public int speed; // speed in seconds
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +29,23 @@ public class AmbientManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        soundEvent.setParameterByName("ZonePP", parameterValue);
+        if (!dontChangeParameter)
+        {
+            soundEvent.setParameterByName("ZonePP", Mathf.Lerp(memoryValue, parameterValue, lerpValue));
+
+            lerpValue = (1 / speed) * Time.deltaTime;
+        }
+
+        if(lerpValue == 1)
+        {
+            dontChangeParameter = true;
+            memoryValue = parameterValue;
+        }
+
+        if (memoryValue != parameterValue)
+        {
+            dontChangeParameter = false;
+        }
     }
 
    

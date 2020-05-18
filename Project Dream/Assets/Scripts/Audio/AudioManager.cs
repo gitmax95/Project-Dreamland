@@ -39,16 +39,16 @@ public class AudioManager : MonoBehaviour
     bool inAir;
     bool onGround;
 
-    int healthMemory = 10;
+    int initialHealth;
 
     //Parameter values: Wood - 0, Stone - 1, Carpet - 2, Metal - 3, Sand - 4, Water - 5, inAir/Idle - 6.
     int parameterValue;
-    int memoryValue; 
-
+    int memoryValue;
 
     // Start is called before the first frame update
     void Start()
     {
+        initialHealth = playerHealth.playerHealth;
         
         playerState = this.gameObject.GetComponent<PlayerState>();
         playerHealth = this.gameObject.GetComponent<PlayerHealthSystem>();
@@ -63,6 +63,7 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+           
 
         //Health
         DamageSFX();
@@ -100,21 +101,21 @@ public class AudioManager : MonoBehaviour
     {
         if (playerHealth.playerHealth != 10)
         {
-            if (memoryValue > playerHealth.playerHealth)
+            if (initialHealth > playerHealth.playerHealth)
             {
                 FMODUnity.RuntimeManager.PlayOneShot(Damage, GetComponent<Transform>().position);
                 //damageSoundEvent.setParameterByName("DamageIntensity", playerHealth.playerHealth);
             }
-            else if(memoryValue == playerHealth.playerHealth)
+            else if(initialHealth == playerHealth.playerHealth)
             {
                 //damageSoundEvent.setParameterByName("DamageIntensity", 10);
             }
-            else if(memoryValue < playerHealth.playerHealth)
+            else if(initialHealth < playerHealth.playerHealth)
             {
-                memoryValue = playerHealth.playerHealth;
+                initialHealth = playerHealth.playerHealth;
             }
 
-            memoryValue = playerHealth.playerHealth;
+            initialHealth = playerHealth.playerHealth;
         }
         else
         {

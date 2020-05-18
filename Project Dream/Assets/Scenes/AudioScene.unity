@@ -17410,6 +17410,7 @@ MonoBehaviour:
   - event:/PlayerMechanics/Landing/LandingCarpet
   - event:/PlayerMechanics/Landing/LandingMetal
   - event:/PlayerMechanics/Landing/LandingSand
+  - event:/PlayerMechanics/Landing/LandingWater
   Walking: event:/PlayerMechanics/Walking
   Damage: event:/PlayerMechanics/Damage
   Lucid: event:/PlayerMechanics/Lucid
@@ -21366,6 +21367,7 @@ GameObject:
   - component: {fileID: 7007010564277873286}
   - component: {fileID: 310112973433738921}
   - component: {fileID: 1657738076}
+  - component: {fileID: 310112973433738928}
   m_Layer: 8
   m_Name: PlayerChar
   m_TagString: Player
@@ -21394,6 +21396,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &310112973433738928
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310112973433738926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9d9e5c17b25b44f93876405e2b9806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ambience: event:/Music/Ambience
+  speed: 0
 --- !u!1 &310112973686564736
 GameObject:
   m_ObjectHideFlags: 0
