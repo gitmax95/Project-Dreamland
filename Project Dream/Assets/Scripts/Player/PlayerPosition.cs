@@ -3,23 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class CheckpointSystem : MonoBehaviour
+public class PlayerPosition : MonoBehaviour
 {
     private GameMaster gameMasterScript;
-
-    private void Start()
+    // Start is called before the first frame update
+    void Start()
     {
         gameMasterScript = GameObject.Find("GameStateManager").GetComponent<GameMaster>();
+        transform.position = gameMasterScript.lastCheckpointPos;
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    public void RestartGame()
     {
-        if (collision.tag == "Player")
-        {
-            gameMasterScript.lastCheckpointPos = transform.position;
-        }
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
-
-
-   
-
