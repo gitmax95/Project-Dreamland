@@ -14,6 +14,8 @@ public class Mobile_DragObject : MonoBehaviour
 
     BoxCollider2D thisCollider;
 
+    GameObject platform;
+
     void Start()
     {
         lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
@@ -21,6 +23,7 @@ public class Mobile_DragObject : MonoBehaviour
 
         thisCollider = GetComponent<BoxCollider2D>();
         
+        platform = gameObject.transform.parent.gameObject;
     }
 
    
@@ -42,7 +45,13 @@ public class Mobile_DragObject : MonoBehaviour
 
         }
 
-        //if dragAllowed and collider overlaps with a touch, position is touchPosition.
+        if(Input.touchCount > 0 && Input.touchCount < 2) {
+
+            if(dragAllowed && thisCollider.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position))) {
+                platform.transform.position = new Vector3(startPosition.x + 0.5f, startPosition.y + 0.5f, startPosition.z);
+            }
+
+        }
 
     }
 }
