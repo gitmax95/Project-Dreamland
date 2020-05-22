@@ -39,14 +39,21 @@ public class LucidState : MonoBehaviour
 
     private void LucidStateToggle()
     {
-        if (Input.GetKey(KeyCode.L) && lucidTimer == 0.0f && lucidCharges != 0)
-        {
-            isLucid = true;
-            lucidCharges--;
-        }
-        else if (lucidTimer > lucidTime)
+        if (Input.GetKey(KeyCode.L)) {
+
+            TriggerLucidState();
+
+        } else if (lucidTimer > lucidTime)
         {
             isLucid = false;
+        }
+    }
+
+    public void TriggerLucidState()
+    {
+        if (lucidTimer == 0.0f && lucidCharges != 0) {
+            isLucid = true;
+            lucidCharges--;
         }
     }
 
