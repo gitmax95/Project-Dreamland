@@ -23,6 +23,7 @@ public class BasicMovement_Player : MonoBehaviour
     public float wallCheckDistance;
     public float movementInputDirection;
     int directionHorizontal;
+    int slideDirection;
 
     [Tooltip("Changes where the Joystick will notice the Player input.")]
     public float joystick_Threshold;
@@ -42,8 +43,8 @@ public class BasicMovement_Player : MonoBehaviour
     public float wallJumpForce;
 
     bool newFeetLocation;
-    bool canMove;
     bool canStrafe = true;
+    bool directionLock = false;
 
     [Header("Player Jumping")]
     [Tooltip("Speed of the upwards motion of the Jump")]
@@ -82,6 +83,7 @@ public class BasicMovement_Player : MonoBehaviour
         CheckMovementDirection();
         CheckStrafe();
         CheckWallJumpState();
+        LockDirection();
 
         if (playerState.isTouchingGround)
         {
@@ -139,7 +141,7 @@ public class BasicMovement_Player : MonoBehaviour
             { //Set new position when Player stands up after a slide
                 timer_timeBetweenSlide = 0.0f;
                 newFeetLocation = false;
-                Vector3 newPosition = new Vector3(transform.position.x + (0.38f * directionHorizontal), transform.position.y, transform.position.z);
+                Vector3 newPosition = new Vector3(transform.position.x + (0.38f * slideDirection), transform.position.y, transform.position.z);
                 //transform.position = new Vector3(transform.position.x + (0.38f * directionHorizontal), transform.position.y, transform.position.z);
                 transform.position = Vector3.Lerp(transform.position, newPosition, 10 * Time.deltaTime);
 
@@ -198,12 +200,15 @@ public class BasicMovement_Player : MonoBehaviour
 
         newFeetLocation = true;
 
-        if(timer_timeBetweenSlide >= timeBetweenSlide) {
+        if(timer_timeBetweenSlide >= timeBetweenSlide)
+        {
             currentStrafeSpeed = strafeSpeedSlide;
-            rigidBodyPlayer.velocity = new Vector2(slideSpeed * directionHorizontal * Time.deltaTime, rigidBodyPlayer.velocity.y);
-        } else {
+            rigidBodyPlayer.velocity = new Vector2(slideSpeed * slideDirection * Time.deltaTime, rigidBodyPlayer.velocity.y);
+        }
+        else
+        {
             currentStrafeSpeed = strafeSpeedSlide * speedDecayMultiplier;
-            rigidBodyPlayer.velocity = new Vector2((slideSpeed * speedDecayMultiplier) * directionHorizontal * Time.deltaTime, rigidBodyPlayer.velocity.y);
+            rigidBodyPlayer.velocity = new Vector2((slideSpeed * speedDecayMultiplier) * slideDirection * Time.deltaTime, rigidBodyPlayer.velocity.y);
         }
     }
     
@@ -292,9 +297,12 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void RunByTranslate()
     {
-        if(controllerStates.input_Horizontal < -joystick_Threshold || controllerStates.input_Horizontal > joystick_Threshold && playerState.isGrounded)  //Temporary, will get a better fix asap 
+        if (!playerState.isSliding)
         {
-            transform.Translate(transform.right * directionHorizontal * runSpeed * Time.deltaTime);
+            if (controllerStates.input_Horizontal < -joystick_Threshold || controllerStates.input_Horizontal > joystick_Threshold && playerState.isGrounded)  //Temporary, will get a better fix asap 
+            {
+                transform.Translate(transform.right * directionHorizontal * runSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -395,6 +403,25 @@ public class BasicMovement_Player : MonoBehaviour
             playerState.touchingLeftWall = false;
             playerState.touchingRightWall = false;
         }
+    }
+
+    private void LockDirection()
+    {
+        //if (!playerState.isSliding)
+        //{
+        //    slideDirection = directionHorizontal;
+        //}
+        //else if (playerState.isSliding)
+        //{
+            if (playerState.isFacingRight)
+            {
+                slideDirection = 1;
+            }
+            else if (!playerState.isFacingRight)
+            {
+                slideDirection = -1;
+            }
+        //}
     }
 
     private void OnDrawGizmos()
