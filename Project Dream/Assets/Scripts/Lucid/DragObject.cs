@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 
 public class DragObject : MonoBehaviour
@@ -32,6 +33,7 @@ public class DragObject : MonoBehaviour
 
         mouseOffset = platform.transform.position - GetMouseWorldPos();
     }
+
 
     private void OnMouseDrag()
     {
