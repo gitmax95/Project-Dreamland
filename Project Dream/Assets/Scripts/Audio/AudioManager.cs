@@ -48,12 +48,12 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        initialHealth = playerHealth.playerHealth;
         
         playerState = this.gameObject.GetComponent<PlayerState>();
         playerHealth = this.gameObject.GetComponent<PlayerHealthSystem>();
         lucidState = this.gameObject.GetComponent<LucidState>();
 
+        initialHealth = playerHealth.playerHealth;
 
         soundEvent = FMODUnity.RuntimeManager.CreateInstance(Walking);
         soundEvent.start();
