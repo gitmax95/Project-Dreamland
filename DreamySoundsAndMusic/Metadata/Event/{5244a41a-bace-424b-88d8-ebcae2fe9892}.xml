@@ -2,13 +2,13 @@
 <objects serializationModel="Studio.02.00.00">
 	<object class="Event" id="{5244a41a-bace-424b-88d8-ebcae2fe9892}">
 		<property name="name">
-			<value>JumpingCarpet</value>
+			<value>Jumping</value>
 		</property>
 		<property name="outputFormat">
 			<value>1</value>
 		</property>
 		<relationship name="folder">
-			<destination>{ae07df06-8b4b-4c1c-8fd4-04502db68db7}</destination>
+			<destination>{4a10e504-e1be-4165-994c-2ceb6720b8af}</destination>
 		</relationship>
 		<relationship name="mixer">
 			<destination>{6eb39f6b-5bf8-4adb-8faa-97802fae3df8}</destination>
