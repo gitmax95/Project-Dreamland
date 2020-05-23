@@ -5,7 +5,7 @@
 			<value>Landing</value>
 		</property>
 		<relationship name="folder">
-			<destination>{ecc89183-9339-4cb2-83db-79dbe96f96fd}</destination>
+			<destination>{4a10e504-e1be-4165-994c-2ceb6720b8af}</destination>
 		</relationship>
 	</object>
 </objects>

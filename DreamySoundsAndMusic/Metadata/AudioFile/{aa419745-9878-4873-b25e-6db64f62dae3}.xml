@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{aa419745-9878-4873-b25e-6db64f62dae3}">
+		<property name="assetPath">
+			<value>FILLER TONE.wav</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>2</value>
+		</property>
+		<property name="length">
+			<value>9.2425625</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e829a7df-3f2d-493a-9002-e2b70a3fb248}</destination>
+		</relationship>
+	</object>
+</objects>

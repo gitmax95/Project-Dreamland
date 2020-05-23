@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<objects serializationModel="Studio.02.00.00">
+	<object class="AudioFile" id="{fab745a0-84f3-4c51-810e-3acf1bff7ec3}">
+		<property name="assetPath">
+			<value>countryside bird morning chorus Quadro.wav</value>
+		</property>
+		<property name="isStreaming">
+			<value>true</value>
+		</property>
+		<property name="frequencyInKHz">
+			<value>48</value>
+		</property>
+		<property name="channelCount">
+			<value>4</value>
+		</property>
+		<property name="length">
+			<value>121.17804166666667</value>
+		</property>
+		<relationship name="masterAssetFolder">
+			<destination>{e829a7df-3f2d-493a-9002-e2b70a3fb248}</destination>
+		</relationship>
+	</object>
+</objects>
