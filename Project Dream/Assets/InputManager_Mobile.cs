@@ -69,9 +69,12 @@ public class InputManager_Mobile : MonoBehaviour
                
                      controllerStates.rightFinger = ControllerStates.FingerState.tap;
 
-                }            
+                }      
 
-            }         
+            }
+            else if (touch.position.x > Screen.width / 2 && IsPointerOverUIObject(touch.position)) {
+                controllerStates.rightFinger = ControllerStates.FingerState.noTouch;
+            }
           
         }
 
