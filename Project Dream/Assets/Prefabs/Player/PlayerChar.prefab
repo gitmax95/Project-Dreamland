@@ -123,6 +123,7 @@ GameObject:
   - component: {fileID: 310112972680910775}
   - component: {fileID: 310112972680910773}
   - component: {fileID: 310112972680910772}
+  - component: {fileID: 1775191027}
   m_Layer: 0
   m_Name: Appearance
   m_TagString: Player
@@ -229,6 +230,18 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 1, y: 5}
   m_Direction: 0
+--- !u!114 &1775191027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310112972680910769}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd880bb68e61534e87e1a89888efa3d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &310112973318033526
 GameObject:
   m_ObjectHideFlags: 0
@@ -501,6 +514,7 @@ GameObject:
   - component: {fileID: 310112973808920565}
   - component: {fileID: 454287872}
   - component: {fileID: 1673701311}
+  - component: {fileID: 740973708}
   m_Layer: 8
   m_Name: PlayerChar
   m_TagString: Player
@@ -658,7 +672,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 21fb1bfdc6617344b9530a86f5f5ea3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  animationFinish: 0
   playerHealth: 10
 --- !u!61 &310112973808920565
 BoxCollider2D:
@@ -698,14 +711,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 574032579c957434d88de72885a0e9a9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  JumpingEvent: 
+  JumpingEvent: event:/PlayerMechanics/Jumping
   LandingEvent:
   - event:/Landing/LandingWood
   - event:/Landing/LandingStone
   - event:/Landing/LandingCarpet
   - event:/Landing/LandingMetal
   - event:/Landing/LandingSand
-  Walking: event:/SFX/walk
+  Walking: event:/PlayerMechanics/Walking
   Damage: event:/PlayerMechanics/Damage
   Lucid: event:/PlayerMechanics/Lucid
 --- !u!114 &1673701311
@@ -718,6 +731,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 53fd290af1b885e42ac18c6186a6fe04, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &740973708
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 310112973808920562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfd880bb68e61534e87e1a89888efa3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &33359377

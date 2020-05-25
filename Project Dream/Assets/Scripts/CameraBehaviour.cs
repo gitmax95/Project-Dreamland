@@ -18,8 +18,8 @@ public class CameraBehaviour : MonoBehaviour
 
     private void FixedUpdate()
     {
-
         Vector3 targetCameraPosition = target.position + offset;
         transform.position = Vector3.Lerp(transform.position, targetCameraPosition, cameraSmoothing * Time.deltaTime);    //Move Camera to new Location following Target.
+
     }
 }
