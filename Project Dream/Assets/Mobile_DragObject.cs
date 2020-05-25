@@ -19,11 +19,14 @@ public class Mobile_DragObject : MonoBehaviour
     void Start()
     {
         lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
-        startPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+
+        platform = gameObject.transform.parent.gameObject;
+
+        startPosition = new Vector3(platform.transform.position.x, platform.transform.position.y, platform.transform.position.z);
 
         thisCollider = GetComponent<BoxCollider2D>();
         
-        platform = gameObject.transform.parent.gameObject;
+        
     }
 
    
@@ -31,24 +34,28 @@ public class Mobile_DragObject : MonoBehaviour
     {
         if (lucidState.isLucid) {
 
-            if(this.transform.position.x >= startPosition.x - maxRangeX && this.transform.position.x <= startPosition.x + maxRangeX) {
+            /*if(platform.transform.position.x >= startPosition.x - maxRangeX && platform.transform.position.x <= startPosition.x + maxRangeX) {
                 dragAllowed = true;
             }
 
-            else if(this.transform.position.y >= startPosition.y - maxRangeY && this.transform.position.y <= startPosition.y + maxRangeY) {
+            else if(platform.transform.position.y >= startPosition.y - maxRangeY && platform.transform.position.y <= startPosition.y + maxRangeY) {
                 dragAllowed = true;
             }
 
             else {
                 dragAllowed = false;
-            }
+            }*/
+            dragAllowed = true;
 
         }
 
-        if(Input.touchCount > 0 && Input.touchCount < 2) {
+        if(Input.touchCount > 0) {
 
-            if(dragAllowed && thisCollider.OverlapPoint(Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position))) {
-                platform.transform.position = new Vector3(startPosition.x + 0.5f, startPosition.y + 0.5f, startPosition.z);
+            Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.GetTouch(0).position);
+            Vector2 touchPosition = new Vector2(worldPoint.x, worldPoint.y);
+
+            if(dragAllowed && thisCollider.OverlapPoint(touchPosition)){
+                platform.transform.position = new Vector3(startPosition.x + 1f, startPosition.y + 1f, startPosition.z);
             }
 
         }
