@@ -11,7 +11,6 @@ public class ChangeMaterial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        ComponentUI = GameObject.Find("LucidIcon");
 
         PlatformNormal = Resources.Load<Material>("Materials/Platform_PlaceHolder");
         PlatformLucid = Resources.Load<Material>("Materials/Torch_PlaceHolder");
@@ -20,13 +19,22 @@ public class ChangeMaterial : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (ComponentUI.GetComponent<LucidState>().isLucid)
-        {
-            gameObject.GetComponent<MeshRenderer>().material = PlatformLucid;
+        if(GameObject.Find("LucidIcon") != null) {
+            ComponentUI = GameObject.Find("LucidIcon");
+
+            if (ComponentUI.activeInHierarchy) {
+
+                if (ComponentUI.GetComponent<LucidState>().isLucid)
+                {
+                    gameObject.GetComponent<MeshRenderer>().material = PlatformLucid;
+                }
+                else if (!ComponentUI.GetComponent<LucidState>().isLucid)
+                {
+                    gameObject.GetComponent<MeshRenderer>().material = PlatformNormal;
+                }
+
+            }
         }
-        else if (!ComponentUI.GetComponent<LucidState>().isLucid)
-        {
-            gameObject.GetComponent<MeshRenderer>().material = PlatformNormal;
-        }
+
     }
 }
