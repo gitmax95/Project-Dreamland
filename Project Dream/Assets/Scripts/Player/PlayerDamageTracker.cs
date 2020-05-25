@@ -1,38 +1,54 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerDamageTracker : MonoBehaviour
 {
-    PlayerState playerStateScript;
-    PlayerPosition gameStateManagerScript;
+    PlayerHealthSystem playerHealthScript;
 
-    float timer = 0.0f;
-    float timerDying = 0.0f;
+    GameObject playerAppearance;
+    GameObject healthOrbFillUI;
 
-    public int playerHealth;
-    // Start is called before the first frame update
     void Start()
     {
-        playerStateScript = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
-        gameStateManagerScript = GameObject.Find("PlayerChar").GetComponent<PlayerPosition>();
+        playerAppearance = GameObject.Find("Appearance");
+
+        healthOrbFillUI = GameObject.Find("Fill_HealthOrb");
+
+        playerHealthScript = GameObject.Find("PlayerChar").GetComponent<PlayerHealthSystem>();
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnCollisionEnter2D(Collision2D collision)
     {
-        DeathTimer();
-    }
-
-    private void DeathTimer()
-    {
-        if (playerStateScript.isDying)
+        if (collision.gameObject.tag == "Hazard" && playerHealthScript.playerHealth > 0)
         {
-            timerDying += Time.deltaTime;
-            if (timerDying > 2.0f) //<- Hardcoded and must be adjusted for the length of Dying Animation!
+            playerHealthScript.playerHealth = playerHealthScript.playerHealth - collision.gameObject.GetComponent<HazardSystem>().hazardDamage; //Make public enter
+
+            if (playerHealthScript.playerHealth < 0)
             {
-                gameStateManagerScript.RestartGame();
+                playerHealthScript.playerHealth = 0;
             }
+
+            playerAppearance.GetComponent<SpriteRenderer>().color = Color.red;
+            healthOrbFillUI.GetComponent<Image>().color = Color.red;
+        }
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Hazard")
+        {
+            playerAppearance.GetComponent<SpriteRenderer>().color = Color.red;
+            healthOrbFillUI.GetComponent<Image>().color = Color.red;
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Hazard")
+        {
+            playerAppearance.GetComponent<SpriteRenderer>().color = Color.white;
+            healthOrbFillUI.GetComponent<Image>().color = Color.white;
         }
     }
 }

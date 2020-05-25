@@ -1,65 +1,38 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class PlayerHealthSystem : MonoBehaviour
 {
-    //public bool animationFinish;
-    //public float invincibilityPeriod = 5.0f;
+    PlayerState playerStateScript;
+    PlayerPosition gameStateManagerScript;
 
-    PlayerDamageTracker playerDamageScript;
+    float timer = 0.0f;
+    float timerDying = 0.0f;
 
-    GameObject playerAppearance;
-    GameObject healthOrbFillUI;
-
-    //GameObject healthOrbBorderUI;
-
-    //Color defaultColor;
+    public int playerHealth = 10;
+    // Start is called before the first frame update
     void Start()
     {
-        playerAppearance = GameObject.Find("Appearance");
-
-        healthOrbFillUI = GameObject.Find("Fill_HealthOrb");
-        //healthOrbBorderUI = GameObject.Find("Border_HealthOrb");
-
-        playerDamageScript = GameObject.Find("PlayerChar").GetComponent<PlayerDamageTracker>();
-
-        //defaultColor = playerAppearance.GetComponent<SpriteRenderer>().color;
+        playerStateScript = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
+        gameStateManagerScript = GameObject.Find("PlayerChar").GetComponent<PlayerPosition>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    // Update is called once per frame
+    void Update()
     {
-        if (collision.gameObject.tag == "Hazard" && playerDamageScript.playerHealth > 0)
-        {
-            playerDamageScript.playerHealth = playerDamageScript.playerHealth - collision.gameObject.GetComponent<HazardSystem>().hazardDamage; //Make public enter
+        DeathTimer();
+    }
 
-            if (playerDamageScript.playerHealth < 0)
+    private void DeathTimer()
+    {
+        if (playerStateScript.isDying)
+        {
+            timerDying += Time.deltaTime;
+            if (timerDying > 2.0f) //<- Hardcoded and must be adjusted for the length of Dying Animation!
             {
-                playerDamageScript.playerHealth = 0;
+                gameStateManagerScript.RestartGame();
             }
-
-            playerAppearance.GetComponent<SpriteRenderer>().color = Color.red;
-            healthOrbFillUI.GetComponent<Image>().color = Color.red;
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Hazard")
-        {
-            playerAppearance.GetComponent<SpriteRenderer>().color = Color.red;
-            healthOrbFillUI.GetComponent<Image>().color = Color.red;
-        }
-    }
-
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-        if (collision.gameObject.tag == "Hazard")
-        {
-            playerAppearance.GetComponent<SpriteRenderer>().color = Color.white;
-            healthOrbFillUI.GetComponent<Image>().color = Color.white;
-        }
-    }
-
-
 }

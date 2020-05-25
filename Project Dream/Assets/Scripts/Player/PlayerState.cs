@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
-    PlayerDamageTracker playerDamageScript;
     PlayerHealthSystem playerHealthScript;
     BasicMovement_Player playerMovement;
     ControllerStates controllerStates;
@@ -236,7 +235,7 @@ public class PlayerState : MonoBehaviour
 
     private void DyingState()
     {
-        if (playerDamageScript.playerHealth <= 0)
+        if (playerHealthScript.playerHealth <= 0)
         {
             isDying = true;
             animator.SetBool("isDying", true);
