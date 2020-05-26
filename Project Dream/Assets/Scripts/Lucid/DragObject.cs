@@ -20,11 +20,16 @@ public class DragObject : MonoBehaviour
     public float movementRangeY;
 
     void Start()
-    {
-        ComponentUI = GameObject.Find("LucidIcon");
-
+    {      
         platform = gameObject.transform.parent.gameObject;
         transPosition = platform.transform.position;
+    }
+
+    private void LateUpdate()
+    {
+        if(GameObject.Find("LucidIcon") != null) {
+            ComponentUI = GameObject.Find("LucidIcon");
+        }
     }
 
     private void OnMouseDown()
@@ -74,6 +79,8 @@ public class DragObject : MonoBehaviour
                  && (platform.transform.position.y <= transPosition.y + movementRangeY && platform.transform.position.y >= transPosition.y - movementRangeY))
             {
                 platform.transform.position = GetMouseWorldPos() + mouseOffset;
+                
+
 
                 if (platform.transform.position.x > transPosition.x + movementRangeX)
                 {
@@ -100,6 +107,7 @@ public class DragObject : MonoBehaviour
         Vector3 mousePoint = Input.mousePosition;
         mousePoint.z = mouseCoordZ;
 
-        return Camera.main.ScreenToViewportPoint(mousePoint);
+        return Camera.main.ScreenToWorldPoint(mousePoint);
     }
+  
 }

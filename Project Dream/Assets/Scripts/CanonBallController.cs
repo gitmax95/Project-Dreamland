@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class CanonBallController : MonoBehaviour
 {
+    [FMODUnity.EventRef]
+    public string canonBallDamage = "event:/SFX/CanonballDamage";
+
     public float speed = 20f;
     Rigidbody2D rb;
     // Start is called before the first frame update
@@ -21,10 +24,17 @@ public class CanonBallController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         Destroy(this.gameObject);
+        if (collision.gameObject.name == "Appearance")
+        {
+            print("something");
+            FMODUnity.RuntimeManager.PlayOneShot(canonBallDamage, GetComponent<Transform>().position);
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Destroy(this.gameObject);
+
+       
     }
 }

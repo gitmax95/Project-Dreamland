@@ -5,6 +5,9 @@ using UnityEngine.UI;
 
 public class LucidUI_Behaviour : MonoBehaviour
 {
+    GameObject lucidIcon;
+    public GameObject lucidButton;
+    public GameObject glassFront;
     LucidState lucidState;
 
     public Image lucidMoon;
@@ -36,27 +39,37 @@ public class LucidUI_Behaviour : MonoBehaviour
         lucidOrb3 = GameObject.Find("LucidOrb3").GetComponent<Image>();
 
         startColor = playerAura.color;
-
-        lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
+      
     }
 
     
     void Update()
     {
-        currentCharges = lucidState.lucidCharges; //Connect Lucid Orbs with current Lucid Charges
+        if (GameObject.Find("LucidIcon") != null) {
+                lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
+                lucidButton.SetActive(true);
+                glassFront.SetActive(true);
 
-        if(moonFilled && lucidState.isLucid) {
-            lucidMoon.fillAmount = (lucidState.lucidTime / 10 - lucidState.lucidTimer / 10);
-        }
 
-        //DebugLucidOrb(); //Used for Keyboard Debug of Lucid Orbs
+                currentCharges = lucidState.lucidCharges; //Connect Lucid Orbs with current Lucid Charges
 
-        LucidOrbState();
+                if (moonFilled && lucidState.isLucid) {
+                    lucidMoon.fillAmount = (lucidState.lucidTime / 10 - lucidState.lucidTimer / 10);
+                }
 
-        if(lucidState.isLucid) {
-            playerAura.color = targetColor;
-        } else {
-            playerAura.color = startColor;
+                //DebugLucidOrb(); //Used for Keyboard Debug of Lucid Orbs
+
+                LucidOrbState();
+
+                if (lucidState.isLucid) {
+                    playerAura.color = targetColor;
+                } else {
+                    playerAura.color = startColor;
+                }
+        } 
+        else {
+            lucidButton.SetActive(false);
+            glassFront.SetActive(false);
         }
        
     }

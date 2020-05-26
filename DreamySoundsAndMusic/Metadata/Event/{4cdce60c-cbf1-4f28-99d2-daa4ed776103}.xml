@@ -5,7 +5,7 @@
 			<value>Lucid</value>
 		</property>
 		<property name="outputFormat">
-			<value>0</value>
+			<value>1</value>
 		</property>
 		<relationship name="folder">
 			<destination>{4a10e504-e1be-4165-994c-2ceb6720b8af}</destination>
@@ -56,14 +56,28 @@
 			<destination>{c9db8b77-862e-47bc-bda0-7fae28468609}</destination>
 		</relationship>
 	</object>
-	<object class="EventAutomatableProperties" id="{9f6e2fc4-6672-42eb-8868-f05db671adac}" />
+	<object class="EventAutomatableProperties" id="{9f6e2fc4-6672-42eb-8868-f05db671adac}">
+		<property name="maxVoices">
+			<value>1</value>
+		</property>
+		<property name="voiceStealing">
+			<value>3</value>
+		</property>
+	</object>
 	<object class="MarkerTrack" id="{6e25f01b-a8b1-4d7a-9812-c1dfab9f559c}" />
 	<object class="GroupTrack" id="{0e862754-9170-4022-884d-ea9ca1a91f96}">
+		<relationship name="modules">
+			<destination>{2db741c7-b50f-4e28-b07d-0f45c1607cce}</destination>
+		</relationship>
 		<relationship name="mixerGroup">
 			<destination>{31e155bc-7b24-4846-8157-7174030ac7ea}</destination>
 		</relationship>
 	</object>
-	<object class="Timeline" id="{439138c7-3f42-4885-8f03-fbdaac626347}" />
+	<object class="Timeline" id="{439138c7-3f42-4885-8f03-fbdaac626347}">
+		<relationship name="modules">
+			<destination>{2db741c7-b50f-4e28-b07d-0f45c1607cce}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerMaster" id="{ea5bfd5f-7661-4c2b-aeb4-fe4f8c5c9384}">
 		<relationship name="effectChain">
 			<destination>{ca2e7a1e-7314-494e-af2c-73f5e9b9c76f}</destination>
@@ -81,6 +95,14 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{b2efceeb-0754-4c52-9287-940bb85c8c85}" />
+	<object class="SingleSound" id="{2db741c7-b50f-4e28-b07d-0f45c1607cce}">
+		<property name="length">
+			<value>6.5654895833333331</value>
+		</property>
+		<relationship name="audioFile">
+			<destination>{6aded136-af5d-4a0d-bfbe-f2662dc14477}</destination>
+		</relationship>
+	</object>
 	<object class="EventMixerGroup" id="{31e155bc-7b24-4846-8157-7174030ac7ea}">
 		<property name="name">
 			<value>Audio 1</value>

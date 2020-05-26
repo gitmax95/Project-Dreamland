@@ -51,7 +51,7 @@ public class AudioManager : MonoBehaviour
         
         playerState = this.gameObject.GetComponent<PlayerState>();
         playerHealth = this.gameObject.GetComponent<PlayerHealthSystem>();
-        lucidState = this.gameObject.GetComponent<LucidState>();
+        lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
 
         initialHealth = playerHealth.playerHealth;
 
@@ -66,9 +66,10 @@ public class AudioManager : MonoBehaviour
            
 
         //Health
-        DamageSFX();
+        //DamageSFX();
 
         //Mechanics
+        LucidSFX();
         JumpSFX();
         WalkingSFX();
         LandingSFX();
@@ -95,33 +96,34 @@ public class AudioManager : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
         }
+        
     }
 
-    void DamageSFX()
-    {
-        if (playerHealth.playerHealth != 10)
-        {
-            if (initialHealth > playerHealth.playerHealth)
-            {
-                FMODUnity.RuntimeManager.PlayOneShot(Damage, GetComponent<Transform>().position);
-                //damageSoundEvent.setParameterByName("DamageIntensity", playerHealth.playerHealth);
-            }
-            else if(initialHealth == playerHealth.playerHealth)
-            {
-                //damageSoundEvent.setParameterByName("DamageIntensity", 10);
-            }
-            else if(initialHealth < playerHealth.playerHealth)
-            {
-                initialHealth = playerHealth.playerHealth;
-            }
+    //void DamageSFX()
+    //{
+    //    if (playerHealth.playerHealth != 10)
+    //    {
+    //        if (initialHealth > playerHealth.playerHealth)
+    //        {
+    //            FMODUnity.RuntimeManager.PlayOneShot(Damage, GetComponent<Transform>().position);
+    //            //damageSoundEvent.setParameterByName("DamageIntensity", playerHealth.playerHealth);
+    //        }
+    //        else if(initialHealth == playerHealth.playerHealth)
+    //        {
+    //            //damageSoundEvent.setParameterByName("DamageIntensity", 10);
+    //        }
+    //        else if(initialHealth < playerHealth.playerHealth)
+    //        {
+    //            initialHealth = playerHealth.playerHealth;
+    //        }
 
-            initialHealth = playerHealth.playerHealth;
-        }
-        else
-        {
-            //damageSoundEvent.setParameterByName("DamageIntensity", 10); /silence
-        }
-    }
+    //        initialHealth = playerHealth.playerHealth;
+    //    }
+    //    else
+    //    {
+    //        //damageSoundEvent.setParameterByName("DamageIntensity", 10); /silence
+    //    }
+    //}
 
     void JumpSFX()
     {

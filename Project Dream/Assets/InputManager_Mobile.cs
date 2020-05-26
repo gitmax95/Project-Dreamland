@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class InputManager_Mobile : MonoBehaviour
 {
@@ -9,9 +10,22 @@ public class InputManager_Mobile : MonoBehaviour
     SpriteRenderer testSprite;
 
     Vector2 startPosition;
+
     public bool fingerMoved;
 
     float minimumSwipe = 30f;
+
+    Touch fingerTouch;
+
+    private bool IsPointerOverUIObject(Vector2 touchPos)
+    {
+        PointerEventData eventDataCurrentPosition = new PointerEventData(EventSystem.current);
+        eventDataCurrentPosition.position = new Vector2(touchPos.x, touchPos.y);
+        List<RaycastResult> results = new List<RaycastResult>();
+        EventSystem.current.RaycastAll(eventDataCurrentPosition, results);
+        return results.Count > 0;
+    }
+
     void Start()
     {
         controllerStates = GameObject.Find("InputManager").GetComponent<ControllerStates>();
@@ -27,10 +41,10 @@ public class InputManager_Mobile : MonoBehaviour
         if(Input.touchCount == 0) {
             testSprite.color = Color.white;
         }
-
+      
         foreach (Touch touch in Input.touches) {
 
-            if (touch.position.x > Screen.width / 2) { //Checks if touch happens on right side of screen.
+            if (touch.position.x > Screen.width / 2 && !IsPointerOverUIObject(touch.position)) { //Checks if touch happens on right side of screen.
 
                 if (touch.phase == TouchPhase.Began) { //Touch Began on right side
                     startPosition = touch.position;
@@ -55,9 +69,12 @@ public class InputManager_Mobile : MonoBehaviour
                
                      controllerStates.rightFinger = ControllerStates.FingerState.tap;
 
-                }            
+                }      
 
-            }         
+            }
+            else if (touch.position.x > Screen.width / 2 && IsPointerOverUIObject(touch.position)) {
+                controllerStates.rightFinger = ControllerStates.FingerState.noTouch;
+            }
           
         }
 
