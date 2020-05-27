@@ -10,7 +10,9 @@ public class PlayerHealthSystem : MonoBehaviour
     float timer = 0.0f;
     float timerDying = 0.0f;
 
+    public float deathDuration;
     public int playerHealth = 10;
+    public GameObject onDeath;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,9 +31,10 @@ public class PlayerHealthSystem : MonoBehaviour
         if (playerStateScript.isDying)
         {
             timerDying += Time.deltaTime;
-            if (timerDying > 2.0f) //<- Hardcoded and must be adjusted for the length of Dying Animation!
+            if (timerDying > deathDuration) //<- Hardcoded and must be adjusted for the length of Dying Animation!
             {
-                gameStateManagerScript.RestartGame();
+                onDeath.SetActive(true);
+                //gameStateManagerScript.RestartGame();
             }
         }
     }
