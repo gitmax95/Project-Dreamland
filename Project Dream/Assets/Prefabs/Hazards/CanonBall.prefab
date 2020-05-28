@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -5582290746251517078, guid: c19fc30ce5a5b2c4d9a44cef36d30d18, type: 3}
+  - {fileID: 2100000, guid: dd97e1c7b2902b346b6e4b2c88849540, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -132,6 +132,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e01ffc7f43d1c24ea13454691e440d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  canonBallDamage: event:/SFX/CanonballDamage
   speed: 3
 --- !u!114 &5447744511797640476
 MonoBehaviour:
