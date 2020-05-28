@@ -13,6 +13,9 @@ public class ElevatorMover : MonoBehaviour
 
     int direction = -1; //Next intended direction for Elevator
     int destination; //Player wants next direction to be destination.
+
+    public bool elevatorArrived;
+    public bool elevatorMoving;
    
     void Start()
     {
@@ -22,7 +25,8 @@ public class ElevatorMover : MonoBehaviour
 
 
     void Update()
-    { 
+    {
+        print(elevatorMoving);
 
         if (Input.GetKey(KeyCode.E)) { //Developer triggered elevator movement.
             CallElevator();
@@ -33,6 +37,9 @@ public class ElevatorMover : MonoBehaviour
             
             if(direction != destination) { //Elevator reached Target Position - Adjust position to be correct.
                 transform.position = new Vector3(transform.position.x, targetTransform.position.y, transform.position.z);
+                elevatorArrived = true;
+            } else {
+                elevatorArrived = false;
             }
             
         } else if(transform.position.y >= startPosition.y) { //Elevator is at Origin Position or slightly above. - Change next Direction.
@@ -40,12 +47,18 @@ public class ElevatorMover : MonoBehaviour
 
             if (direction != destination) { //Elevator is at Origin Position - Adjust position to be correct.
                 transform.position = new Vector3(transform.position.x, startPosition.y, transform.position.z);
+                elevatorArrived = true;
+            } else {
+                elevatorArrived = false;
             }
         }
 
 
         if (direction == destination) { //Makes Elevator Move
             transform.Translate(0f, elevatorSpeed * direction * Time.deltaTime, 0f);
+            elevatorMoving = true;
+        } else {
+            elevatorMoving = false;
         }
 
         if (playerOnboard) {
