@@ -65,6 +65,7 @@ GameObject:
   - component: {fileID: 1966196267487614309}
   - component: {fileID: 1966196267487614308}
   - component: {fileID: 1966196267487614311}
+  - component: {fileID: 81821447369304357}
   m_Layer: 0
   m_Name: PlayerDamage
   m_TagString: Hazard
@@ -126,6 +127,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazardDamage: 1
+--- !u!114 &81821447369304357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966196267487614314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dde85d4b49a87e46a020d32f732104a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spikeDamage: event:/SFX/SpikeDamage
 --- !u!1 &1966196267718950713
 GameObject:
   m_ObjectHideFlags: 0
