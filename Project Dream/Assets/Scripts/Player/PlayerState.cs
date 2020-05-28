@@ -7,12 +7,10 @@ public class PlayerState : MonoBehaviour
     PlayerHealthSystem playerHealthScript;
     BasicMovement_Player playerMovement;
     ControllerStates controllerStates;
-
+    GameObject playerAppearance;
     CapsuleCollider2D playerCollider;
 
     //PolygonCollider2D playerCollider;
-
-     
 
     public Animator animator;
 
@@ -46,6 +44,7 @@ public class PlayerState : MonoBehaviour
         controllerStates = GameObject.Find("InputManager").GetComponent<ControllerStates>();
         playerHealthScript = GameObject.Find("PlayerChar").GetComponent<PlayerHealthSystem>();
         playerCollider = GameObject.Find("Appearance").GetComponent<CapsuleCollider2D>();
+        playerAppearance = GameObject.Find("Appearance");
 
         isFacingRight = true;
 
@@ -239,6 +238,7 @@ public class PlayerState : MonoBehaviour
         {
             isDying = true;
             animator.SetBool("isDying", true);
+            playerAppearance.GetComponent<SpriteRenderer>().color = Color.white;
         }
     }
 

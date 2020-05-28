@@ -9,6 +9,7 @@ TagManager:
   - Hazard
   - ElevatorKey
   - Bell
+  - End
   layers:
   - Default
   - TransparentFX
