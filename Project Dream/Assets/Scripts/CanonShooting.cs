@@ -7,7 +7,10 @@ public class CanonShooting : MonoBehaviour
     public Transform shootingPoint;
     public GameObject canonBall;
 
-   public float Timer = 1f; 
+    public float Timer = 1f;
+
+    [FMODUnity.EventRef]
+    public string canonSFX = "event:/SFX/CanonBallSpawn";
 
     // Start is called before the first frame update
     void Start()
@@ -24,5 +27,6 @@ public class CanonShooting : MonoBehaviour
     void Shoot()
     {
         Instantiate(canonBall, shootingPoint.position, shootingPoint.rotation);
+        FMODUnity.RuntimeManager.PlayOneShot(canonSFX, GetComponent<Transform>().position);
     }
 }
