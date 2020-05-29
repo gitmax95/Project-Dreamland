@@ -226,10 +226,10 @@ public class BasicMovement_Player : MonoBehaviour
                 rigidBodyPlayer.velocity = new Vector2(-currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
             }
 
-            //else if (!playerState.isWallSliding)  //All aditions are temp while I am working on Wall Jump, the reason for this so the player deosnt "run" off the wall when sliding
-            //{
-            //    rigidBodyPlayer.velocity = new Vector2(0, rigidBodyPlayer.velocity.y); //Remove this to keep momentum even without Strafe Input.
-            //}
+           else if (controllerStates.input_Horizontal == 0)  //All aditions are temp while I am working on Wall Jump, the reason for this so the player deosnt "run" off the wall when sliding
+           {
+                rigidBodyPlayer.velocity = new Vector2(0, rigidBodyPlayer.velocity.y); //Remove this to keep momentum even without Strafe Input.
+           }
         }
     }
 
