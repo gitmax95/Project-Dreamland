@@ -28,7 +28,7 @@ public class BridgeSFX : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot(Leversfx, GetComponent<Transform>().position);
             FMODUnity.RuntimeManager.PlayOneShot(Bridgesfx, bridge.GetComponent<Transform>().position);
-            StartCoroutine(Coroutine());
+            //StartCoroutine(Coroutine());
         }
     }
 
