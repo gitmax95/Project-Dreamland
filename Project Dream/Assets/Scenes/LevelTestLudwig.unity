@@ -22495,7 +22495,7 @@ PrefabInstance:
     - target: {fileID: 5958824209929466642, guid: aec40125ae2f5334f9c2600f86754a49,
         type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5958824209929466642, guid: aec40125ae2f5334f9c2600f86754a49,
         type: 3}
@@ -35268,6 +35268,7 @@ Transform:
   m_LocalPosition: {x: 7.7079678, y: -6.5510335, z: -1.1283593}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1249708812}
   - {fileID: 977050766}
   m_Father: {fileID: 111136070}
   m_RootOrder: 17
@@ -38522,6 +38523,26 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 869658537}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &873471123 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5958824209827843489, guid: aec40125ae2f5334f9c2600f86754a49,
+    type: 3}
+  m_PrefabInstance: {fileID: 479343056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &873471128
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 873471123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c782b178dc5df884388b8c6b69d50345, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Elevator: event:/SFX/Elevator
+  Filler: event:/SFX/FillerTone
 --- !u!1001 &873524344
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -52857,6 +52878,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 3107973815567289657}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1249708811
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1249708812}
+  m_Layer: 0
+  m_Name: AudioChain
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1249708812
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1249708811}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -6.1289997, y: 10.243, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 797996798}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1249931287 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8402257297281751190, guid: f419daefcfcfc5c4fad558251ec8665e,
@@ -71533,7 +71584,7 @@ PrefabInstance:
     - target: {fileID: 8603977881612559315, guid: b235be5ab6ff718439f93d9e0b18ffd2,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -79.55
+      value: -23.86
       objectReference: {fileID: 0}
     - target: {fileID: 8603977881612559315, guid: b235be5ab6ff718439f93d9e0b18ffd2,
         type: 3}

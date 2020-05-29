@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4421925393266084820}
   - component: {fileID: 5380839419919750173}
   - component: {fileID: 8378724863816981357}
-  - component: {fileID: 5112923163612602384}
   - component: {fileID: 2989014964394688835}
   - component: {fileID: 1750349480407223911}
   - component: {fileID: 3969610889206307731}
@@ -62,18 +61,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hazardDamage: 1
---- !u!114 &5112923163612602384
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4421925393266084831}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d9c18c8197246234f91c2ea95184edcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!33 &2989014964394688835
 MeshFilter:
   m_ObjectHideFlags: 0
