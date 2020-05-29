@@ -14,9 +14,6 @@ public class CeilingSpikesSFX : MonoBehaviour
     [FMODUnity.EventRef]
     public string spikeDamage = "event:/SFX/SpikeDamage";
 
-    [FMODUnity.EventRef]
-    public string spikeGroundDamage = "event:/SFX/SpikeGroundDamage";
-
     // Start is called before the first frame update
     void Start()
     {
@@ -41,13 +38,7 @@ public class CeilingSpikesSFX : MonoBehaviour
         {
             FMODUnity.RuntimeManager.PlayOneShot(spikeDamage, GetComponent<Transform>().position);
         }
-        else if (collision.gameObject.tag == "Ground")
-        {
-            print("something");
-            FMODUnity.RuntimeManager.PlayOneShot(spikeGroundDamage, GetComponent<Transform>().position);
-            Rigidbody2D rb = this.gameObject.GetComponent<Rigidbody2D>();
-            rb.isKinematic = true;
-        }
+       
     }
 
    

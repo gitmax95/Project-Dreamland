@@ -35,7 +35,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -439,7 +439,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -728,7 +728,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1166,7 +1166,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1642,7 +1642,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1791,7 +1791,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2206,7 +2206,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2229,7 +2229,7 @@ MonoBehaviour:
   Path: event:/SFX/FillerTone
   guid: f12a8fbe2aa3a14e8266748827bfb1b0
   Banks:
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2255,7 +2255,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2651,7 +2651,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2708,7 +2708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637263436701002073
+  lastModified: 637263456509615840
   LoadResult: 0
   FileSizes:
   - Name: Desktop
@@ -2841,7 +2841,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2902,7 +2902,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3242,7 +3242,7 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 4
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3436758457731374673
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3294,7 +3294,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3296132350484381717
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3365,7 +3365,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3391,7 +3391,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3417,7 +3417,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -3608,7 +3608,7 @@ MonoBehaviour:
   Min: 0
   Max: 5
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &-3020819074592045378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3782,6 +3782,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-2604424172882915306
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Zone
+  m_EditorClassIdentifier: 
+  Name: Zone
+  Min: 0
+  Max: 5
+  Default: 1
+  Exists: 1
 --- !u!114 &-2601083082371682080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3932,12 +3949,12 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3471731955051684491}
+  - {fileID: -1430730145961343021}
   MinDistance: 0
   MaxDistance: 0
   Length: 375
@@ -4459,6 +4476,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-1430730145961343021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 7
+  Default: 4
+  Exists: 1
 --- !u!114 &-1389733209384844089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4552,12 +4586,12 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -3302606911001553734}
+  - {fileID: 44842819534463107}
   MinDistance: 0
   MaxDistance: 0
   Length: 32052
@@ -5078,12 +5112,12 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: 3188902416736772535}
+  - {fileID: 9165340290115349983}
   MinDistance: 1
   MaxDistance: 60
   Length: 27000
@@ -5152,7 +5186,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -4408218279438224100}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   EditorEvents:
   - {fileID: -1192317422422737762}
   - {fileID: -6432231793077096236}
@@ -5184,10 +5218,10 @@ MonoBehaviour:
   - {fileID: -5299395964188596910}
   EditorParameters: []
   MasterBanks:
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   StringsBanks:
   - {fileID: -4408218279438224100}
-  stringsBankWriteTime: 637263436701002073
+  stringsBankWriteTime: 637263456509615840
   cacheVersion: 3
 --- !u!114 &17714794562873945
 MonoBehaviour:
@@ -5206,6 +5240,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &44842819534463107
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/Ambience
+  m_EditorClassIdentifier: 
+  Name: Ambience
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &60450485041098547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5474,7 +5525,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5939,12 +5990,12 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: -3022846413947602173}
+  - {fileID: -2604424172882915306}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -6705,7 +6756,7 @@ MonoBehaviour:
   lastModified: 637263436700941862
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &2848064521381887573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6833,6 +6884,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &3041782426785986670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637263456509875147
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &3091628085722654742
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6919,7 +6988,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &3298087723433284195
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7044,7 +7113,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7800,7 +7869,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8437,7 +8506,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -8532,7 +8601,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -8727,7 +8796,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9256,7 +9325,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9350,7 +9419,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9393,7 +9462,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: 2820108498725411633}
+  - {fileID: 3041782426785986670}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -9666,6 +9735,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 992
+--- !u!114 &9165340290115349983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Elevator/ElevatorP
+  m_EditorClassIdentifier: 
+  Name: ElevatorP
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &9172128567319227240
 MonoBehaviour:
   m_ObjectHideFlags: 0

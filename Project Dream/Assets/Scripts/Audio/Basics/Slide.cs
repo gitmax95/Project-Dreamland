@@ -24,7 +24,7 @@ public class Slide : MonoBehaviour
     {
         FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, GetComponent<Transform>(), GetComponent<Rigidbody>());
 
-        if (player.isSliding || player.isWallSliding)
+        if (player.isSliding/* || player.isWallSliding*/)
         {
             SlideSound();
 
