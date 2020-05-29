@@ -25,15 +25,15 @@ public class PlayerState : MonoBehaviour
     public bool isWallJumping;
     public bool isGrounded;
     //public bool inAir;
-    public bool isTouchingWall; //is Touching && IS FACING WALL!
+/*    public bool isTouchingWall;*/ //is Touching && IS FACING WALL!
     //public bool onWall;
-    public bool isWallSliding;
+    //public bool isWallSliding;
     public bool isDying;
     public bool isDead;
     public bool hasSpikedShoes;  //Testing purposes
 
-    public bool touchingLeftWall;
-    public bool touchingRightWall;
+    //public bool touchingLeftWall;
+    //public bool touchingRightWall;
 
     float runDuration;
     
@@ -48,8 +48,8 @@ public class PlayerState : MonoBehaviour
 
         isFacingRight = true;
 
-        touchingLeftWall = false;
-        touchingRightWall = false;
+        //touchingLeftWall = false;
+        //touchingRightWall = false;
 
         isDying = false;
         isDead = false;
@@ -64,11 +64,11 @@ public class PlayerState : MonoBehaviour
 
         JumpState();
 
-        WallJumpState();
+        //WallJumpState();
 
         GroundedState();
 
-        WallSlideState();
+        //WallSlideState();
 
         AirStrafeState();
 
@@ -109,7 +109,7 @@ public class PlayerState : MonoBehaviour
             isIdle = true;
             animator.SetBool("isIdle", true); //Animation for Idle
         } 
-        else if (!isTouchingGround || isRunning || isSliding || isJumping || isWallSliding)
+        else if (!isTouchingGround || isRunning || isSliding || isJumping)
         {
             isIdle = false;
             animator.SetBool("isIdle", false);
@@ -118,12 +118,7 @@ public class PlayerState : MonoBehaviour
 
     private void GroundedState()
     {
-        if (!isTouchingGround && !isTouchingWall)
-        {
-            isGrounded = false;
-            animator.SetBool("isGrounded", false);
-        }
-        else if (!isTouchingGround && isTouchingWall)
+        if (!isTouchingGround)
         {
             isGrounded = false;
             animator.SetBool("isGrounded", false);
@@ -148,7 +143,7 @@ public class PlayerState : MonoBehaviour
             //isGrounded = false;
             //animator.SetBool("isGrounded", false);
         }
-        else if (jumpActivated && isTouchingGround || isWallSliding)
+        else if (jumpActivated && isTouchingGround)
         {
            // if (isJumping){ //playerMovement.timer_jumpDuration > 0.02f//This needs to be made in a different way otherwise the Landing becomes inconsistent.
 
@@ -166,13 +161,13 @@ public class PlayerState : MonoBehaviour
 
     private void WallJumpState()
     {
-        if (!isGrounded && isWallSliding && Input.GetKey(KeyCode.Space))
+        if (!isGrounded && Input.GetKey(KeyCode.Space))
         {
             isWallJumping = true;
             animator.SetBool("isJumping", true);
             //playerMovement.timerWallJump += Time.deltaTime;
         }
-        else if (!isJumping && isTouchingGround || isTouchingWall || isWallSliding)
+        else if (!isJumping && isTouchingGround)
         {
             isWallJumping = false;
             animator.SetBool("isJumping", false);
@@ -182,7 +177,7 @@ public class PlayerState : MonoBehaviour
 
         private void RunState()
     {
-        if (isTouchingGround && !isSliding && !isJumping && !isWallSliding && isGrounded)
+        if (isTouchingGround && !isSliding && !isJumping && isGrounded)
         {
             if (controllerStates.input_Horizontal < -playerMovement.joystick_Threshold || controllerStates.input_Horizontal > playerMovement.joystick_Threshold)
             {
@@ -195,7 +190,7 @@ public class PlayerState : MonoBehaviour
                 animator.SetBool("isRunning", false);        
             }
         }
-        else if(!isTouchingGround || isJumping || isSliding || isWallSliding || isGrounded || isIdle)
+        else if(!isTouchingGround || isJumping || isSliding || isGrounded || isIdle)
         {
             animator.SetBool("isRunning", false);
             isRunning = false;
@@ -204,30 +199,30 @@ public class PlayerState : MonoBehaviour
 
     private void WallSlideState()
     {
-        if (isTouchingWall && !isTouchingGround && playerMovement.rigidBodyPlayer.velocity.y < 0)
+        if (!isTouchingGround && playerMovement.rigidBodyPlayer.velocity.y < 0)
         {
-            if (touchingRightWall && (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
             {
-                isWallSliding = true;
+                //isWallSliding = true;
                 animator.SetBool("isWallSliding", true);
                 playerMovement.wallSlideSpeed = 0.1f;
             }
-            else if (touchingLeftWall && (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
             {
-                isWallSliding = true;
+                //isWallSliding = true;
                 animator.SetBool("isWallSliding", true);
                 playerMovement.wallSlideSpeed = 0.1f;
             }
             else
             {
-                isWallSliding = true;
+                //isWallSliding = true;
                 animator.SetBool("isWallSliding", true);
                 playerMovement.wallSlideSpeed = 1.0f;
             }
         }
         else
         {
-            isWallSliding = false;
+            //isWallSliding = false;
             animator.SetBool("isWallSliding", false);
         }
     }

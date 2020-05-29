@@ -29,7 +29,6 @@ public class AudioManager : MonoBehaviour
     public string Lucid = "event:/PlayerMechanics/Lucid";
 
     FMOD.Studio.EventInstance soundEvent;
-    FMOD.Studio.EventInstance damageSoundEvent;
 
     //[FMODUnity.EventRef]
     //public string Sliding = "event:/SFX/Sliding";
@@ -51,7 +50,7 @@ public class AudioManager : MonoBehaviour
         
         playerState = this.gameObject.GetComponent<PlayerState>();
         playerHealth = this.gameObject.GetComponent<PlayerHealthSystem>();
-        lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
+        
 
         initialHealth = playerHealth.playerHealth;
 
@@ -63,12 +62,11 @@ public class AudioManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-           
-
-        //Health
-        //DamageSFX();
-
-        //Mechanics
+        if(lucidState = null)
+        {
+            lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
+        }
+        
         LucidSFX();
         JumpSFX();
         WalkingSFX();
@@ -78,20 +76,11 @@ public class AudioManager : MonoBehaviour
         soundEvent.setParameterByName("PlayerMSFX", parameterValue);
 
 
-
-        //if (Input.GetAxis("Horizontal") >= 0.01f || Input.GetAxis("Horizontal") <= -0.01f)
-        //{
-        //    
-        //}
-        //else if(Input.GetAxis("Horizontal") == 0)
-        //{
-
-        //}
-
     }
 
     void LucidSFX()
     {
+        if(lucidState != null)
         if (lucidState.isLucid)
         {
             FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
@@ -221,8 +210,7 @@ public class AudioManager : MonoBehaviour
 
     //void SlidingSFX()
     //{
-    //    FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, GetComponent<Transform>(), GetComponent<Rigidbody>());
-
+    //   
     //    if (playerState.isSliding || playerState.isWallSliding)
     //    {
     //        soundEvent = FMODUnity.RuntimeManager.CreateInstance(Landing);
@@ -239,6 +227,7 @@ public class AudioManager : MonoBehaviour
 
         if (other.gameObject.tag == "Ground")
         {
+            print("I'm touching the ground!");
             SurfaceType surface;
             surface = other.GetComponent<SurfaceType>();
 
