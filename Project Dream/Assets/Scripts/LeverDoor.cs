@@ -31,8 +31,6 @@ public class LeverDoor : MonoBehaviour
         if (bridge.rotateBridge)
         {
             Move();
-            FMODUnity.RuntimeManager.PlayOneShot(door, GetComponent<Transform>().position);
-
         }
         
     }
