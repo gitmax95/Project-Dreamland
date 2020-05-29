@@ -1514,6 +1514,12 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 0.9}
   m_EdgeRadius: 0
+--- !u!1 &341500163 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8202799501497799029, guid: 11beef52ea9c16c4fa160e5f1103385f,
+    type: 3}
+  m_PrefabInstance: {fileID: 682431068}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &348052184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1618,7 +1624,7 @@ PrefabInstance:
         type: 3}
       propertyPath: onDeath
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 341500163}
     - target: {fileID: 8603977881612559314, guid: b235be5ab6ff718439f93d9e0b18ffd2,
         type: 3}
       propertyPath: m_Name
@@ -3094,6 +3100,10 @@ PrefabInstance:
       propertyPath: playerAura
       value: 
       objectReference: {fileID: 787605266}
+    - target: {fileID: 737663404, guid: 11beef52ea9c16c4fa160e5f1103385f, type: 3}
+      propertyPath: playerAura
+      value: 
+      objectReference: {fileID: 787605266}
     - target: {fileID: 819892095, guid: 11beef52ea9c16c4fa160e5f1103385f, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -3228,6 +3238,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8202799501497799017, guid: 11beef52ea9c16c4fa160e5f1103385f,
+        type: 3}
+      propertyPath: gameStateManagerScript
+      value: 
+      objectReference: {fileID: 863683949}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11beef52ea9c16c4fa160e5f1103385f, type: 3}
 --- !u!1 &734062291
@@ -3688,6 +3703,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9207ada54508c994980c7cab37091a1c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &863683949 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1305583715, guid: b235be5ab6ff718439f93d9e0b18ffd2,
+    type: 3}
+  m_PrefabInstance: {fileID: 356226138}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 53fd290af1b885e42ac18c6186a6fe04, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &913461024
@@ -7405,6 +7432,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340606381721233528, guid: 1099cc69fb04dec418a9866b47250e13,
+        type: 3}
+      propertyPath: lastCheckpointPos.x
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8340606381721233528, guid: 1099cc69fb04dec418a9866b47250e13,
+        type: 3}
+      propertyPath: lastCheckpointPos.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1099cc69fb04dec418a9866b47250e13, type: 3}
