@@ -110,7 +110,7 @@ public class BasicMovement_Player : MonoBehaviour
     {
         if (!playerState.isDying && !playerState.isDead)
         {
-            CheckSuroundings();
+            //CheckSuroundings();
 
             if (playerState.isIdle)
             { //Player is Idle
@@ -155,10 +155,10 @@ public class BasicMovement_Player : MonoBehaviour
                     Jump();
                 }
                 //Player is WallJumping
-                else if (playerState.isWallSliding)
-                {
-                    WallJump();
-                }
+                //else if (playerState.isWallSliding)
+                //{
+                //    WallJump();
+                //}
 
 
                 //if (!playerState.isTouchingGround && playerState.isWallSliding && Input.GetKey(KeyCode.Space))
@@ -177,10 +177,10 @@ public class BasicMovement_Player : MonoBehaviour
                 AirStrafe();
             }
 
-            if (playerState.isWallSliding)
-            {
-                WallSlide();
-            }
+            //if (playerState.isWallSliding)
+            //{
+            //    WallSlide();
+            //}
 
             //if (!playerState.isTouchingGround && playerState.isWallSliding && movementInputDirection != 0)
             //{
@@ -216,20 +216,20 @@ public class BasicMovement_Player : MonoBehaviour
     {
         if (canStrafe)
         {
-            if (controllerStates.input_Horizontal > joystick_Threshold && !playerState.isWallSliding)
+            if (controllerStates.input_Horizontal > joystick_Threshold)
             {
                 rigidBodyPlayer.velocity = new Vector2(currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
             }
 
-            else if (controllerStates.input_Horizontal < -joystick_Threshold && !playerState.isWallSliding)
+            else if (controllerStates.input_Horizontal < -joystick_Threshold)
             {
                 rigidBodyPlayer.velocity = new Vector2(-currentStrafeSpeed * Time.deltaTime, rigidBodyPlayer.velocity.y);
             }
 
-            else if (!playerState.isWallSliding)  //All aditions are temp while I am working on Wall Jump, the reason for this so the player deosnt "run" off the wall when sliding
-            {
-                rigidBodyPlayer.velocity = new Vector2(0, rigidBodyPlayer.velocity.y); //Remove this to keep momentum even without Strafe Input.
-            }
+            //else if (!playerState.isWallSliding)  //All aditions are temp while I am working on Wall Jump, the reason for this so the player deosnt "run" off the wall when sliding
+            //{
+            //    rigidBodyPlayer.velocity = new Vector2(0, rigidBodyPlayer.velocity.y); //Remove this to keep momentum even without Strafe Input.
+            //}
         }
     }
 
@@ -253,25 +253,25 @@ public class BasicMovement_Player : MonoBehaviour
         } */
     }
 
-    private void WallJump()
-    {
-        print("Wall Jumping");
+    //private void WallJump()
+    //{
+    //    print("Wall Jumping");
 
-        if (playerState.isWallSliding && playerState.isTouchingWall && Input.GetKey(KeyCode.Space))
-        {
-            if (playerState.touchingRightWall)
-            {
-                rigidBodyPlayer.velocity = new Vector2(-jumpVelocity * 0.5f * Time.deltaTime, jumpVelocity*0.75f * Time.deltaTime);
-                //Flip();
-            }
-            else if (playerState.touchingLeftWall)
-            {
-                rigidBodyPlayer.velocity = new Vector2(jumpVelocity * 0.5f * Time.deltaTime, jumpVelocity*0.75f * Time.deltaTime);
-                //Flip();
-            }
-            Flip();
-        }
-    }
+    //    if (playerState.isWallSliding && playerState.isTouchingWall && Input.GetKey(KeyCode.Space))
+    //    {
+    //        if (playerState.touchingRightWall)
+    //        {
+    //            rigidBodyPlayer.velocity = new Vector2(-jumpVelocity * 0.5f * Time.deltaTime, jumpVelocity*0.75f * Time.deltaTime);
+    //            //Flip();
+    //        }
+    //        else if (playerState.touchingLeftWall)
+    //        {
+    //            rigidBodyPlayer.velocity = new Vector2(jumpVelocity * 0.5f * Time.deltaTime, jumpVelocity*0.75f * Time.deltaTime);
+    //            //Flip();
+    //        }
+    //        Flip();
+    //    }
+    //}
     
    /* private void RunWithForce()
     {
@@ -332,7 +332,7 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void Flip()
     {
-        if (!playerState.isWallSliding && !playerState.isDying && !playerState.isSliding)
+        if (!playerState.isDying && !playerState.isSliding)
         {
             directionHorizontal *= -1;
             playerState.isFacingRight = !playerState.isFacingRight;
@@ -378,32 +378,32 @@ public class BasicMovement_Player : MonoBehaviour
     //    }
     //}
 
-    private void CheckSuroundings()
-    {
-        //if (movementInputDirection > 0)
-        //{
-        //    playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
-        //}
-        //else if (movementInputDirection < 0)
-        //{
-        //    playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
-        //}
-        playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+    //private void CheckSuroundings()
+    //{
+    //    //if (movementInputDirection > 0)
+    //    //{
+    //    //    playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+    //    //}
+    //    //else if (movementInputDirection < 0)
+    //    //{
+    //    //    playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
+    //    //}
+    //    playerState.isTouchingWall = Physics2D.Raycast(wallCheck.position, transform.right, wallCheckDistance, whatIsGround);
 
-        if (playerState.isFacingRight && playerState.isTouchingWall)
-        {
-            playerState.touchingRightWall = true;
-        }
-        else if (!playerState.isFacingRight && playerState.isTouchingWall)
-        {
-            playerState.touchingLeftWall = true;
-        }
-        else if (!playerState.isTouchingWall)
-        {
-            playerState.touchingLeftWall = false;
-            playerState.touchingRightWall = false;
-        }
-    }
+    //    if (playerState.isFacingRight && playerState.isTouchingWall)
+    //    {
+    //        playerState.touchingRightWall = true;
+    //    }
+    //    else if (!playerState.isFacingRight && playerState.isTouchingWall)
+    //    {
+    //        playerState.touchingLeftWall = true;
+    //    }
+    //    else if (!playerState.isTouchingWall)
+    //    {
+    //        playerState.touchingLeftWall = false;
+    //        playerState.touchingRightWall = false;
+    //    }
+    //}
 
     private void LockDirection()
     {

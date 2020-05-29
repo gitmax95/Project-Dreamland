@@ -57,8 +57,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 899f8dbef2ee58f499330b28e9300ed5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementRangeX: 5
-  movementRangeY: 1.5
+  movementRangeXmin: 0
+  movementRangeXmax: 3
+  movementRangeYmin: 0.5
+  movementRangeYmax: 5
 --- !u!1 &6798810650565208259
 GameObject:
   m_ObjectHideFlags: 0
