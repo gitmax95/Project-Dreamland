@@ -11,18 +11,16 @@ public class LeverDoor : MonoBehaviour
     [SerializeField]
     float moveSpeed = 2f;
 
-    int waypointIndex = 0;
+    int waypointIndex = 1;
 
     BridgeRotator bridge;
 
     [FMODUnity.EventRef]
     string door = "event:/SFX/LeverDoor";
 
-    bool playSound = false;
-
     void Start()
     {
-        transform.position = waypoints[waypointIndex].transform.position;
+        transform.position = waypoints[0].transform.position;
         bridge = GameObject.Find("RotationController").GetComponent<BridgeRotator>();
     }
 
@@ -30,30 +28,34 @@ public class LeverDoor : MonoBehaviour
     void Update()
     {
         
-        if (bridge.bridgeRaised)
+        if (bridge.rotateBridge)
         {
-            Move(0);
-            if(bridge.bridgeRotation)
-            {
-                FMODUnity.RuntimeManager.PlayOneShot(door, GetComponent<Transform>().position);
-            }
+            Move();
+            FMODUnity.RuntimeManager.PlayOneShot(door, GetComponent<Transform>().position);
 
         }
-        else if(bridge.bridgeLowered)
-        {
-            Move(1);
-            if (bridge.bridgeRotation)
-            {
-                FMODUnity.RuntimeManager.PlayOneShot(door, GetComponent<Transform>().position);
-            }
-        }
+        
     }
 
-    void Move(int destination)
+    void Move()
     {
-        transform.position = Vector2.MoveTowards(transform.position,
-                                                waypoints[destination].transform.position,
+        transform.position = Vector3.MoveTowards(transform.position,
+                                                waypoints[waypointIndex].transform.position,
                                                 moveSpeed * Time.deltaTime);
-       
+
+        if (transform.position == waypoints[waypointIndex].transform.position)
+        {
+            waypointIndex += 1;
+        }
+
+        if (waypointIndex == waypoints.Length)
+        {
+            waypointIndex = 0;
+        }
+
+
+
     }
+
+    
 }

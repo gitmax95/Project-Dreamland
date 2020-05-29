@@ -11,9 +11,9 @@ public class BridgeRotator : MonoBehaviour {
     public float rotationSpeed_Handle;
 
     bool raiseBridge;
-    public bool bridgeRaised;
+    bool bridgeRaised;
     bool lowerBridge;
-    public bool bridgeLowered = true;
+    bool bridgeLowered = true;
 
     public Transform bridgeRotation;
     Quaternion targetRotation;

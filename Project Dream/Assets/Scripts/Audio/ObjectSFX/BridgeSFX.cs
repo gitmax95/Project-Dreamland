@@ -26,7 +26,6 @@ public class BridgeSFX : MonoBehaviour
 
         if (bridgeRotator.rotateBridge)
         {
-            print("Once");
             FMODUnity.RuntimeManager.PlayOneShot(Leversfx, GetComponent<Transform>().position);
             FMODUnity.RuntimeManager.PlayOneShot(Bridgesfx, bridge.GetComponent<Transform>().position);
             //StartCoroutine(Coroutine());
