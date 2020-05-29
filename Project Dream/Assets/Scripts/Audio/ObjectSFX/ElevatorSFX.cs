@@ -4,48 +4,40 @@ using UnityEngine;
 
 public class ElevatorSFX : MonoBehaviour
 {
-    //bool bellSound = false;
+    bool bellSound = false;
+    ElevatorMover elevator;
 
-    //[FMODUnity.EventRef]
-    //public string Elevator = "event:/SFX/Elevator";
-    //[FMODUnity.EventRef]
-    //public string Bell = "event:/SFX/Bell";
+    [FMODUnity.EventRef]
+    public string Elevator = "event:/SFX/Elevator";
+    [FMODUnity.EventRef]
+    public string Filler = "event:/SFX/FillerTone";
 
     //FMOD.Studio.EventInstance soundEvent;
+    //Transform trans;
+    //Rigidbody rb;
 
-    //// Start is called before the first frame update
-    //void Start()
-    //{
-    //    //AttachInstanceToGameObject(FMOD.Studio.EventInstance instance, Transform transform, Rigidbody rigidBody)
+    // Start is called before the first frame update
+    void Start()
+    {
+        //    FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, trans, rb);
 
-    //    soundEvent = FMODUnity.RuntimeManager.CreateInstance(Elevator);
-    //    soundEvent.start();
-    //}
+        //    soundEvent = FMODUnity.RuntimeManager.CreateInstance(Elevator);
+        //    soundEvent.start();
 
-    //// Update is called once per frame
-    //void Update()
-    //{
-    //    if(isMoving)
-    //    {
-    //        bellSound = true;
-    //    }
+        elevator = this.gameObject.GetComponent<ElevatorMover>();
+        //trans = this.gameObject.GetComponent<Transform>();
+        //rb = this.gameObject.GetComponent<Rigidbody>();
+    }
 
-    //    if(destination == transform.position)
-    //    {
-    //        if(bellSound)
-    //        {
-    //            FMODUnity.RuntimeManager.PlayOneShot(Bell, GetComponent<Transform>().position);
-    //            bellSound = false;
-    //        }
-    //    }
+    // Update is called once per frame
+    void Update()
+    {
 
-    //    if(isMoving)
-    //    {
-    //        soundEvent.setParameterByName("ElevatorP", 1);
-    //    }
-    //    else
-    //    {
-    //        soundEvent.setParameterByName("ElevatorP", 0);
-    //    }
-    //}
+        if(elevator.elevatorMoving)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(Elevator, GetComponent<Transform>().position);
+        //soundEvent.setParameterByName("ElevatorP", 0f);
+        }
+       
+    }
 }
