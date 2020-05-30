@@ -10,6 +10,10 @@ TagManager:
   - ElevatorKey
   - Bell
   - End
+  - BellRight
+  - BellLeft
+  - BellLeftMax
+  - BellRightMax
   layers:
   - Default
   - TransparentFX
