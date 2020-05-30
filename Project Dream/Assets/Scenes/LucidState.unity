@@ -4219,7 +4219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62ab78b69a591dd43b1edc477cd6d9b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hazardDamage: 1
+  hazardDamage: 10
 --- !u!58 &1099460142
 CircleCollider2D:
   m_ObjectHideFlags: 0
