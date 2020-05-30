@@ -11,42 +11,51 @@ public class NarrativeText : MonoBehaviour
     public Color midColor;
     public Color endColor;
 
+    public GameObject buttonText;
+    public Narrative narativeScript;
+
     public float speed;
 
-    float startTime;
+    float timer;
 
-    bool stepOneComplete = false;
+    bool stepOneComplete;
 
     // Start is called before the first frame update
     void Start()
     {
-        startTime = Time.time;
-        narrativeText = gameObject.GetComponent<Text>();
-    }
+        timer = 0.0f;
 
-    // Update is called once per frame
+        narrativeText = gameObject.GetComponent<Text>();
+
+        stepOneComplete = false;
+    }
     void Update()
     {
-        if (narrativeText.color == midColor)
+        timer += Time.deltaTime;
+
+        if (!stepOneComplete && narrativeText.color == midColor)
         {
             stepOneComplete = true;
-            startTime = Time.time;
+        }
+        else if (!stepOneComplete)
+        {
+            narrativeText.color = Color.Lerp(startColor, midColor, speed * timer);
         }
 
-        if (!stepOneComplete)
+        if (buttonText.activeInHierarchy)
         {
-            float t = (Time.time - startTime) * speed;
-            narrativeText.color = Color.Lerp(startColor, midColor, t);
+            timer = 0.0f;
         }
-        if (stepOneComplete)
+
+        if (stepOneComplete && narativeScript.buttonPressed)
         {
-            FadeToBlack();
+            narrativeText.color = Color.Lerp(midColor, endColor, speed * timer);
         }
     }
 
-    public void FadeToBlack()
-    {
-        float t = (Time.time - startTime) * speed;
-        narrativeText.color = Color.Lerp(midColor, endColor, t);
-    }
+    //public void FadeToBlack()
+    //{
+    //    //float t = (timer - startTime) * speed;
+    //    narrativeText.color = Color.Lerp(startColor, midColor, speed * Time.deltaTime);
+    //}
 }

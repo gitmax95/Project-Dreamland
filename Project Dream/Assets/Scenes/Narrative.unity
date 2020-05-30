@@ -306,6 +306,8 @@ MonoBehaviour:
   startColor: {r: 0, g: 0, b: 0, a: 0}
   midColor: {r: 0.8941177, g: 0.8941177, b: 0.8941177, a: 1}
   endColor: {r: 0.8941177, g: 0.8941177, b: 0.8941177, a: 0}
+  buttonText: {fileID: 0}
+  narativeScript: {fileID: 0}
   speed: 0.4
 --- !u!1 &1134481451
 GameObject:
@@ -410,6 +412,8 @@ MonoBehaviour:
   startColor: {r: 1, g: 1, b: 1, a: 0}
   midColor: {r: 0.8980393, g: 0.8980393, b: 0.8980393, a: 1}
   endColor: {r: 0.8980393, g: 0.8980393, b: 0.8980393, a: 0}
+  buttonText: {fileID: 494104003}
+  narativeScript: {fileID: 1155209784}
   speed: 0.4
 --- !u!1 &1153198851
 GameObject:
@@ -568,7 +572,8 @@ MonoBehaviour:
   endColor: {r: 0, g: 0, b: 0, a: 1}
   buttonText: {fileID: 494104003}
   sceneManager: {fileID: 1300990739}
-  speed: 0.4
+  speed: 0.25
+  buttonPressed: 0
 --- !u!1 &1300990738
 GameObject:
   m_ObjectHideFlags: 0
@@ -695,18 +700,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1155209784}
-        m_MethodName: FadeToBlack
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1134481455}
-        m_MethodName: FadeToBlack
+        m_MethodName: PressButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
