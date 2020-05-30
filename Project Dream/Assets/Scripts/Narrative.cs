@@ -15,49 +15,62 @@ public class Narrative : MonoBehaviour
     public MainMenu sceneManager;
 
     public float speed;
-    
-    float startTime;
+    public bool buttonPressed;
 
-    bool stepOneComplete = false;
+    float timer;
+
+    bool stepOneComplete;
 
     // Start is called before the first frame update
     void Start()
     {
-        startTime = Time.time;
+        Time.timeScale = 1.0f;
+        timer = 0.0f;
+
         backgroundImage = gameObject.GetComponent<Image>();
+
+        stepOneComplete = false;
+        buttonPressed = false;
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (backgroundImage.color == midColor)
+        timer += Time.deltaTime;
+
+        if (!stepOneComplete && backgroundImage.color == midColor)
         {
             stepOneComplete = true;
-            startTime = Time.time;
             buttonText.SetActive(true);
         }
-        else if (backgroundImage.color != midColor && buttonText.activeInHierarchy)
+        else if (!stepOneComplete)
         {
-            buttonText.SetActive(false);
+            backgroundImage.color = Color.Lerp(startColor, midColor, speed * timer);
         }
 
-        if (!stepOneComplete)
+        if (stepOneComplete && buttonPressed)
         {
-            float t = (Time.time - startTime) * speed;
-            backgroundImage.color = Color.Lerp(startColor, midColor, t);
+            backgroundImage.color = Color.Lerp(midColor, endColor, speed * timer);/*FadeToBlack();*/
         }
-        if (stepOneComplete)
-        {
-            FadeToBlack();
-        }
+
         if (backgroundImage.color == endColor)
         {
             sceneManager.BridgeScene();
         }
+
+        //print(Time.timeScale);
 }
-    public void FadeToBlack()
+    //public void FadeToBlack()
+    //{
+    //    backgroundImage.color = Color.Lerp(midColor, endColor, speed * timer/* Mathf.MoveTowards(0.0f, 1.0f, speed) * Time.deltaTime*/);
+    //}
+    public void PressButton()
     {
-        float t = (Time.time - startTime) * speed;
-        backgroundImage.color = Color.Lerp(midColor, endColor, t);
+        if (buttonText.activeInHierarchy)
+        {
+            buttonText.SetActive(false);
+            buttonPressed = true;
+            timer = 0.0f;
+        }
     }
 }
