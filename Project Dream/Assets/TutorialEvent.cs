@@ -23,8 +23,7 @@ public class TutorialEvent : MonoBehaviour
 
     public GameObject eventObject;
     Transform secondPosition;
-    Transform thirdPosition;
-    
+    Transform thirdPosition; 
 
     float delayTimer;
     float durationTimer;
@@ -49,17 +48,25 @@ public class TutorialEvent : MonoBehaviour
 
     private void Update()
     {
+        
         if(tutorialStep >= 3) {
             tutorialCompleted = true;
-           // Destroy(this.gameObject, 0.5f);
+            Time.timeScale = 1f;
+            //Destroy(this.gameObject, 0.5f);
         }
 
         if (eventCompleted && durationTimer >= minimumDuration) {
 
             eventObject.SetActive(false);
-
-            //Destroy(this.gameObject, 0.5f);
+            comboStep = 0;
+           
         }
+
+        if (playerState.isSliding == false) {
+            comboStep = 0;
+        }
+
+
 
         if (eventObject.activeSelf) {
 
@@ -80,10 +87,7 @@ public class TutorialEvent : MonoBehaviour
 
             }
 
-            if (playerState.isSliding == false) {
-                comboStep = 0;
-            }
-
+        
             switch (thisEvent) {
                 case TutorialEvents.jump: //eventNumber 1
                     if (playerState.isJumping == true) {
@@ -99,6 +103,7 @@ public class TutorialEvent : MonoBehaviour
                         eventCompleted = true;
                         tutorialStep = 2;
                         transform.position = thirdPosition.position;
+                        eventObject.SetActive(false);
                         thisEvent = TutorialEvents.comboJump;
                     } else if(playerState.isRunning == false) {
                         eventObject.SetActive(false);
@@ -118,7 +123,8 @@ public class TutorialEvent : MonoBehaviour
                     }
 
                     if (comboStep == 1 && playerState.isJumping) {
-                        eventCompleted = true;
+                       // eventCompleted = true;
+                        tutorialStep = 3;
                      
                     }
                     return;
@@ -168,9 +174,9 @@ public class TutorialEvent : MonoBehaviour
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Player") {
+       if(collision.gameObject.tag == "Player") {
             insideEvent = false;
-        }
+       } 
     }
 
     private void JumpEvent(float delay)

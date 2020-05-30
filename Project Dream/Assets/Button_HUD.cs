@@ -11,8 +11,6 @@ public class Button_HUD : MonoBehaviour
     {
         if (buttonEvent.activeInHierarchy) {
             Time.timeScale = 0f;
-        } else {
-            Time.timeScale = 1f;
         }
     }
 
@@ -24,10 +22,12 @@ public class Button_HUD : MonoBehaviour
   public void BackToMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        Time.timeScale = 1f;
     }
 
     public void BackButtonNO()
     {
         buttonEvent.SetActive(false);
+        Time.timeScale = 1f;
     }
 }
