@@ -152,14 +152,16 @@ public class PlayerState : MonoBehaviour
             jumpActivated = false;
            
         }
-        //else if (isWallSliding)
-        //{
-        //    animator.SetBool("isJumping", false);
-        //    isJumping = false;
-        //}
+        /*
+        else if (isWallSliding)
+        {
+            animator.SetBool("isJumping", false);
+            isJumping = false;
+        }
+        */
     }
 
-    private void WallJumpState()
+    /*private void WallJumpState()
     {
         if (!isGrounded && Input.GetKey(KeyCode.Space))
         {
@@ -173,7 +175,7 @@ public class PlayerState : MonoBehaviour
             animator.SetBool("isJumping", false);
             //playerMovement.timerWallJump = 0.0f;
         }
-    }
+    }*/
 
         private void RunState()
     {

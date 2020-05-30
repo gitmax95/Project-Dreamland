@@ -13,11 +13,14 @@ public class BellController : MonoBehaviour
     bool ForceRightActive = true;
     bool ForceLeftActive = false;
 
+    BellRotationDetector bellRotation;
+
     //Start is called before the first frame update
     void Start()
     {
         rb = this.GetComponent<Rigidbody>();
         rb.AddForce(startSpeed, 0, 0, ForceMode.Impulse);
+        bellRotation = GameObject.Find("BellRotation").GetComponent<BellRotationDetector>();
 
     }
 
@@ -26,12 +29,12 @@ public class BellController : MonoBehaviour
     {
         SwingLeft();
 
-        if (UnityEditor.TransformUtils.GetInspectorRotation(gameObject.transform).x >= max)
+        if (bellRotation.leftMax)
         {
             ForceLeftActive = false;
             StartCoroutine(MaxLeftReached());
         }
-        else if (UnityEditor.TransformUtils.GetInspectorRotation(gameObject.transform).x <= -max)
+        else if (bellRotation.rightMax)
         {
             ForceRightActive = false;
             StartCoroutine(MaxRightReached());
@@ -42,8 +45,9 @@ public class BellController : MonoBehaviour
     private void SwingLeft()
     {
 
-        if (UnityEditor.TransformUtils.GetInspectorRotation(gameObject.transform).x >= 0/*transform.rotation.eulerAngles.x >= 0 && transform.rotation.eulerAngles.x <= max*/)
+        if (bellRotation.left)
         {
+
             if (ForceLeftActive)
             {
                 rb.AddForce(-force, 0, 0, ForceMode.Force);
@@ -51,7 +55,7 @@ public class BellController : MonoBehaviour
 
         }
 
-        if(UnityEditor.TransformUtils.GetInspectorRotation(gameObject.transform).x <= 0 /*transform.rotation.eulerAngles.x <= 0 && transform.rotation.eulerAngles.x >= -max*/)
+        if(bellRotation.right)
         {
             if (ForceRightActive)
             {
