@@ -26,7 +26,7 @@ public class ElevatorMover : MonoBehaviour
 
     void Update()
     {
-        print(elevatorMoving);
+      
 
         if (Input.GetKey(KeyCode.E)) { //Developer triggered elevator movement.
             CallElevator();

@@ -25,7 +25,7 @@ public class PlayerState : MonoBehaviour
     public bool jumpActivated;
     //public bool isWallJumping;
     public bool isGrounded;
-    public bool inAir;
+    //public bool inAir;
 /*    public bool isTouchingWall;*/ //is Touching && IS FACING WALL!
     //public bool onWall;
     //public bool isWallSliding;
@@ -273,7 +273,7 @@ public class PlayerState : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
-            inAir = false;
+            //inAir = false;
             isTouchingGround = true;
             animator.SetBool("isGrounded", true);
             
@@ -283,7 +283,7 @@ public class PlayerState : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
-            inAir = false;
+            //inAir = false;
             isTouchingGround = true;
             animator.SetBool("isGrounded", true);
         }
@@ -292,7 +292,7 @@ public class PlayerState : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
-            inAir = true;
+            //inAir = true;
             isTouchingGround = false;
             animator.SetBool("isGrounded", false);
         }

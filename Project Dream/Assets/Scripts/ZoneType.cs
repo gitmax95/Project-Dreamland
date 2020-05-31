@@ -7,7 +7,8 @@ public class ZoneType : MonoBehaviour
 
     [SerializeField]
     public int type;
-    public int fade;
+    [Header("Values between 10 and 1 ONLY")]
+    public int fadeSeconds;
 
     // Start is called before the first frame update
     void Start()
@@ -28,6 +29,6 @@ public class ZoneType : MonoBehaviour
 
     public int getFade()
     {
-        return fade;
+        return fadeSeconds;
     }
 }

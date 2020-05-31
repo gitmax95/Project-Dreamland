@@ -12,12 +12,12 @@ public class AmbientManager : MonoBehaviour
 
     int parameterValue = 0;
     int memoryValue = 0;
-    float lerpValue;
+    float lerpValue = 0;
     bool ChangeParameter = true;
 
-    [Header("Values between 10 and 1")]
-    [SerializeField]
-    public int speed; // speed in seconds
+    
+    int speed; // speed in seconds
+    private bool destroyed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,38 +26,36 @@ public class AmbientManager : MonoBehaviour
         soundEvent.start();
     }
 
+ 
     // Update is called once per frame
     void Update()
     {
+        //print("par " + parameterValue);
+        //print("mem " + memoryValue);
+
+
         if (ChangeParameter)
         {
-            if (memoryValue < parameterValue)
+           if(destroyed)
             {
+                memoryValue = parameterValue;
+                destroyed = false;
+            }
+
                 soundEvent.setParameterByName("ZonePP", Mathf.Lerp(memoryValue, parameterValue, lerpValue));
 
-                lerpValue = (1 / speed) * Time.deltaTime;
+                lerpValue += Time.deltaTime/speed;
 
-                if (parameterValue == Mathf.Lerp(memoryValue, parameterValue, lerpValue))
-                {
-                    memoryValue = parameterValue;
-                    ChangeParameter = false;
-                }
-            }
-            else if (memoryValue > parameterValue)
+            if (parameterValue == Mathf.Lerp(memoryValue, parameterValue, lerpValue))
             {
-                soundEvent.setParameterByName("ZonePP", Mathf.Lerp(parameterValue, memoryValue, lerpValue));
-
-                lerpValue = (1 / speed) * Time.deltaTime;
-
-                if (memoryValue == Mathf.Lerp(parameterValue, memoryValue, lerpValue))
-                {
-                    memoryValue = parameterValue;
-                    ChangeParameter = false;
-                }
+                print("I reached the par");
+                memoryValue = parameterValue;
+                ChangeParameter = false;
+                lerpValue = 0;
             }
+
         }
 
-        
         if (memoryValue != parameterValue)
         {
             ChangeParameter = true;
@@ -77,12 +75,17 @@ public class AmbientManager : MonoBehaviour
 
             if (zone != null)
             {
-                print("music");
                 parameterValue = zone.getType();
                 speed = zone.getFade();
             }
-            
+
         }
+    }
+
+    private void OnDestroy()
+    {
+        print("I was destroyed");
+        destroyed = true;
     }
 }
         

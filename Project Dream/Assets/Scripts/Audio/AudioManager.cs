@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     PlayerHealthSystem playerHealth;
     LucidState lucidState;
 
+    GameObject lucidIcon;
 
     [SerializeField]
     [FMODUnity.EventRef] string JumpingEvent = "event:/PlayerMechanics/Jumping";
@@ -52,20 +53,25 @@ public class AudioManager : MonoBehaviour
         soundEvent = FMODUnity.RuntimeManager.CreateInstance(Walking);
         soundEvent.start();
 
+        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(lucidState = null)
+        lucidIcon = GameObject.Find("LucidState");
+
+        if (lucidIcon != null)
         {
             lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
         }
+                
         
         LucidSFX();
         JumpSFX();
         WalkingSFX();
-        //LandingSFX();
+        LandingSFX();
         //SlidingSFX();
 
         soundEvent.setParameterByName("PlayerMSFX", parameterValue);
@@ -75,10 +81,13 @@ public class AudioManager : MonoBehaviour
 
     void LucidSFX()
     {
-        if(lucidState != null)
-        if (lucidState.isLucid)
+        if (lucidState != null)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
+            if (lucidState.isLucid)
+            {
+                print("lucid exists and should play");
+                FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
+            }
         }
         
     }
@@ -141,14 +150,13 @@ public class AudioManager : MonoBehaviour
         if (!playerState.isTouchingGround)
         {
             inAir = true;
-           
         }
 
         if (inAir)
         {
             if (playerState.isTouchingGround)
             {
-                print("land");
+                
 
                 switch (memoryValue)
                 {
