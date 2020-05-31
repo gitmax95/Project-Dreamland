@@ -11,6 +11,7 @@ public class PlayerPosition : MonoBehaviour
     {
         gameMasterScript = GameObject.Find("GameStateManager").GetComponent<GameMaster>();
         transform.position = gameMasterScript.lastCheckpointPos;
+        Time.timeScale = 1f;
     }
 
     public void RestartGame()
