@@ -13,6 +13,7 @@ public class PlayerState : MonoBehaviour
     //PolygonCollider2D playerCollider;
 
     public Animator animator;
+    public GameObject onDeath;
 
     [Header("Player States")]
     public bool isFacingRight;
@@ -25,7 +26,7 @@ public class PlayerState : MonoBehaviour
     public bool jumpActivated;
     //public bool isWallJumping;
     public bool isGrounded;
-    //public bool inAir;
+    public bool inAir;
 /*    public bool isTouchingWall;*/ //is Touching && IS FACING WALL!
     //public bool onWall;
     //public bool isWallSliding;
@@ -252,9 +253,19 @@ public class PlayerState : MonoBehaviour
             isDying = true;
             animator.SetBool("isDying", true);
             playerAppearance.GetComponent<SpriteRenderer>().color = Color.white;
-            playerAppearance.GetComponent<CapsuleCollider2D>().enabled = false;
+            //playerAppearance.GetComponent<CapsuleCollider2D>().enabled = false;
             //gameObject.GetComponent<BoxCollider2D>().enabled = false;
             //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+        else if (playerHealthScript.playerHealth > 0)
+        {
+            isDying = false;
+            animator.SetBool("isDying", false);
+            if (onDeath.activeInHierarchy)
+            {
+                onDeath.SetActive(false);
+                playerHealthScript.timerDying = 0.0f;
+            }
         }
     }
 
@@ -273,6 +284,7 @@ public class PlayerState : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
+            inAir = false;
             isTouchingGround = true;
             animator.SetBool("isGrounded", true);
             
@@ -282,6 +294,7 @@ public class PlayerState : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
+            inAir = false;
             isTouchingGround = true;
             animator.SetBool("isGrounded", true);
         }
@@ -290,6 +303,7 @@ public class PlayerState : MonoBehaviour
     {
         if(collision.gameObject.tag == "Ground")
         {
+            inAir = true;
             isTouchingGround = false;
             animator.SetBool("isGrounded", false);
         }
