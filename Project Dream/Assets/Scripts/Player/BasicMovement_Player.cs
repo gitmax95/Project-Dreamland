@@ -162,7 +162,7 @@ public class BasicMovement_Player : MonoBehaviour
 
             }
 
-            if (playerState.isJumping/* || playerState.isWallJumping*/)
+            if (playerState.isJumping && !playerState.isDying)
             {
                 //Player is Jumping
                 if (playerState.isTouchingGround)
