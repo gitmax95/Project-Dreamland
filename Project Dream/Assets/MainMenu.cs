@@ -45,4 +45,9 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene("Narrative");
     }
+    
+    public void EndScene()
+    {
+        SceneManager.LoadScene("EndScene");
+    }
 }
