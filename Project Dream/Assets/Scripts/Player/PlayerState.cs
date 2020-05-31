@@ -21,8 +21,9 @@ public class PlayerState : MonoBehaviour
     public bool isRunning;
     public bool isSliding;
     public bool isJumping;
+    public bool isFalling;
     public bool jumpActivated;
-    public bool isWallJumping;
+    //public bool isWallJumping;
     public bool isGrounded;
     //public bool inAir;
 /*    public bool isTouchingWall;*/ //is Touching && IS FACING WALL!
@@ -70,9 +71,9 @@ public class PlayerState : MonoBehaviour
 
         //WallSlideState();
 
-        AirStrafeState();
-
         DyingState();
+
+        FallState();
 
         //DeadState();
         //WallHangState();
@@ -81,7 +82,7 @@ public class PlayerState : MonoBehaviour
 
     private void SlideState()
     {
-        if (isRunning && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || controllerStates.rightFinger == ControllerStates.FingerState.downSwipe)) //Future iteration will only use fingerState and we'll have more InputMangerScripts
+        if (isRunning && !isDying && (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow) || controllerStates.rightFinger == ControllerStates.FingerState.downSwipe)) //Future iteration will only use fingerState and we'll have more InputMangerScripts
             {
             if (runDuration >= playerMovement.requiredRunDuration)
             {
@@ -104,7 +105,7 @@ public class PlayerState : MonoBehaviour
 
     private void IdleState()
     {
-        if (isTouchingGround && controllerStates.input_Horizontal == 0)
+        if (isTouchingGround && controllerStates.input_Horizontal == 0 && !isDying)
         {
             isIdle = true;
             animator.SetBool("isIdle", true); //Animation for Idle
@@ -132,18 +133,19 @@ public class PlayerState : MonoBehaviour
 
     private void JumpState()
     {
-        if(isJumping && !isTouchingGround) {
+        if(isJumping && !isTouchingGround && !isDying)
+        {
             jumpActivated = true;
         }
 
-        if (isGrounded && Input.GetKeyDown(KeyCode.Space) || controllerStates.rightFinger == ControllerStates.FingerState.tap) //&& playerMovement.timer_jumpDuration < playerMovement.jumpDuration
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space) || controllerStates.rightFinger == ControllerStates.FingerState.tap && !isDying) //&& playerMovement.timer_jumpDuration < playerMovement.jumpDuration
         {
             isJumping = true;
             animator.SetBool("isJumping", true);
             //isGrounded = false;
             //animator.SetBool("isGrounded", false);
         }
-        else if (jumpActivated && isTouchingGround)
+        else if (jumpActivated && isTouchingGround || playerMovement.rigidBodyPlayer.velocity.y < 0.0f)
         {
            // if (isJumping){ //playerMovement.timer_jumpDuration > 0.02f//This needs to be made in a different way otherwise the Landing becomes inconsistent.
 
@@ -176,10 +178,10 @@ public class PlayerState : MonoBehaviour
             //playerMovement.timerWallJump = 0.0f;
         }
     }*/
-
-        private void RunState()
+    
+    private void RunState()
     {
-        if (isTouchingGround && !isSliding && !isJumping && isGrounded)
+        if (isTouchingGround && !isSliding && !isJumping && isGrounded && !isDying)
         {
             if (controllerStates.input_Horizontal < -playerMovement.joystick_Threshold || controllerStates.input_Horizontal > playerMovement.joystick_Threshold)
             {
@@ -199,35 +201,49 @@ public class PlayerState : MonoBehaviour
         }
     }
 
-    private void WallSlideState()
+    private void FallState()
     {
-        if (!isTouchingGround && playerMovement.rigidBodyPlayer.velocity.y < 0)
+        if (playerMovement.rigidBodyPlayer.velocity.y < 0 && !isGrounded && !isDying)
         {
-            if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
-            {
-                //isWallSliding = true;
-                animator.SetBool("isWallSliding", true);
-                playerMovement.wallSlideSpeed = 0.1f;
-            }
-            else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
-            {
-                //isWallSliding = true;
-                animator.SetBool("isWallSliding", true);
-                playerMovement.wallSlideSpeed = 0.1f;
-            }
-            else
-            {
-                //isWallSliding = true;
-                animator.SetBool("isWallSliding", true);
-                playerMovement.wallSlideSpeed = 1.0f;
-            }
+            isFalling = true;
+            animator.SetBool("isFalling", true);
         }
-        else
+        else if (playerMovement.rigidBodyPlayer.velocity.y >= 0 || !isGrounded)
         {
-            //isWallSliding = false;
-            animator.SetBool("isWallSliding", false);
+            isFalling = false;
+            animator.SetBool("isFalling", false);
         }
     }
+
+    //private void WallSlideState()
+    //{
+    //    if (!isTouchingGround && playerMovement.rigidBodyPlayer.velocity.y < 0)
+    //    {
+    //        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)))
+    //        {
+    //            //isWallSliding = true;
+    //            animator.SetBool("isWallSliding", true);
+    //            playerMovement.wallSlideSpeed = 0.1f;
+    //        }
+    //        else if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)))
+    //        {
+    //            //isWallSliding = true;
+    //            animator.SetBool("isWallSliding", true);
+    //            playerMovement.wallSlideSpeed = 0.1f;
+    //        }
+    //        else
+    //        {
+    //            //isWallSliding = true;
+    //            animator.SetBool("isWallSliding", true);
+    //            playerMovement.wallSlideSpeed = 1.0f;
+    //        }
+    //    }
+    //    else
+    //    {
+    //        //isWallSliding = false;
+    //        animator.SetBool("isWallSliding", false);
+    //    }
+    //}
 
     private void DyingState()
     {
@@ -236,6 +252,9 @@ public class PlayerState : MonoBehaviour
             isDying = true;
             animator.SetBool("isDying", true);
             playerAppearance.GetComponent<SpriteRenderer>().color = Color.white;
+            playerAppearance.GetComponent<CapsuleCollider2D>().enabled = false;
+            //gameObject.GetComponent<BoxCollider2D>().enabled = false;
+            //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
         }
     }
 
@@ -249,11 +268,6 @@ public class PlayerState : MonoBehaviour
     //        animator.SetBool("isDead", true);
     //    }
     //}
-
-    private void AirStrafeState()
-    {
-
-    }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
