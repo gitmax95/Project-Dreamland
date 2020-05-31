@@ -73,7 +73,7 @@ public class TutorialEvent : MonoBehaviour
             durationTimer += Time.deltaTime;
 
             if (thisEvent == TutorialEvents.comboJump && playerState.isSliding) {
-                Time.timeScale = 0.3f;
+                Time.timeScale = 0.5f;
                 tutorialAnimator.speed = 4f;
             } else {
                 Time.timeScale = 1f;
