@@ -9,12 +9,13 @@ public class ActivationEvent : MonoBehaviour
     CheckpointSystem thisCheckPoint;
     GameMaster gameMasterScript;
 
+    public GameObject checkPointAnnouncer;
+
     bool particleAllowed;
     bool checkPoint;
 
     private void Start()
     {
-        
         if(this.gameObject.name != " AbilityUnlock") {
             thisCheckPoint = GetComponent<CheckpointSystem>();
             gameMasterScript = GameObject.Find("GameStateManager").GetComponent<GameMaster>();
@@ -44,6 +45,7 @@ public class ActivationEvent : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" && particleAllowed) {
             activationParticle.Play();
+            checkPointAnnouncer.SetActive(true);
         }
     }
 }
