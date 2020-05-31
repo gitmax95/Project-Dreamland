@@ -35,7 +35,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -265,6 +265,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 1
+--- !u!114 &-8985446248057324075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Elevator/ElevatorP
+  m_EditorClassIdentifier: 
+  Name: ElevatorP
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-8972253961478087437
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -333,6 +350,23 @@ MonoBehaviour:
   Min: 0
   Max: 5
   Default: 1
+  Exists: 0
+--- !u!114 &-8832711985572183443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/ZonePP
+  m_EditorClassIdentifier: 
+  Name: ZonePP
+  Min: 0
+  Max: 5
+  Default: 0
   Exists: 0
 --- !u!114 &-8803241929905780226
 MonoBehaviour:
@@ -491,7 +525,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -603,6 +637,23 @@ MonoBehaviour:
   lastModified: 637256585720964380
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-8281637243553159786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 7
+  Default: 4
   Exists: 0
 --- !u!114 &-8270765981143213086
 MonoBehaviour:
@@ -798,7 +849,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -806,6 +857,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 992
+--- !u!114 &-8032486119690844284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/ZonePP
+  m_EditorClassIdentifier: 
+  Name: ZonePP
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 0
 --- !u!114 &-8029541916909049879
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1110,7 +1178,7 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 4
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7825390942228452393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1270,7 +1338,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -1312,7 +1380,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &-7585017012776808184
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1606,6 +1674,23 @@ MonoBehaviour:
   Max: 5
   Default: 1
   Exists: 0
+--- !u!114 &-6973476063193509899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 7
+  Default: 4
+  Exists: 0
 --- !u!114 &-6970818163475121812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1673,6 +1758,23 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
+  Exists: 0
+--- !u!114 &-6682892061431842857
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Zone
+  m_EditorClassIdentifier: 
+  Name: Zone
+  Min: 0
+  Max: 5
+  Default: 1
   Exists: 0
 --- !u!114 &-6583969264136065461
 MonoBehaviour:
@@ -1763,7 +1865,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -1912,7 +2014,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2187,6 +2289,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-5517905629929523683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637265431385046001
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-5512337019056673540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2292,6 +2412,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-5405223362038767465
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Elevator/ElevatorP
+  m_EditorClassIdentifier: 
+  Name: ElevatorP
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-5378333988048389748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2344,7 +2481,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -2352,6 +2489,23 @@ MonoBehaviour:
   MinDistance: 1
   MaxDistance: 10
   Length: 1071
+--- !u!114 &-5319734835587245635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/ZonePP
+  m_EditorClassIdentifier: 
+  Name: ZonePP
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 0
 --- !u!114 &-5299395964188596910
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2367,7 +2521,7 @@ MonoBehaviour:
   Path: event:/SFX/FillerTone
   guid: f12a8fbe2aa3a14e8266748827bfb1b0
   Banks:
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2393,7 +2547,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2608,6 +2762,23 @@ MonoBehaviour:
   Max: 5
   Default: 1
   Exists: 0
+--- !u!114 &-4797710847374847536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 7
+  Default: 4
+  Exists: 0
 --- !u!114 &-4785202064118452767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2789,7 +2960,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -2846,13 +3017,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.strings.bank
   SubDir: 
-  lastModified: 637264481446420911
+  lastModified: 637265445645158129
   LoadResult: 0
   FileSizes:
   - Name: Desktop
-    Value: 2288
+    Value: 2248
   - Name: Mobile
-    Value: 2288
+    Value: 2248
   Exists: 1
 --- !u!114 &-4398485366934930501
 MonoBehaviour:
@@ -2979,7 +3150,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3022,6 +3193,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-4221777426138020147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/ZonePP
+  m_EditorClassIdentifier: 
+  Name: ZonePP
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 0
 --- !u!114 &-4147970756722954027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3040,7 +3228,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3100,7 +3288,7 @@ MonoBehaviour:
   lastModified: 637264481447099088
   LoadResult: 0
   FileSizes: []
-  Exists: 1
+  Exists: 0
 --- !u!114 &-4074269580969898866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3118,6 +3306,23 @@ MonoBehaviour:
   lastModified: 637263038699818777
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-4069842601951069798
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/ZonePP
+  m_EditorClassIdentifier: 
+  Name: ZonePP
+  Min: 0
+  Max: 5
+  Default: 0
   Exists: 0
 --- !u!114 &-4015190303985494604
 MonoBehaviour:
@@ -3521,7 +3726,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -3547,7 +3752,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -3573,7 +3778,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 1
   Is3D: 1
   IsOneShot: 0
@@ -3939,6 +4144,40 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &-2740372435016460119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Zone
+  m_EditorClassIdentifier: 
+  Name: Zone
+  Min: 0
+  Max: 5
+  Default: 1
+  Exists: 0
+--- !u!114 &-2707107181340770293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Elevator/ElevatorP
+  m_EditorClassIdentifier: 
+  Name: ElevatorP
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-2627047804094697279
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4123,15 +4362,33 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: -7834728179472967396}
+  - {fileID: 7459028490255450557}
   MinDistance: 0
   MaxDistance: 0
   Length: 375
+--- !u!114 &-2421446815261563441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637265437604781803
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-2396421724655353429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4237,6 +4494,23 @@ MonoBehaviour:
   Max: 7
   Default: 4
   Exists: 0
+--- !u!114 &-2179379260825725569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Elevator/ElevatorP
+  m_EditorClassIdentifier: 
+  Name: ElevatorP
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &-2164743825231338461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4307,6 +4581,23 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 0
+--- !u!114 &-2061263690640782139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Elevator/ElevatorP
+  m_EditorClassIdentifier: 
+  Name: ElevatorP
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 1
 --- !u!114 &-2048098760253723278
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4359,6 +4650,23 @@ MonoBehaviour:
   lastModified: 637256582814422447
   LoadResult: 0
   FileSizes: []
+  Exists: 0
+--- !u!114 &-1906989907521914530
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 7
+  Default: 4
   Exists: 0
 --- !u!114 &-1886713972557991246
 MonoBehaviour:
@@ -4509,6 +4817,24 @@ MonoBehaviour:
   Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
   SubDir: 
   lastModified: 637231482730723150
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
+--- !u!114 &-1771231647736088799
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637265438043586521
   LoadResult: 0
   FileSizes: []
   Exists: 0
@@ -4684,6 +5010,23 @@ MonoBehaviour:
   Max: 7
   Default: 4
   Exists: 0
+--- !u!114 &-1408745780735968032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Zone
+  m_EditorClassIdentifier: 
+  Name: Zone
+  Min: 0
+  Max: 5
+  Default: 1
+  Exists: 0
 --- !u!114 &-1389733209384844089
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4777,15 +5120,15 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 1
   Is3D: 0
   IsOneShot: 0
   Parameters:
-  - {fileID: 9147955305023448355}
+  - {fileID: 5632929660754765442}
   MinDistance: 0
   MaxDistance: 0
-  Length: 32052
+  Length: 68571
 --- !u!114 &-1141056727922611528
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4803,6 +5146,24 @@ MonoBehaviour:
   Max: 1
   Default: 0
   Exists: 1
+--- !u!114 &-1116023121757089121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637265444259986586
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &-1094395011002363048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5320,12 +5681,12 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 1
   Is3D: 1
   IsOneShot: 1
   Parameters:
-  - {fileID: -7637071333986047208}
+  - {fileID: -2061263690640782139}
   MinDistance: 1
   MaxDistance: 60
   Length: 27000
@@ -5394,7 +5755,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   EditorBanks:
   - {fileID: -4408218279438224100}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   EditorEvents:
   - {fileID: -1192317422422737762}
   - {fileID: -6432231793077096236}
@@ -5424,13 +5785,12 @@ MonoBehaviour:
   - {fileID: -4147970756722954027}
   - {fileID: -181955476403584053}
   - {fileID: -5299395964188596910}
-  - {fileID: 5887079164744158876}
   EditorParameters: []
   MasterBanks:
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   StringsBanks:
   - {fileID: -4408218279438224100}
-  stringsBankWriteTime: 637264481446420911
+  stringsBankWriteTime: 637265445645158129
   cacheVersion: 3
 --- !u!114 &17714794562873945
 MonoBehaviour:
@@ -5751,7 +6111,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -5915,6 +6275,23 @@ MonoBehaviour:
   Default: 0
   Exists: 0
 --- !u!114 &970804279198774631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 7
+  Default: 4
+  Exists: 0
+--- !u!114 &973481921198342297
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6106,6 +6483,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &1279209885787977939
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 7
+  Default: 4
+  Exists: 0
 --- !u!114 &1317688279617865826
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6233,12 +6627,12 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
   Parameters:
-  - {fileID: 8922612753522023135}
+  - {fileID: 4785568763554701556}
   MinDistance: 0
   MaxDistance: 0
   Length: 0
@@ -6775,6 +7169,24 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &2440452137716095103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637265445645068372
+  LoadResult: 0
+  FileSizes: []
+  Exists: 1
 --- !u!114 &2493277758084523029
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7442,7 +7854,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -7771,6 +8183,23 @@ MonoBehaviour:
   Max: 5
   Default: 1
   Exists: 0
+--- !u!114 &4223186562976419048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Zone
+  m_EditorClassIdentifier: 
+  Name: Zone
+  Min: 0
+  Max: 5
+  Default: 1
+  Exists: 0
 --- !u!114 &4244636686969859728
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8001,7 +8430,41 @@ MonoBehaviour:
   Max: 7
   Default: 4
   Exists: 1
+--- !u!114 &4785568763554701556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Zone
+  m_EditorClassIdentifier: 
+  Name: Zone
+  Min: 0
+  Max: 5
+  Default: 1
+  Exists: 1
 --- !u!114 &4791839603077923264
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Zone
+  m_EditorClassIdentifier: 
+  Name: Zone
+  Min: 0
+  Max: 5
+  Default: 1
+  Exists: 0
+--- !u!114 &4816634997211493903
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8051,6 +8514,23 @@ MonoBehaviour:
   Min: 0
   Max: 5
   Default: 1
+  Exists: 0
+--- !u!114 &4982654693614065080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/ZonePP
+  m_EditorClassIdentifier: 
+  Name: ZonePP
+  Min: 0
+  Max: 5
+  Default: 0
   Exists: 0
 --- !u!114 &5000420036633863084
 MonoBehaviour:
@@ -8198,7 +8678,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -8423,6 +8903,23 @@ MonoBehaviour:
   Max: 5
   Default: 1
   Exists: 0
+--- !u!114 &5632929660754765442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Music/ZonePP
+  m_EditorClassIdentifier: 
+  Name: ZonePP
+  Min: 0
+  Max: 5
+  Default: 0
+  Exists: 1
 --- !u!114 &5659812227281247546
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8564,8 +9061,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Path: event:/SFX/LeverDoor
   guid: 73b0e49835e44349be697adf53c488a1
-  Banks:
-  - {fileID: -4076130507065057345}
+  Banks: []
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -8702,6 +9198,23 @@ MonoBehaviour:
   MinDistance: 0
   MaxDistance: 0
   Length: 0
+--- !u!114 &6193123360414951706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Elevator/ElevatorP
+  m_EditorClassIdentifier: 
+  Name: ElevatorP
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &6275581248795571798
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8858,7 +9371,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -8953,7 +9466,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -9148,7 +9661,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9277,6 +9790,24 @@ MonoBehaviour:
   Max: 5
   Default: 1
   Exists: 0
+--- !u!114 &7349244348393821681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637265437152633268
+  LoadResult: 0
+  FileSizes: []
+  Exists: 0
 --- !u!114 &7416520903623577357
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9295,6 +9826,23 @@ MonoBehaviour:
   LoadResult: 0
   FileSizes: []
   Exists: 0
+--- !u!114 &7459028490255450557
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Walking/PlayerMSFX
+  m_EditorClassIdentifier: 
+  Name: PlayerMSFX
+  Min: 0
+  Max: 7
+  Default: 4
+  Exists: 1
 --- !u!114 &7465836244389873391
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9398,6 +9946,24 @@ MonoBehaviour:
   Min: 0
   Max: 7
   Default: 4
+  Exists: 0
+--- !u!114 &7677071840561184395
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c18180ecb35941f4682ae60107b85b7c, type: 3}
+  m_Name: bank:/Master.bank
+  m_EditorClassIdentifier: 
+  Path: ../DreamySoundsAndMusic/Build/Desktop/Master.bank
+  SubDir: 
+  lastModified: 637265438482951640
+  LoadResult: 0
+  FileSizes: []
   Exists: 0
 --- !u!114 &7720245686003812340
 MonoBehaviour:
@@ -9728,7 +10294,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9787,6 +10353,23 @@ MonoBehaviour:
   Max: 7
   Default: 4
   Exists: 0
+--- !u!114 &8679176781727598721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Elevator/ElevatorP
+  m_EditorClassIdentifier: 
+  Name: ElevatorP
+  Min: 0
+  Max: 1
+  Default: 0
+  Exists: 0
 --- !u!114 &8694257189741289913
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9822,7 +10405,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 0
   IsOneShot: 1
@@ -9865,7 +10448,7 @@ MonoBehaviour:
   - {fileID: -5478167158041074288}
   - {fileID: 1980790777636585240}
   - {fileID: -6355608950124804380}
-  - {fileID: -4076130507065057345}
+  - {fileID: 2440452137716095103}
   IsStream: 0
   Is3D: 1
   IsOneShot: 1
@@ -9995,6 +10578,23 @@ MonoBehaviour:
   Max: 7
   Default: 4
   Exists: 1
+--- !u!114 &8839982026875905932
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fecb8ef7f94ca804a8ab72049b86782e, type: 3}
+  m_Name: parameter:/Ambience/Zone
+  m_EditorClassIdentifier: 
+  Name: Zone
+  Min: 0
+  Max: 5
+  Default: 1
+  Exists: 0
 --- !u!114 &8847486430709058112
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10045,7 +10645,7 @@ MonoBehaviour:
   Min: 0
   Max: 5
   Default: 1
-  Exists: 1
+  Exists: 0
 --- !u!114 &8940005829594251251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10188,7 +10788,7 @@ MonoBehaviour:
   Min: 0
   Max: 1
   Default: 0
-  Exists: 1
+  Exists: 0
 --- !u!114 &9165340290115349983
 MonoBehaviour:
   m_ObjectHideFlags: 0

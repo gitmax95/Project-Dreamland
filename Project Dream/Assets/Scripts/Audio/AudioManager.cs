@@ -38,8 +38,6 @@ public class AudioManager : MonoBehaviour
     bool inAir;
     bool onGround;
 
-    int initialHealth;
-
     //Parameter values: Wood - 0, Stone - 1, Carpet - 2, Metal - 3, Sand - 4, Water - 5, inAir/Idle - 6.
     int parameterValue;
     int memoryValue;
@@ -50,9 +48,6 @@ public class AudioManager : MonoBehaviour
         
         playerState = this.gameObject.GetComponent<PlayerState>();
         playerHealth = this.gameObject.GetComponent<PlayerHealthSystem>();
-        
-
-        initialHealth = playerHealth.playerHealth;
 
         soundEvent = FMODUnity.RuntimeManager.CreateInstance(Walking);
         soundEvent.start();
@@ -70,7 +65,7 @@ public class AudioManager : MonoBehaviour
         LucidSFX();
         JumpSFX();
         WalkingSFX();
-        LandingSFX();
+        //LandingSFX();
         //SlidingSFX();
 
         soundEvent.setParameterByName("PlayerMSFX", parameterValue);
@@ -153,7 +148,7 @@ public class AudioManager : MonoBehaviour
         {
             if (playerState.isTouchingGround)
             {
-               
+                print("land");
 
                 switch (memoryValue)
                 {
@@ -227,7 +222,6 @@ public class AudioManager : MonoBehaviour
 
         if (other.gameObject.tag == "Ground")
         {
-            print("I'm touching the ground!");
             SurfaceType surface;
             surface = other.GetComponent<SurfaceType>();
 

@@ -25,10 +25,10 @@ public class PlayerState : MonoBehaviour
     public bool jumpActivated;
     //public bool isWallJumping;
     public bool isGrounded;
-    //public bool inAir;
-/*    public bool isTouchingWall;*/ //is Touching && IS FACING WALL!
-    //public bool onWall;
-    //public bool isWallSliding;
+    public bool inAir;
+    /*    public bool isTouchingWall;*/ //is Touching && IS FACING WALL!
+                                        //public bool onWall;
+                                        //public bool isWallSliding;
     public bool isDying;
     public bool isDead;
     public bool hasSpikedShoes;  //Testing purposes
