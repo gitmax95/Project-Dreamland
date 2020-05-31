@@ -29,6 +29,9 @@ public class AudioManager : MonoBehaviour
     [FMODUnity.EventRef]
     public string Lucid = "event:/PlayerMechanics/Lucid";
 
+    [FMODUnity.EventRef]
+    public string Death = "event:/PlayerMechanics/Death";
+
     FMOD.Studio.EventInstance soundEvent;
 
     //[FMODUnity.EventRef]
@@ -42,6 +45,7 @@ public class AudioManager : MonoBehaviour
     //Parameter values: Wood - 0, Stone - 1, Carpet - 2, Metal - 3, Sand - 4, Water - 5, inAir/Idle - 6.
     int parameterValue;
     int memoryValue;
+    private bool damageSound;
 
     // Start is called before the first frame update
     void Start()
@@ -66,8 +70,8 @@ public class AudioManager : MonoBehaviour
         {
             lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
         }
-                
-        
+
+        DamageSFX();
         LucidSFX();
         JumpSFX();
         WalkingSFX();
@@ -92,33 +96,22 @@ public class AudioManager : MonoBehaviour
         
     }
 
-    //void DamageSFX()
-    //{
-    //    if (playerHealth.playerHealth != 10)
-    //    {
-    //        if (initialHealth > playerHealth.playerHealth)
-    //        {
-    //            FMODUnity.RuntimeManager.PlayOneShot(Damage, GetComponent<Transform>().position);
-    //            //damageSoundEvent.setParameterByName("DamageIntensity", playerHealth.playerHealth);
-    //        }
-    //        else if(initialHealth == playerHealth.playerHealth)
-    //        {
-    //            //damageSoundEvent.setParameterByName("DamageIntensity", 10);
-    //        }
-    //        else if(initialHealth < playerHealth.playerHealth)
-    //        {
-    //            initialHealth = playerHealth.playerHealth;
-    //        }
+    void DamageSFX()
+    {
+        if(playerHealth.playerHealth > 0)
+        {
+            damageSound = true;
+        }
 
-    //        initialHealth = playerHealth.playerHealth;
-    //    }
-    //    else
-    //    {
-    //        //damageSoundEvent.setParameterByName("DamageIntensity", 10); /silence
-    //    }
-    //}
+        if(damageSound)
+        if (playerHealth.playerHealth == 0)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(Death, GetComponent<Transform>().position);
+                damageSound = false;
+        }
+    }
 
-    void JumpSFX()
+        void JumpSFX()
     {
 
         if (!playerState.isJumping && playerState.isTouchingGround)

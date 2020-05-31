@@ -72,6 +72,9 @@
 		<property name="maxVoices">
 			<value>1</value>
 		</property>
+		<property name="voiceStealing">
+			<value>3</value>
+		</property>
 	</object>
 	<object class="MarkerTrack" id="{4028109d-c127-46bc-89f6-661740f6e6c9}" />
 	<object class="GroupTrack" id="{da0d7736-4cfc-45b3-872b-bed9f954d4f4}">
@@ -540,7 +543,6 @@
 	<object class="MixerBusEffectChain" id="{e6b6d072-ced4-4bf5-b282-79813f91c856}">
 		<relationship name="effects">
 			<destination>{8d7113c1-ff38-4da4-a92c-65b1da0c0ac9}</destination>
-			<destination>{559b87be-19e1-4a67-813b-dbd051c100f5}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{8c5d627a-b563-4ef7-9c58-2afb3a083dcd}" />
@@ -686,11 +688,6 @@
 	</object>
 	<object class="MixerBusPanner" id="{73e586b0-b5ca-4d40-b4df-7f7c2a7bdc6f}" />
 	<object class="MixerBusFader" id="{8d7113c1-ff38-4da4-a92c-65b1da0c0ac9}" />
-	<object class="SFXReverbEffect" id="{559b87be-19e1-4a67-813b-dbd051c100f5}">
-		<property name="decayTime">
-			<value>100</value>
-		</property>
-	</object>
 	<object class="AutomationCurve" id="{9c2fb9bb-4b70-4e3d-8650-9eb8294d856f}">
 		<relationship name="parameter">
 			<destination>{8d4762c0-d714-4697-afd0-29da2de14383}</destination>
@@ -1091,7 +1088,7 @@
 			<value>6.0098522167487687</value>
 		</property>
 		<property name="value">
-			<value>5</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{857b88b0-3044-4992-ad7c-ca9f6ca5d3f9}">
@@ -1099,7 +1096,7 @@
 			<value>7.0114942528735638</value>
 		</property>
 		<property name="value">
-			<value>8</value>
+			<value>0</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{ae52a5b0-1b75-4279-a6d3-27b424c52bf3}">

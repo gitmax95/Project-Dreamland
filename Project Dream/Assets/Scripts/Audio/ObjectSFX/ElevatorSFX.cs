@@ -9,24 +9,21 @@ public class ElevatorSFX : MonoBehaviour
 
     [FMODUnity.EventRef]
     public string Elevator = "event:/SFX/Elevator";
-    [FMODUnity.EventRef]
-    public string Filler = "event:/SFX/FillerTone";
 
-    //FMOD.Studio.EventInstance soundEvent;
-    //Transform trans;
-    //Rigidbody rb;
+    FMOD.Studio.EventInstance soundEvent;
 
     // Start is called before the first frame update
     void Start()
     {
-        //    FMODUnity.RuntimeManager.AttachInstanceToGameObject(soundEvent, trans, rb);
-
-        //    soundEvent = FMODUnity.RuntimeManager.CreateInstance(Elevator);
-        //    soundEvent.start();
-
+       
         elevator = this.gameObject.GetComponent<ElevatorMover>();
-        //trans = this.gameObject.GetComponent<Transform>();
-        //rb = this.gameObject.GetComponent<Rigidbody>();
+
+        //soundEvent = FMODUnity.RuntimeManager.CreateInstance(Elevator);
+        //soundEvent.start();
+        //soundEvent.setParameterByName("ElevatorP", 1);
+
+
+
     }
 
     // Update is called once per frame
@@ -35,9 +32,15 @@ public class ElevatorSFX : MonoBehaviour
 
         if(elevator.elevatorMoving)
         {
+            //print("Elevator Moving");
             FMODUnity.RuntimeManager.PlayOneShot(Elevator, GetComponent<Transform>().position);
-        //soundEvent.setParameterByName("ElevatorP", 0f);
+            //soundEvent.setParameterByName("ElevatorP", 0f);
         }
+        //else
+        //{
+           
+        //    soundEvent.setParameterByName("ElevatorP", 1f);
+        //}
        
     }
 }
