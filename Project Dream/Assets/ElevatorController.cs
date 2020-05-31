@@ -5,6 +5,7 @@ using UnityEngine;
 public class ElevatorController : MonoBehaviour
 {
     ElevatorMover elevatorMover;
+    public ElevatorTrigger elevatorTrigger;
 
     bool elevatorLowered;
     int elevatorCalled;
@@ -31,6 +32,8 @@ public class ElevatorController : MonoBehaviour
    
     void Update()
     {
+       
+
         if (weightPlateActivated) {
 
             if(transform.position.y > targetPositionY) {
@@ -38,8 +41,7 @@ public class ElevatorController : MonoBehaviour
             } else {
                 elevatorLowered = true;
 
-                if(elevatorCalled == 0) {    
-                    
+                if(elevatorCalled == 0) {
                     elevatorMover.CallElevator();
                     elevatorCalled = 1;
                 }
@@ -55,6 +57,8 @@ public class ElevatorController : MonoBehaviour
 
             transform.Translate(0, plateSpeed * Time.deltaTime * 1, 0);
         }
+
+
     }
 
     private void OnTriggerStay2D(Collider2D collision)
