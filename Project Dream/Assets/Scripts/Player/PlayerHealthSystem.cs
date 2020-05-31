@@ -8,7 +8,7 @@ public class PlayerHealthSystem : MonoBehaviour
     PlayerPosition gameStateManagerScript;
 
     float timer = 0.0f;
-    float timerDying = 0.0f;
+    public float timerDying = 0.0f;
 
     public float deathDuration;
     public int playerHealth = 10;

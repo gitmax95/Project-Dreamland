@@ -13,6 +13,7 @@ public class PlayerState : MonoBehaviour
     //PolygonCollider2D playerCollider;
 
     public Animator animator;
+    public GameObject onDeath;
 
     [Header("Player States")]
     public bool isFacingRight;
@@ -252,9 +253,19 @@ public class PlayerState : MonoBehaviour
             isDying = true;
             animator.SetBool("isDying", true);
             playerAppearance.GetComponent<SpriteRenderer>().color = Color.white;
-            playerAppearance.GetComponent<CapsuleCollider2D>().enabled = false;
+            //playerAppearance.GetComponent<CapsuleCollider2D>().enabled = false;
             //gameObject.GetComponent<BoxCollider2D>().enabled = false;
             //gameObject.GetComponent<Rigidbody2D>().isKinematic = true;
+        }
+        else if (playerHealthScript.playerHealth > 0)
+        {
+            isDying = false;
+            animator.SetBool("isDying", false);
+            if (onDeath.activeInHierarchy)
+            {
+                onDeath.SetActive(false);
+                playerHealthScript.timerDying = 0.0f;
+            }
         }
     }
 

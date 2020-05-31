@@ -6,16 +6,19 @@ using UnityEngine.SceneManagement;
 public class PlayerPosition : MonoBehaviour
 {
     private GameMaster gameMasterScript;
+    public PlayerHealthSystem playerHealthScript;
+    public GameObject player;
     // Start is called before the first frame update
     void Start()
     {
-        gameMasterScript = GameObject.Find("GameStateManager").GetComponent<GameMaster>();
-        transform.position = gameMasterScript.lastCheckpointPos;
-        Time.timeScale = 1f;
+        gameMasterScript = GameObject.Find("GameStateManager").GetComponent<GameMaster>();               
     }
 
     public void RestartGame()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        Time.timeScale = 1f;
+        playerHealthScript.playerHealth = 10;
+        player.transform.position = new Vector3(gameMasterScript.lastCheckpointPos.x, gameMasterScript.lastCheckpointPos.y, gameMasterScript.lastCheckpointPos.z);        
+        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 }
