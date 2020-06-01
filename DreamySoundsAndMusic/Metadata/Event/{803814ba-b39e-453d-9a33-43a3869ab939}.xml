@@ -108,7 +108,7 @@
 			<value>true</value>
 		</property>
 		<property name="length">
-			<value>27</value>
+			<value>27.5</value>
 		</property>
 		<relationship name="audioFile">
 			<destination>{b6d3d6be-2f2f-4720-a778-01284b1718a4}</destination>
@@ -156,7 +156,7 @@
 	<object class="MixerBusFader" id="{c5998062-6f49-47e3-b469-3b568b74c388}" />
 	<object class="SpatialiserEffect" id="{215ab386-d057-4a4f-a7f5-b2277ffdcb6d}">
 		<property name="maximumDistance">
-			<value>40</value>
+			<value>70</value>
 		</property>
 	</object>
 	<object class="AutomationCurve" id="{eb7286a7-ff65-49f2-884d-7d7d541b9c6c}">
@@ -174,7 +174,7 @@
 			<value>0</value>
 		</property>
 		<property name="value">
-			<value>3.81469727e-06</value>
+			<value>-2</value>
 		</property>
 	</object>
 	<object class="AutomationPoint" id="{46efda55-620f-4866-921b-51c49d6ef1d9}">
@@ -182,7 +182,7 @@
 			<value>0.5</value>
 		</property>
 		<property name="value">
-			<value>-1.25628757</value>
+			<value>-3.25629139</value>
 		</property>
 	</object>
 </objects>

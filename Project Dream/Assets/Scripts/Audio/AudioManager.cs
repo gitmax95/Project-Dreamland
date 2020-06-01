@@ -1,9 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
+
+    GameObject player;
+
     PlayerState playerState;
     PlayerHealthSystem playerHealth;
     LucidState lucidState;
@@ -34,8 +38,8 @@ public class AudioManager : MonoBehaviour
 
     FMOD.Studio.EventInstance soundEvent;
 
-    //[FMODUnity.EventRef]
-    //public string Sliding = "event:/SFX/Sliding";
+    [FMODUnity.EventRef]
+    public string Sliding = "event:/PlayerMechanics/Sliding";
 
     //Variables to keep track of what sounds are allowed to be played atm
 
@@ -50,25 +54,30 @@ public class AudioManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-        playerState = this.gameObject.GetComponent<PlayerState>();
-        playerHealth = this.gameObject.GetComponent<PlayerHealthSystem>();
-
         soundEvent = FMODUnity.RuntimeManager.CreateInstance(Walking);
         soundEvent.start();
-
-        
-
     }
 
     // Update is called once per frame
     void Update()
     {
-        lucidIcon = GameObject.Find("LucidState");
-
-        if (lucidIcon != null)
+        if (lucidIcon == null)
+        {
+            lucidIcon = GameObject.Find("LucidState");
+        }
+        else if (lucidIcon != null)
         {
             lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
+        }
+
+        if (player == null)
+        {
+            player = GameObject.Find("PlayerChar");
+        }
+        if (player != null)
+        {
+            playerHealth = GameObject.Find("PlayerChar").GetComponent<PlayerHealthSystem>();
+            playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
         }
 
         DamageSFX();
@@ -76,10 +85,14 @@ public class AudioManager : MonoBehaviour
         JumpSFX();
         WalkingSFX();
         LandingSFX();
-        //SlidingSFX();
+        SlidingSFX();
+
+        if (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "EndScene")
+        {
+            parameterValue = 6;
+        }
 
         soundEvent.setParameterByName("PlayerMSFX", parameterValue);
-
 
     }
 
@@ -89,7 +102,7 @@ public class AudioManager : MonoBehaviour
         {
             if (lucidState.isLucid)
             {
-                print("lucid exists and should play");
+               // print("lucid exists and should play");
                 FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
             }
         }
@@ -204,71 +217,76 @@ public class AudioManager : MonoBehaviour
         
     }
 
-    //void SlidingSFX()
-    //{
-    //   
-    //    if (playerState.isSliding || playerState.isWallSliding)
-    //    {
-    //        soundEvent = FMODUnity.RuntimeManager.CreateInstance(Landing);
-    //        soundEvent.start();
-            
-
-    //    }
-    //}
-
-    private void OnCollisionEnter2D(Collision2D collision)
+    void SlidingSFX()
     {
 
-        GameObject other = collision.gameObject;
-
-        if (other.gameObject.tag == "Ground")
+        if (playerState.isSliding)
         {
-            SurfaceType surface;
-            surface = other.GetComponent<SurfaceType>();
+            FMODUnity.RuntimeManager.PlayOneShot(Sliding, GetComponent<Transform>().position);
 
-            if (surface != null)
-            {
-                if (surface.getType() == "Wood")
-                {
-                    parameterValue = 0;
-                    memoryValue = 0;
-                }
-                else if (surface.getType() == "Stone")
-                {
-                    parameterValue = 1;
-                    memoryValue = 1;
-                }               
-                else if (surface.getType() == "Carpet")
-                {
-
-                    parameterValue = 2;
-                    memoryValue = 2;
-                }
-                else if (surface.getType() == "Metal")
-                {
-                    parameterValue = 3;
-                    memoryValue = 3;
-                }
-                else if (surface.getType() == "Sand")
-                {
-                    parameterValue = 4;
-                    memoryValue = 4;
-                }
-                else if (surface.getType() == "Water")
-                {
-                    parameterValue = 5;
-                    memoryValue = 5;
-                }
-
-
-            }
-            else
-            {
-                parameterValue = 1;
-                memoryValue = 1;
-            }
 
         }
+    }
 
+    //private void OnCollisionEnter2D(Collision2D collision)
+    //{
+
+    //    GameObject other = collision.gameObject;
+
+    //    if (other.gameObject.tag == "Ground")
+    //    {
+    //        SurfaceType surface;
+    //        surface = other.GetComponent<SurfaceType>();
+
+    //        if (surface != null)
+    //        {
+    //            if (surface.getType() == "Wood")
+    //            {
+    //                parameterValue = 0;
+    //                memoryValue = 0;
+    //            }
+    //            else if (surface.getType() == "Stone")
+    //            {
+    //                parameterValue = 1;
+    //                memoryValue = 1;
+    //            }               
+    //            else if (surface.getType() == "Carpet")
+    //            {
+
+    //                parameterValue = 2;
+    //                memoryValue = 2;
+    //            }
+    //            else if (surface.getType() == "Metal")
+    //            {
+    //                parameterValue = 3;
+    //                memoryValue = 3;
+    //            }
+    //            else if (surface.getType() == "Sand")
+    //            {
+    //                parameterValue = 4;
+    //                memoryValue = 4;
+    //            }
+    //            else if (surface.getType() == "Water")
+    //            {
+    //                parameterValue = 5;
+    //                memoryValue = 5;
+    //            }
+
+
+    //        }
+    //        else
+    //        {
+    //            parameterValue = 1;
+    //            memoryValue = 1;
+    //        }
+
+    //    }
+
+    //}
+
+    public void SetParameterValue(int a, int b)
+    {
+        parameterValue = a;
+        memoryValue = b;
     }
 }
