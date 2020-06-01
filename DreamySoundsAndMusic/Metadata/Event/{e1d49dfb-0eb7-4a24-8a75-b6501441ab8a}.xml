@@ -157,7 +157,7 @@
 	</object>
 	<object class="EventMixerMaster" id="{df86a597-d2ac-48f8-9df1-61f2e3bc107d}">
 		<property name="volume">
-			<value>-10</value>
+			<value>-3</value>
 		</property>
 		<relationship name="effectChain">
 			<destination>{d06e9572-fd6e-4e0a-90f2-94bf7a26495d}</destination>
@@ -267,6 +267,9 @@
 		</relationship>
 	</object>
 	<object class="EventMixerGroup" id="{8ee36edb-3c41-4d75-81a5-356bb1d1dc73}">
+		<property name="volume">
+			<value>4</value>
+		</property>
 		<property name="name">
 			<value>Carpet</value>
 		</property>
