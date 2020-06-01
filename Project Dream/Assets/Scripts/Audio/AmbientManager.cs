@@ -84,7 +84,8 @@ public class AmbientManager : MonoBehaviour
 
     private void OnDestroy()
     {
-      //  print("I was destroyed");
+        //  print("I was destroyed");
+        lerpValue = 0f;
         destroyed = true;
     }
 }
