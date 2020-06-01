@@ -89,7 +89,7 @@ public class AudioManager : MonoBehaviour
         {
             if (lucidState.isLucid)
             {
-                print("lucid exists and should play");
+               // print("lucid exists and should play");
                 FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
             }
         }

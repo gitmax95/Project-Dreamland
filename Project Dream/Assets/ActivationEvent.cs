@@ -38,6 +38,8 @@ public class ActivationEvent : MonoBehaviour
                 particleAllowed = true;
             }
 
+        } else {
+            particleAllowed = true;
         }
     }
 
@@ -45,7 +47,10 @@ public class ActivationEvent : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player" && particleAllowed) {
             activationParticle.Play();
-            checkPointAnnouncer.SetActive(true);
+
+            if (checkPoint) {
+                checkPointAnnouncer.SetActive(true);
+            }
         }
     }
 }

@@ -9,6 +9,7 @@ public class ElevatorMover : MonoBehaviour
     GameObject playerChar;
     public bool playerOnboard;
 
+    public GameObject elevatorIndicator;
     public float speedUp;
     public float speedDown;
     float elevatorSpeed;
@@ -33,6 +34,12 @@ public class ElevatorMover : MonoBehaviour
 
     void Update()
     {
+        if(elevatorMoving && !playerOnboard) {
+            elevatorIndicator.SetActive(true);
+        } else if (elevatorIndicator.activeSelf) {
+            elevatorIndicator.SetActive(false);
+        }
+
         if (elevatorBottom == false) {
             elevatorTrigger.playerReady = false;
         }
