@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerState : MonoBehaviour
 {
+    AudioManager audioManager;
+    AmbientManager ambientManager;
     PlayerHealthSystem playerHealthScript;
     BasicMovement_Player playerMovement;
     ControllerStates controllerStates;
@@ -47,6 +49,9 @@ public class PlayerState : MonoBehaviour
         playerHealthScript = GameObject.Find("PlayerChar").GetComponent<PlayerHealthSystem>();
         playerCollider = GameObject.Find("Appearance").GetComponent<CapsuleCollider2D>();
         playerAppearance = GameObject.Find("Appearance");
+        audioManager = GameObject.Find("AudioManager").GetComponent<AudioManager>();
+        ambientManager = GameObject.Find("AudioManager").GetComponent<AmbientManager>();
+
 
         isFacingRight = true;
 
@@ -282,14 +287,58 @@ public class PlayerState : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if(collision.gameObject.tag == "Ground")
+        if (collision.gameObject.tag == "Ground")
         {
             //inAir = false;
             isTouchingGround = true;
             animator.SetBool("isGrounded", true);
-            
+
+            //Audio
+            GameObject other = collision.gameObject;
+
+            if (other.gameObject.tag == "Ground")
+            {
+                SurfaceType surface;
+                surface = other.GetComponent<SurfaceType>();
+
+                if (surface != null)
+                {
+                    if (surface.getType() == "Wood")
+                    {
+                        audioManager.SetParameterValue(0, 0);
+                    }
+                    else if (surface.getType() == "Stone")
+                    {
+                        audioManager.SetParameterValue(1, 1);
+                    }
+                    else if (surface.getType() == "Carpet")
+                    {
+                        audioManager.SetParameterValue(2, 2);
+                    }
+                    else if (surface.getType() == "Metal")
+                    {
+                        audioManager.SetParameterValue(3, 3);
+                    }
+                    else if (surface.getType() == "Sand")
+                    {
+                        audioManager.SetParameterValue(4, 4);
+                    }
+                    else if (surface.getType() == "Water")
+                    {
+                        audioManager.SetParameterValue(5, 5);
+                    }
+
+
+                }
+                else
+                {
+                    audioManager.SetParameterValue(1, 1);
+                }
+
+            }
         }
     }
+
     private void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Ground")
@@ -306,6 +355,27 @@ public class PlayerState : MonoBehaviour
             //inAir = true;
             isTouchingGround = false;
             animator.SetBool("isGrounded", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        GameObject other = collision.gameObject;
+
+        if (other.gameObject.tag == "MusicZone")
+        {
+            ZoneType zone;
+            zone = other.GetComponent<ZoneType>();
+
+            if (zone != null)
+            {
+                    int p;
+                    int speed;
+                p = zone.getType();
+                speed = zone.getFade();
+                ambientManager.SetParameterValue(p, speed);
+            }
+
         }
     }
 }

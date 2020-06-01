@@ -1,10 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AmbientManager : MonoBehaviour
 {
-
     [FMODUnity.EventRef]
     public string Ambience = "event:/Music/Music";
 
@@ -13,17 +13,43 @@ public class AmbientManager : MonoBehaviour
     int parameterValue = 0;
     int memoryValue = 0;
     float lerpValue = 0;
+    float scenelerp = 0;
+    float scenelerp2 = 0;
     bool ChangeParameter = true;
+    bool enteredEndScene = false;
 
     
     int speed; // speed in seconds
     private bool destroyed = false;
+
+    //private void Awake()
+    //{
+    //    int numMusicPlayers = FindObjectsOfType<AmbientManager>().Length;
+
+    //    if (numMusicPlayers != 1)
+    //    {
+    //        Destroy(gameObject);
+    //    }
+    //    else
+    //    {
+    //        instance = this;
+    //        DontDestroyOnLoad(this);
+    //    }
+
+
+    //}
+
+    private void Awake()
+    {
+        
+    }
 
     // Start is called before the first frame update
     void Start()
     {
         soundEvent = FMODUnity.RuntimeManager.CreateInstance(Ambience);
         soundEvent.start();
+        soundEvent.setParameterByName("EndSceneP", 1);
     }
 
  
@@ -32,6 +58,39 @@ public class AmbientManager : MonoBehaviour
     {
         //print("par " + parameterValue);
         //print("mem " + memoryValue);
+
+        if (SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            soundEvent.setParameterByName("ZonePP", 0);
+
+            if (enteredEndScene)
+            {
+                
+                soundEvent.setParameterByName("EndSceneP", Mathf.Lerp(0, 1, scenelerp2));
+                scenelerp2 += Time.deltaTime / 5;
+
+                if (scenelerp2 > 1)
+                {
+                    enteredEndScene = false;
+                    scenelerp2 = 0;
+                }
+            }
+        }
+        else if (SceneManager.GetActiveScene().name == "EndScene")
+        {
+            enteredEndScene = true;
+
+            soundEvent.setParameterByName("EndSceneP", Mathf.Lerp(1, 0, scenelerp));
+            scenelerp += Time.deltaTime / 15;
+
+            if (scenelerp > 1)
+            {
+                scenelerp = 0;
+            }
+
+        }     
+
+        
 
 
         if (ChangeParameter)
@@ -62,31 +121,30 @@ public class AmbientManager : MonoBehaviour
         }
     }
 
-   
 
-    private void OnTriggerEnter2D(Collider2D collision)
+
+    //private void OnTriggerEnter2D(Collider2D collision)
+    //{
+    //    GameObject other = collision.gameObject;
+
+    //    if (other.gameObject.tag == "MusicZone")
+    //    {
+    //        ZoneType zone;
+    //        zone = other.GetComponent<ZoneType>();
+
+    //        if (zone != null)
+    //        {
+    //            parameterValue = zone.getType();
+    //            speed = zone.getFade();
+    //        }
+
+    //    }
+    //}
+
+    public void SetParameterValue(int a, int b)
     {
-        GameObject other = collision.gameObject;
-
-        if (other.gameObject.tag == "MusicZone")
-        {
-            ZoneType zone;
-            zone = other.GetComponent<ZoneType>();
-
-            if (zone != null)
-            {
-                parameterValue = zone.getType();
-                speed = zone.getFade();
-            }
-
-        }
-    }
-
-    private void OnDestroy()
-    {
-        //  print("I was destroyed");
-        lerpValue = 0f;
-        destroyed = true;
+        parameterValue = a;
+        speed = b;
     }
 }
         
