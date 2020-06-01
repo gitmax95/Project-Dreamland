@@ -16,6 +16,7 @@ public class TextDeactivate : MonoBehaviour
             timer += Time.deltaTime;
 
             if(timer >= activeDuration) {
+                timer = 0f;
                 this.gameObject.SetActive(false);
             }
         }
