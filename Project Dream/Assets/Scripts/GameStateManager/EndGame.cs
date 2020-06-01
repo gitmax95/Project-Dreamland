@@ -23,6 +23,8 @@ public class EndGame : MonoBehaviour
 
     public void ButtonYes()
     {
+        //gameObject.SetActive(false);
+        //Time.timeScale = 1.0f;
         gameStateManagerScript.RestartGame();
     }
 

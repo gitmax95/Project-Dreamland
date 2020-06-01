@@ -11,7 +11,8 @@ TrueTypeFontImporter:
   fontName: Julius Sans One
   fontNames:
   - Julius Sans One
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 75d630b4a397079458d38409d0567898, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
