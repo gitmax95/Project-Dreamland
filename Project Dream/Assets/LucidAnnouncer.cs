@@ -19,21 +19,22 @@ public class LucidAnnouncer : MonoBehaviour
     void Update()
     {
         if(abilityAnnouncer.activeSelf == false && !displayed ) {
-            abilityAnnouncer.SetActive(true);
-            displayed = true;
+            abilityAnnouncer.SetActive(true);           
         }
 
         if (abilityAnnouncer.activeSelf) {
+            displayed = true;
+            timer_Announcement += Time.deltaTime;
             if(timer_Announcement >= announceDuration) {
                 abilityAnnouncer.SetActive(false);
             }
-        }
-
-        if(displayed && abilityAnnouncer.activeSelf == false) {
+        } else if(displayed && abilityAnnouncer.activeSelf == false) {
             lucidInstruction.SetActive(true);
         }
 
         if (lucidInstruction.activeSelf) {
+
+            timer_Instruction += Time.deltaTime;
 
             if(timer_Instruction >= instructionDuration) {
                 lucidInstruction.SetActive(false);

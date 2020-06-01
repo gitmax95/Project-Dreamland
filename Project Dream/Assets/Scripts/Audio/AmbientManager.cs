@@ -48,7 +48,7 @@ public class AmbientManager : MonoBehaviour
 
             if (parameterValue == Mathf.Lerp(memoryValue, parameterValue, lerpValue))
             {
-                print("I reached the par");
+               // print("I reached the par");
                 memoryValue = parameterValue;
                 ChangeParameter = false;
                 lerpValue = 0;
@@ -84,7 +84,7 @@ public class AmbientManager : MonoBehaviour
 
     private void OnDestroy()
     {
-        print("I was destroyed");
+      //  print("I was destroyed");
         destroyed = true;
     }
 }

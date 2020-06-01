@@ -16,7 +16,7 @@ public class ActivationEvent : MonoBehaviour
 
     private void Start()
     {
-        if(this.gameObject.name != " AbilityUnlock") {
+        if(this.gameObject.name != "AbilityUnlock") {
             thisCheckPoint = GetComponent<CheckpointSystem>();
             gameMasterScript = GameObject.Find("GameStateManager").GetComponent<GameMaster>();
             checkPoint = true;

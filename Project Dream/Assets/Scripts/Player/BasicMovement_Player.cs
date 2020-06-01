@@ -250,7 +250,7 @@ public class BasicMovement_Player : MonoBehaviour
 
     private void Jump()
     {
-        print("Jumping");
+        //print("Jumping");
         timer_jumpDuration += Time.deltaTime;
 
         if(timer_jumpDuration < jumpDuration && playerState.isJumping)
