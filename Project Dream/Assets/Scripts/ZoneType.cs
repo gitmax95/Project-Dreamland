@@ -5,10 +5,10 @@ using UnityEngine;
 public class ZoneType : MonoBehaviour
 {
 
-    enum ZoneTypes {Beach, Bridge,Tower, UnderGround, EndGame, Elevator,  };
-
     [SerializeField]
-    ZoneTypes thisZone;
+    public int type;
+    [Header("Values between 10 and 1 ONLY")]
+    public int fadeSeconds;
 
     // Start is called before the first frame update
     void Start()
@@ -22,30 +22,13 @@ public class ZoneType : MonoBehaviour
         
     }
 
-    public string getType()
+    public int getType()
     {
-        if (thisZone == ZoneTypes.Beach)
-        {
-            return "Beach";
-        }
-        if (thisZone == ZoneTypes.Bridge)
-        {
-            return "Bridge";
-        }
-        if (thisZone == ZoneTypes.Tower)
-        {
-            return "Tower";
-        }
-        if (thisZone == ZoneTypes.UnderGround)
-        {
-            return "UnderGround";
-        }
-        if (thisZone == ZoneTypes.Elevator)
-        {
-            return "Elevator";
-        }
+        return type;
+    }
 
-
-        return "idk";
+    public int getFade()
+    {
+        return fadeSeconds;
     }
 }

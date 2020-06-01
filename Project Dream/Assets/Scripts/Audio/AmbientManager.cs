@@ -6,18 +6,18 @@ public class AmbientManager : MonoBehaviour
 {
 
     [FMODUnity.EventRef]
-    public string Ambience = "event:/Music/Ambience";
+    public string Ambience = "event:/Music/Music";
 
     FMOD.Studio.EventInstance soundEvent;
 
-    int parameterValue;
-    int memoryValue;
-    float lerpValue;
-    bool dontChangeParameter = true;
+    int parameterValue = 0;
+    int memoryValue = 0;
+    float lerpValue = 0;
+    bool ChangeParameter = true;
 
-    [Header("Values between 10 and 1")]
-    [SerializeField]
-    public int speed; // speed in seconds
+    
+    int speed; // speed in seconds
+    private bool destroyed = false;
 
     // Start is called before the first frame update
     void Start()
@@ -26,25 +26,39 @@ public class AmbientManager : MonoBehaviour
         soundEvent.start();
     }
 
+ 
     // Update is called once per frame
     void Update()
     {
-        if (!dontChangeParameter)
-        {
-            soundEvent.setParameterByName("ZonePP", Mathf.Lerp(memoryValue, parameterValue, lerpValue));
+        //print("par " + parameterValue);
+        //print("mem " + memoryValue);
 
-            lerpValue = (1 / speed) * Time.deltaTime;
-        }
 
-        if(lerpValue == 1)
+        if (ChangeParameter)
         {
-            dontChangeParameter = true;
-            memoryValue = parameterValue;
+           if(destroyed)
+            {
+                memoryValue = parameterValue;
+                destroyed = false;
+            }
+
+                soundEvent.setParameterByName("ZonePP", Mathf.Lerp(memoryValue, parameterValue, lerpValue));
+
+                lerpValue += Time.deltaTime/speed;
+
+            if (parameterValue == Mathf.Lerp(memoryValue, parameterValue, lerpValue))
+            {
+                print("I reached the par");
+                memoryValue = parameterValue;
+                ChangeParameter = false;
+                lerpValue = 0;
+            }
+
         }
 
         if (memoryValue != parameterValue)
         {
-            dontChangeParameter = false;
+            ChangeParameter = true;
         }
     }
 
@@ -54,45 +68,24 @@ public class AmbientManager : MonoBehaviour
     {
         GameObject other = collision.gameObject;
 
-        if (other.gameObject.tag == "Zone")
+        if (other.gameObject.tag == "MusicZone")
         {
             ZoneType zone;
             zone = other.GetComponent<ZoneType>();
 
             if (zone != null)
             {
-                if (zone.getType() == "Beach")
-                {
-                    parameterValue = 0;
-
-                }
-                else if (zone.getType() == "Bridge")
-                {
-                    parameterValue = 1;
-
-                }
-                else if(zone.getType() == "Tower")
-                {
-                    parameterValue = 2;
-
-                }
-                else if (zone.getType() == "Underground")
-                {
-                    parameterValue = 3;
-
-                }
-                else if (zone.getType() == "Elevator")
-                {
-                    parameterValue = 4;
-
-                }
-
+                parameterValue = zone.getType();
+                speed = zone.getFade();
             }
-            else
-            {
 
-            }
         }
+    }
+
+    private void OnDestroy()
+    {
+        print("I was destroyed");
+        destroyed = true;
     }
 }
         

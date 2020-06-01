@@ -22,7 +22,7 @@ public class BellClapper : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        print("something");
+
 
         if (collision.gameObject.tag == "Bell")
         {
