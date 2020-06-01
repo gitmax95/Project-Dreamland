@@ -53,7 +53,7 @@
 			<destination>{b2ea9f6d-9760-43ae-b85c-46140f0859bb}</destination>
 		</relationship>
 		<relationship name="output">
-			<destination>{c9db8b77-862e-47bc-bda0-7fae28468609}</destination>
+			<destination>{08a86a8d-d43b-4084-9002-2317e345dcc4}</destination>
 		</relationship>
 	</object>
 	<object class="EventAutomatableProperties" id="{45b5cb3d-3220-4c65-8e23-742110369aef}" />
@@ -114,6 +114,7 @@
 		<relationship name="effects">
 			<destination>{dc299aa7-317e-4f1d-b1f0-f09e140d7fee}</destination>
 			<destination>{373d39cb-fe76-493c-992a-e203962163da}</destination>
+			<destination>{e265b14b-49bc-4670-956f-f7ca7e169bb1}</destination>
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{705178fd-71d4-452b-8026-97d808b1d186}" />
@@ -127,6 +128,7 @@
 	<object class="MixerBusPanner" id="{08e70cf4-284b-4a0a-b9bf-1d00c2e09b87}" />
 	<object class="MixerBusFader" id="{dc299aa7-317e-4f1d-b1f0-f09e140d7fee}" />
 	<object class="SpatialiserEffect" id="{373d39cb-fe76-493c-992a-e203962163da}" />
+	<object class="Sidechain" id="{e265b14b-49bc-4670-956f-f7ca7e169bb1}" />
 	<object class="PitchShifterEffect" id="{eeaf01bd-3656-453c-b2ce-54463d01caa5}">
 		<property name="pitch">
 			<value>1.01000011</value>

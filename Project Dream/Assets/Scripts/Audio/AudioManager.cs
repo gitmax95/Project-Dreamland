@@ -8,6 +8,7 @@ public class AudioManager : MonoBehaviour
     PlayerHealthSystem playerHealth;
     LucidState lucidState;
 
+    GameObject lucidIcon;
 
     [SerializeField]
     [FMODUnity.EventRef] string JumpingEvent = "event:/PlayerMechanics/Jumping";
@@ -28,6 +29,9 @@ public class AudioManager : MonoBehaviour
     [FMODUnity.EventRef]
     public string Lucid = "event:/PlayerMechanics/Lucid";
 
+    [FMODUnity.EventRef]
+    public string Death = "event:/PlayerMechanics/Death";
+
     FMOD.Studio.EventInstance soundEvent;
 
     //[FMODUnity.EventRef]
@@ -38,11 +42,10 @@ public class AudioManager : MonoBehaviour
     bool inAir;
     bool onGround;
 
-    int initialHealth;
-
     //Parameter values: Wood - 0, Stone - 1, Carpet - 2, Metal - 3, Sand - 4, Water - 5, inAir/Idle - 6.
     int parameterValue;
     int memoryValue;
+    private bool damageSound;
 
     // Start is called before the first frame update
     void Start()
@@ -50,23 +53,25 @@ public class AudioManager : MonoBehaviour
         
         playerState = this.gameObject.GetComponent<PlayerState>();
         playerHealth = this.gameObject.GetComponent<PlayerHealthSystem>();
-        
-
-        initialHealth = playerHealth.playerHealth;
 
         soundEvent = FMODUnity.RuntimeManager.CreateInstance(Walking);
         soundEvent.start();
+
+        
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(lucidState = null)
+        lucidIcon = GameObject.Find("LucidState");
+
+        if (lucidIcon != null)
         {
             lucidState = GameObject.Find("LucidIcon").GetComponent<LucidState>();
         }
-        
+
+        DamageSFX();
         LucidSFX();
         JumpSFX();
         WalkingSFX();
@@ -80,41 +85,33 @@ public class AudioManager : MonoBehaviour
 
     void LucidSFX()
     {
-        if(lucidState != null)
-        if (lucidState.isLucid)
+        if (lucidState != null)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
+            if (lucidState.isLucid)
+            {
+                print("lucid exists and should play");
+                FMODUnity.RuntimeManager.PlayOneShot(Lucid, GetComponent<Transform>().position);
+            }
         }
         
     }
 
-    //void DamageSFX()
-    //{
-    //    if (playerHealth.playerHealth != 10)
-    //    {
-    //        if (initialHealth > playerHealth.playerHealth)
-    //        {
-    //            FMODUnity.RuntimeManager.PlayOneShot(Damage, GetComponent<Transform>().position);
-    //            //damageSoundEvent.setParameterByName("DamageIntensity", playerHealth.playerHealth);
-    //        }
-    //        else if(initialHealth == playerHealth.playerHealth)
-    //        {
-    //            //damageSoundEvent.setParameterByName("DamageIntensity", 10);
-    //        }
-    //        else if(initialHealth < playerHealth.playerHealth)
-    //        {
-    //            initialHealth = playerHealth.playerHealth;
-    //        }
+    void DamageSFX()
+    {
+        if(playerHealth.playerHealth > 0)
+        {
+            damageSound = true;
+        }
 
-    //        initialHealth = playerHealth.playerHealth;
-    //    }
-    //    else
-    //    {
-    //        //damageSoundEvent.setParameterByName("DamageIntensity", 10); /silence
-    //    }
-    //}
+        if(damageSound)
+        if (playerHealth.playerHealth == 0)
+        {
+            FMODUnity.RuntimeManager.PlayOneShot(Death, GetComponent<Transform>().position);
+                damageSound = false;
+        }
+    }
 
-    void JumpSFX()
+        void JumpSFX()
     {
 
         if (!playerState.isJumping && playerState.isTouchingGround)
@@ -146,14 +143,13 @@ public class AudioManager : MonoBehaviour
         if (!playerState.isTouchingGround)
         {
             inAir = true;
-           
         }
 
         if (inAir)
         {
             if (playerState.isTouchingGround)
             {
-               
+                
 
                 switch (memoryValue)
                 {
@@ -227,7 +223,6 @@ public class AudioManager : MonoBehaviour
 
         if (other.gameObject.tag == "Ground")
         {
-            print("I'm touching the ground!");
             SurfaceType surface;
             surface = other.GetComponent<SurfaceType>();
 
