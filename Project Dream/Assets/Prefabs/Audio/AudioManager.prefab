@@ -1,0 +1,85 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &436836651772765772
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 436836651772765809}
+  - component: {fileID: 436836651772765774}
+  - component: {fileID: 436836651772765775}
+  - component: {fileID: 436836651772765808}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &436836651772765809
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436836651772765772}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -23.7, y: -23.8, z: -6.17}
+  m_LocalScale: {x: 0.08, y: 0.05, z: 0.08}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &436836651772765774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436836651772765772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 574032579c957434d88de72885a0e9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  JumpingEvent: event:/PlayerMechanics/Jumping
+  LandingEvent:
+  - event:/PlayerMechanics/Landing/LandingWood
+  - event:/PlayerMechanics/Landing/LandingStone
+  - event:/PlayerMechanics/Landing/LandingCarpet
+  - event:/PlayerMechanics/Landing/LandingMetal
+  - event:/PlayerMechanics/Landing/LandingSand
+  - event:/PlayerMechanics/Landing/LandingWater
+  Walking: event:/PlayerMechanics/Walking
+  Damage: event:/PlayerMechanics/Damage
+  Lucid: event:/PlayerMechanics/Lucid
+  Death: event:/PlayerMechanics/Death
+  Sliding: event:/PlayerMechanics/Sliding
+--- !u!114 &436836651772765775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436836651772765772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e9d9e5c17b25b44f93876405e2b9806, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Ambience: event:/Music/Music
+--- !u!114 &436836651772765808
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 436836651772765772}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3c84223f8256cc4c8c0dd37271fc54d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

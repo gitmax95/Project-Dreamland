@@ -13,6 +13,7 @@ public class CeilingSpikesSFX : MonoBehaviour
 
     [FMODUnity.EventRef]
     public string spikeDamage = "event:/SFX/SpikeDamage";
+    private bool sound = true;
 
     // Start is called before the first frame update
     void Start()
@@ -27,7 +28,12 @@ public class CeilingSpikesSFX : MonoBehaviour
     {
         if(spikeCeiling.fall == true)
         {
-            FMODUnity.RuntimeManager.PlayOneShot(SpikeCeiling, spike.position);
+            if (sound)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(SpikeCeiling, spike.position);
+                sound = false;
+                StartCoroutine(SoundStop());
+            }
         }
     }
 
@@ -41,5 +47,12 @@ public class CeilingSpikesSFX : MonoBehaviour
        
     }
 
-   
+    IEnumerator SoundStop()
+    {
+        yield return new WaitForSecondsRealtime(10);
+        //print("maxRight");
+        sound = true;
+    }
+
+
 }

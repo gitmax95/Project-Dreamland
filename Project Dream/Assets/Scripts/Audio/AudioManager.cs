@@ -80,12 +80,15 @@ public class AudioManager : MonoBehaviour
             playerState = GameObject.Find("PlayerChar").GetComponent<PlayerState>();
         }
 
-        DamageSFX();
-        LucidSFX();
-        JumpSFX();
-        WalkingSFX();
-        LandingSFX();
-        SlidingSFX();
+        if (player != null)
+        {
+            DamageSFX();
+            LucidSFX();
+            JumpSFX();
+            WalkingSFX();
+            LandingSFX();
+            SlidingSFX();
+        }
 
         if (SceneManager.GetActiveScene().name == "MainMenu" || SceneManager.GetActiveScene().name == "EndScene")
         {
@@ -111,58 +114,54 @@ public class AudioManager : MonoBehaviour
 
     void DamageSFX()
     {
-        if(playerHealth.playerHealth > 0)
-        {
-            damageSound = true;
-        }
+            if (playerHealth.playerHealth > 0)
+            {
+                damageSound = true;
+            }
 
-        if(damageSound)
-        if (playerHealth.playerHealth == 0)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(Death, GetComponent<Transform>().position);
-                damageSound = false;
-        }
+            if (damageSound)
+                if (playerHealth.playerHealth == 0)
+                {
+                    FMODUnity.RuntimeManager.PlayOneShot(Death, GetComponent<Transform>().position);
+                    damageSound = false;
+                }
     }
 
-        void JumpSFX()
+    void JumpSFX()
     {
+            if (!playerState.isJumping && playerState.isTouchingGround)
+            {
+                onGround = true;
 
-        if (!playerState.isJumping && playerState.isTouchingGround)
-        {
-            onGround = true;
-          
-        }
-        else if (!playerState.isTouchingGround)
-        {
-            onGround = false;
-            
-        }
+            }
+            else if (!playerState.isTouchingGround)
+            {
+                onGround = false;
 
-
-        if (playerState.isJumping && onGround)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent, GetComponent<Transform>().position);
-            onGround = false;
-        }
+            }
 
 
-
+            if (playerState.isJumping && onGround)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(JumpingEvent, GetComponent<Transform>().position);
+                onGround = false;
+            }
 
     }
 
     void LandingSFX()
     {
-
-        if (!playerState.isTouchingGround)
-        {
-            inAir = true;
-        }
+        
+            if (!playerState.isTouchingGround)
+            {
+                inAir = true;
+            }
 
         if (inAir)
         {
             if (playerState.isTouchingGround)
             {
-                
+
 
                 switch (memoryValue)
                 {
@@ -197,35 +196,33 @@ public class AudioManager : MonoBehaviour
 
             }
         }
-
-
     }
 
     void WalkingSFX()
     {
-        if (playerState.isRunning)
-        {
-            parameterValue = memoryValue;
+       
+            if (playerState.isRunning)
+            {
+                parameterValue = memoryValue;
 
-        }
-        else if(!playerState.isRunning)
-        {
+            }
+            else if (!playerState.isRunning)
+            {
 
-            parameterValue = 6; //Idle sound
+                parameterValue = 6; //Idle sound
 
-        }
-        
+            }
     }
 
     void SlidingSFX()
     {
+       
+            if (playerState.isSliding)
+            {
+                FMODUnity.RuntimeManager.PlayOneShot(Sliding, GetComponent<Transform>().position);
 
-        if (playerState.isSliding)
-        {
-            FMODUnity.RuntimeManager.PlayOneShot(Sliding, GetComponent<Transform>().position);
 
-
-        }
+            }
     }
 
     //private void OnCollisionEnter2D(Collision2D collision)

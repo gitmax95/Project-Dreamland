@@ -44,9 +44,10 @@ public class ElevatorMover : MonoBehaviour
             elevatorTrigger.playerReady = false;
         }
 
-        if (Input.GetKey(KeyCode.E)) { //Developer triggered elevator movement.
-            CallElevator();
-        }
+        //if (Input.GetKey(KeyCode.E))
+        //{ //Developer triggered elevator movement.
+        //    CallElevator();
+        //}
 
         if (transform.position.y <= targetTransform.position.y) { //Elevator reached Target position or slightly below. - Change next Direction
             direction = 1;
