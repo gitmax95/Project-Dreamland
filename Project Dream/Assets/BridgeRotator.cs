@@ -25,6 +25,8 @@ public class BridgeRotator : MonoBehaviour {
     public BoxCollider2D bridgeFloor;
     //public BoxCollider2D bridgeZoomZone;
 
+    bool leverActive = true;
+
 
 	// Use this for initialization
 	void Start () {
@@ -34,9 +36,9 @@ public class BridgeRotator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        //if(rotateBridge && bridgeLowered) { //PLAYER ATTEMPTS TO RAISE BRIDGE WHEN ALLOWED
-        //    raiseBridge = true;          
-        //}
+        if(rotateBridge && bridgeLowered) { //PLAYER ATTEMPTS TO RAISE BRIDGE WHEN ALLOWED
+            raiseBridge = true;          
+        }
         if(rotateBridge && bridgeRaised) { //PLAYER ATTEMPTS TO LOWER BRIDGE WHEN ALLOWED
             lowerBridge = true;
         }
@@ -106,8 +108,10 @@ public class BridgeRotator : MonoBehaviour {
 
     private void OnTriggerStay2D(Collider2D collision)
     {
+        if(leverActive)
         if (Input.GetKey(KeyCode.F)) {
             UseLever(collision);
+                leverActive = false;
         }
     }
 
