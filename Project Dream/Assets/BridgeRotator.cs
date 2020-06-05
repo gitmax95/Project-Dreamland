@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class BridgeRotator : MonoBehaviour {
 
+    bool usedOnce; //Checks if lever was used already! - Placeholder
+
     public bool rotateBridge;
     float timeCount;
     float timeCount_Handle;
@@ -34,11 +36,13 @@ public class BridgeRotator : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if(rotateBridge && bridgeLowered) { //PLAYER ATTEMPTS TO RAISE BRIDGE WHEN ALLOWED
-            raiseBridge = true;          
+        if(rotateBridge && bridgeLowered && usedOnce == false) { //PLAYER ATTEMPTS TO RAISE BRIDGE WHEN ALLOWED
+            raiseBridge = true;
+            usedOnce = true;
         }
-        if(rotateBridge && bridgeRaised) { //PLAYER ATTEMPTS TO LOWER BRIDGE WHEN ALLOWED
+        if(rotateBridge && bridgeRaised && usedOnce == false) { //PLAYER ATTEMPTS TO LOWER BRIDGE WHEN ALLOWED
             lowerBridge = true;
+            usedOnce = true;
         }
 
         if (raiseBridge) { //Raising Bridge
@@ -114,7 +118,7 @@ public class BridgeRotator : MonoBehaviour {
     public void UseLever(Collider2D collision)
     {
         //if (collision.tag == "Player") {  //Player tries to activate Lever        
-
+       
             if (bridgeLowered || bridgeRaised) { //If bridge ready. Lever Activated             
                 rotateBridge = true;
                 //invisibleBridgeWall.enabled = true;
@@ -122,6 +126,7 @@ public class BridgeRotator : MonoBehaviour {
                 //bridgeZoomZone.enabled = false;
 
             }
+        
 
 
         //}

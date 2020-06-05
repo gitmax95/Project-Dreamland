@@ -14,6 +14,7 @@ public class MainMenu : MonoBehaviour
     public void BridgeScene()
     {
         SceneManager.LoadScene("LevelTestLudwig");
+        //SceneManager.LoadScene("MaxWorld");
     }
 
     public void DarkRoomScene()
